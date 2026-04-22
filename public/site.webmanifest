@@ -1,0 +1,13 @@
+{
+    "name": "Kailash Machine Tools",
+    "short_name": "Kailash Machine Tools",
+    "description": "Pharmaceutical machinery manufacturer since 1991 — Ahmedabad, India.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0B1F4B",
+    "theme_color": "#0B1F4B",
+    "icons": [
+        { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    ]
+}

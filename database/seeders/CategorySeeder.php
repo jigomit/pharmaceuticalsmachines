@@ -1,0 +1,177 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Category;
+use Illuminate\Database\Seeder;
+
+class CategorySeeder extends Seeder
+{
+    public function run(): void
+    {
+        $categories = [
+            [
+                'name' => 'Washing Machines',
+                'slug' => 'washing-machines',
+                'tagline' => 'Ampoule, vial & bottle washing — validated to cGMP particulate standards',
+                'short_description' => 'Rotary, linear and multi-jet washing machines for glass containers. Engineered for pharmaceutical cleanliness with recirculating water, compressed air and WFI cycles.',
+                'description' => 'Kailash Machine Tools manufactures the complete range of pharmaceutical washing machines for ampoules, vials, bottles, and rubber bungs. Each machine is built with SS 316L contact parts, offers programmable wash cycles (external wash, internal wash, DM water, WFI, sterile air), and is fully validatable with IQ/OQ/PQ documentation. Our rotary and linear configurations handle outputs from 60 to 300 bottles per minute, integrating seamlessly into complete injectable filling lines.',
+                'icon' => 'droplet',
+                'meta_title' => 'Pharmaceutical Washing Machines Manufacturer — Ampoule, Vial, Bottle',
+                'meta_description' => 'Leading manufacturer of cGMP-compliant ampoule washing, vial washing and bottle washing machines in Ahmedabad, India. Rotary, linear, and multi-jet configurations. FAT/SAT + validation support.',
+                'faqs' => [
+                    ['q' => 'What output speeds do your washing machines support?', 'a' => 'From 60 to 300 containers per minute depending on configuration and container size.'],
+                    ['q' => 'Are these machines cGMP compliant?', 'a' => 'Yes. All contact parts are SS 316L, with IQ/OQ/PQ documentation and FAT/SAT support provided.'],
+                ],
+                'sort_order' => 1,
+            ],
+            [
+                'name' => 'Injectable Liquid Filling',
+                'slug' => 'injectable-liquid-filling',
+                'tagline' => 'High-accuracy ampoule & vial liquid filling with rubber stoppering',
+                'short_description' => 'Servo-driven liquid filling and sealing machines for sterile injectable applications — ampoules, vials, and eye-drop bottles.',
+                'description' => 'Our injectable liquid filling range covers ampoule filling & sealing (2, 5, 10, 20 ml) and vial filling with rubber stoppering for lyophilised and RTU injectables. Servo peristaltic or piston-metering pumps deliver ±0.5 % accuracy. Laminar-airflow-ready, PLC controlled with HMI, and suitable for integration into a complete cGMP injectable line.',
+                'icon' => 'syringe',
+                'meta_title' => 'Injectable Liquid Filling Machine Manufacturer — Ampoule, Vial',
+                'meta_description' => 'Automatic ampoule filling sealing machine, vial filling with rubber stoppering — servo-metered, cGMP-compliant. Manufacturer and exporter from Ahmedabad, India.',
+                'sort_order' => 2,
+            ],
+            [
+                'name' => 'Injectable Powder Filling',
+                'slug' => 'injectable-powder-filling',
+                'tagline' => 'Dry injection & dry syrup powder filling with precision auger dosing',
+                'short_description' => 'Auger-based powder filling machines for sterile dry injections and dry syrups. Single- and double-head configurations with integrated rubber stoppering and sealing.',
+                'description' => 'Our dry injection powder filling machines use servo-driven auger dosing with in-line check-weighing for fill accuracy within ±1 %. Configurations include double-head dry powder fillers with rubber bunging, monoblock dry syrup fillers, and powder inserter + capper combinations. Suitable for antibiotics, hormones, and high-potency pharmaceuticals.',
+                'icon' => 'flask',
+                'meta_title' => 'Dry Injection Powder Filling Machine Manufacturer India',
+                'meta_description' => 'Dry injection powder filling, dry syrup filling and auger-based vial powder filling machines. cGMP-compliant, servo driven, manufactured in Ahmedabad.',
+                'sort_order' => 3,
+            ],
+            [
+                'name' => 'Capping & Sealing Machines',
+                'slug' => 'capping-sealing',
+                'tagline' => 'ROPP, vial, screw and snap capping for injectable and oral lines',
+                'short_description' => 'Complete range of automatic and semi-automatic capping and sealing machines for pharmaceutical containers.',
+                'description' => 'Our capping and sealing range includes ROPP (Roll-On Pilfer-Proof) cap sealing, flip-off vial sealing, screw cap torque sealing, and snap capping. Servo-driven heads ensure uniform torque and pilfer-proof rolling, with no-cap / no-bottle detection and reject stations standard.',
+                'icon' => 'lock',
+                'meta_title' => 'ROPP Cap Sealing Machine, Vial Sealing Machine Manufacturer',
+                'meta_description' => 'Automatic ROPP cap sealing, flip-off vial sealing and screw capping machines for pharma bottles and vials. Servo precision, GMP construction.',
+                'sort_order' => 4,
+            ],
+            [
+                'name' => 'Labelling Machines',
+                'slug' => 'labelling',
+                'tagline' => 'Self-adhesive sticker & wet-glue labelling for ampoules, vials, bottles',
+                'short_description' => 'High-speed self-adhesive and wet-glue labelling systems for round, flat, and vial containers. Integrated print & apply available.',
+                'description' => 'We build self-adhesive sticker labelling machines, wet-glue labellers, ampoule sticker labellers, and vial sticker labellers with on-line batch printing integration (ink-jet or thermal transfer). PLC-HMI controlled, servo-driven label dispensing with ±0.5 mm registration.',
+                'icon' => 'tag',
+                'meta_title' => 'Pharmaceutical Labelling Machine Manufacturer — Sticker, Wet-glue',
+                'meta_description' => 'Automatic sticker labelling machine, wet-glue labeller, ampoule and vial sticker labelling systems. Servo precision, Ahmedabad India.',
+                'sort_order' => 5,
+            ],
+            [
+                'name' => 'Visual Inspection Machines',
+                'slug' => 'inspection',
+                'tagline' => 'Manual, semi-auto and automatic ampoule/vial inspection booths',
+                'short_description' => 'Inspection machines to detect particulates, fill volume and cosmetic defects in filled ampoules, vials and bottles.',
+                'description' => 'Our visual inspection range includes manual inspection booths with polarised back-lighting, semi-automatic roller inspection stations, and automatic vision-system inspection for particulates, cracks, fill level and stopper integrity.',
+                'icon' => 'eye',
+                'meta_title' => 'Pharmaceutical Inspection Machine Manufacturer — Ampoule, Vial',
+                'meta_description' => 'Visual ampoule inspection machine, vial inspection machine and automatic vision inspection systems. Polarised lighting, cGMP construction.',
+                'sort_order' => 6,
+            ],
+            [
+                'name' => 'Tablet Section',
+                'slug' => 'tablet-section',
+                'tagline' => 'Rotary tablet presses, roll compactors & ball mills for OSD manufacturing',
+                'short_description' => 'Solid-dosage production equipment — tablet compression, granulation, and size reduction.',
+                'description' => 'Single-rotary mini tablet presses (16/27/35 stations), lab-scale ball mills, roll compactors and tray dryers for pharmaceutical solid dosage forms. GMP construction, easy-cleaning design, interlocked safety doors.',
+                'icon' => 'pill',
+                'meta_title' => 'Tablet Press Machine Manufacturer India — Rotary, Single-Punch',
+                'meta_description' => 'Single rotary mini tablet press, ball mill and roll compactor for pharmaceutical tablet manufacturing. GMP compliant, manufactured in Ahmedabad.',
+                'sort_order' => 7,
+            ],
+            [
+                'name' => 'Ointment & Cream Plants',
+                'slug' => 'ointment-cream-plants',
+                'tagline' => 'Complete turnkey ointment, cream and gel manufacturing plants',
+                'short_description' => 'Jacketed vacuum mixers, homogenisers, storage vessels and transfer systems for semi-solid production.',
+                'description' => 'Fully integrated ointment manufacturing plants with jacketed vessels, vacuum homogenisers, counter-rotating stirrers and transfer pumps. Sized from 50 L R&D units to 2,000 L production skids.',
+                'icon' => 'beaker',
+                'meta_title' => 'Ointment Manufacturing Plant Manufacturer India',
+                'meta_description' => 'Turnkey ointment, cream and gel manufacturing plants with vacuum homogenisers. GMP-compliant, manufactured in Ahmedabad.',
+                'sort_order' => 8,
+            ],
+            [
+                'name' => 'Liquid Syrup Plants',
+                'slug' => 'liquid-syrup-plants',
+                'tagline' => 'Turnkey oral liquid and syrup manufacturing plants',
+                'short_description' => 'Sugar syrup preparation, manufacturing vessels, storage tanks and filling integration for oral liquids.',
+                'description' => 'Complete liquid syrup manufacturing solutions including sugar syrup preparation vessels, jacketed manufacturing tanks, storage vessels, inline filters and transfer pumps. Designed to GMP with CIP/SIP compatibility.',
+                'icon' => 'bottle',
+                'meta_title' => 'Liquid Syrup Manufacturing Plant Manufacturer India',
+                'meta_description' => 'Turnkey liquid syrup plants — sugar syrup prep, jacketed vessels, storage tanks. GMP compliant, manufactured in Ahmedabad.',
+                'sort_order' => 9,
+            ],
+            [
+                'name' => 'Packing Conveyors',
+                'slug' => 'packing-conveyors',
+                'tagline' => 'Modular slat, belt and roller conveyors for pharma packaging lines',
+                'short_description' => 'Connecting conveyors, turn tables, accumulators and bottle elevators for complete line integration.',
+                'description' => 'Stainless-steel modular conveyors including slat-chain conveyors, flat-belt conveyors, turn tables, bi-directional accumulators and bottle elevators — the connecting tissue of your packaging line.',
+                'icon' => 'conveyor',
+                'meta_title' => 'Packing Conveyor Manufacturer — Pharma Slat, Belt, Turn Table',
+                'meta_description' => 'SS slat conveyor, belt conveyor, turn table and accumulator systems for pharmaceutical packaging lines. Ahmedabad, India.',
+                'sort_order' => 10,
+            ],
+            [
+                'name' => 'Change Parts',
+                'slug' => 'change-parts',
+                'tagline' => 'Format parts and change-over kits for every Kailash machine',
+                'short_description' => 'Interchangeable format parts for multiple container sizes on the same machine — fast, validated change-overs.',
+                'description' => 'We manufacture and ship change-part kits for every machine we build — star-wheels, guide-rails, timing screws, pick-and-place grippers — enabling fast validated change-overs between ampoule, vial or bottle sizes.',
+                'icon' => 'wrench',
+                'meta_title' => 'Pharma Machine Change Parts Manufacturer — Format Tooling',
+                'meta_description' => 'Interchangeable change parts, format tooling and change-over kits for pharmaceutical machines. Manufactured in Ahmedabad.',
+                'sort_order' => 11,
+            ],
+            [
+                'name' => 'Pharma Furniture',
+                'slug' => 'pharma-furniture',
+                'tagline' => 'SS304/316 garment cabinets, pass boxes and clean-room furniture',
+                'short_description' => 'GMP clean-room furniture — garment cabinets, dynamic pass boxes, work tables, trolleys, cross-over benches.',
+                'description' => 'Engineered cleanroom furniture in SS 304 / 316 including double-door dynamic pass boxes with HEPA, garment storage cabinets, cross-over benches, lockers, and mobile work tables.',
+                'icon' => 'cabinet',
+                'meta_title' => 'Cleanroom Pharma Furniture Manufacturer India',
+                'meta_description' => 'SS garment cabinets, dynamic pass boxes, cross-over benches and cleanroom furniture for GMP pharmaceutical facilities.',
+                'sort_order' => 12,
+            ],
+            [
+                'name' => 'Tray Dryers & Storage',
+                'slug' => 'tray-dryers-storage',
+                'tagline' => 'Tray dryers, storage vessels and WFI tanks',
+                'short_description' => 'Hot-air tray dryers, mobile storage vessels and WFI/DM water holding tanks for pharma production.',
+                'description' => 'Tray dryers with digital PID temperature control, fully jacketed storage vessels and polished WFI holding tanks with internal spray-ball CIP, manufactured to cGMP.',
+                'icon' => 'box',
+                'meta_title' => 'Tray Dryer Manufacturer — Pharma, WFI Storage Tanks',
+                'meta_description' => 'Tray dryers, SS storage vessels and WFI tanks for pharmaceutical industries. GMP construction, Ahmedabad India.',
+                'sort_order' => 13,
+            ],
+            [
+                'name' => 'Other Machinery',
+                'slug' => 'other-machinery',
+                'tagline' => 'Bung washers, rubber stopper processors and special-purpose machines',
+                'short_description' => 'Ancillary equipment for a complete injectable line — rubber bung washers, stopper processors, and custom special-purpose builds.',
+                'description' => 'Specialist machines including rubber bung washing & sterilising machines, stopper processors, dust extraction, and custom-engineered units built to client specifications.',
+                'icon' => 'cog',
+                'meta_title' => 'Pharmaceutical Special-Purpose Machinery — Bung Washer, Stopper',
+                'meta_description' => 'Rubber bung washers, stopper processors and custom pharmaceutical machinery. Manufactured in Ahmedabad.',
+                'sort_order' => 14,
+            ],
+        ];
+
+        foreach ($categories as $c) {
+            Category::updateOrCreate(['slug' => $c['slug']], $c);
+        }
+    }
+}
