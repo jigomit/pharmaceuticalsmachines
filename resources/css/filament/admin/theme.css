@@ -1,0 +1,169 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*.php';
+@source '../../../../resources/views/filament/**/*.blade.php';
+@source '../../../../vendor/filament/**/*.blade.php';
+
+/* Website brand palette from resources/css/app.css */
+:root {
+    --primary: #0b1f4b;
+    --primary-light: #1f3d78;
+    --white: #ffffff;
+    --accent: #14b8a6;
+    --highlight: #22d3ee;
+    --bg: #eef2f9;
+    --text: #0f172a;
+
+    --kmt-brand: var(--primary);
+    --kmt-brand-accent: var(--accent);
+    --kmt-brand-highlight: var(--highlight);
+    --kmt-brand-deep: #061433;
+    --kmt-brand-soft-surface: var(--bg);
+}
+
+.fi-simple-layout {
+    background:
+        radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--kmt-brand-highlight) 26%, transparent), transparent 44%),
+        radial-gradient(circle at 15% 72%, color-mix(in srgb, var(--kmt-brand-accent) 24%, transparent), transparent 48%),
+        linear-gradient(135deg, var(--kmt-brand-deep), var(--kmt-brand));
+}
+
+.fi-simple-main-ctn {
+    border-color: color-mix(in srgb, var(--kmt-brand-highlight) 18%, #ffffff);
+    box-shadow: 0 28px 50px -32px color-mix(in srgb, var(--kmt-brand) 65%, transparent);
+}
+
+.fi-sidebar {
+    background: linear-gradient(180deg, var(--kmt-brand), var(--kmt-brand-deep));
+}
+
+.fi-sidebar-nav {
+    border-right-color: color-mix(in srgb, #ffffff 14%, transparent);
+}
+
+.fi-sidebar-item-button {
+    color: #d4dced;
+}
+
+.fi-sidebar-item-button.fi-active {
+    background: color-mix(in srgb, var(--kmt-brand-accent) 32%, var(--kmt-brand));
+    color: #ffffff;
+}
+
+.fi-sidebar-item-button:hover {
+    background: color-mix(in srgb, var(--kmt-brand-highlight) 20%, var(--kmt-brand));
+    color: #ffffff;
+}
+
+.fi-topbar {
+    background: var(--white);
+    border-bottom-color: color-mix(in srgb, var(--primary) 15%, #dbe4ef);
+}
+
+.fi-topbar .fi-icon-btn,
+.fi-topbar .fi-dropdown-trigger {
+    color: var(--text);
+}
+
+.fi-topbar .fi-icon-btn:hover,
+.fi-topbar .fi-dropdown-trigger:hover {
+    color: var(--accent);
+}
+
+.fi-main {
+    background: var(--kmt-brand-soft-surface);
+}
+
+.fi-section,
+.fi-ta,
+.fi-wi-stats-overview-stat {
+    border-color: color-mix(in srgb, var(--primary) 12%, #d6e6ff);
+    background: #ffffff;
+}
+
+.fi-section-header-heading,
+.fi-ta-header-heading {
+    color: var(--text);
+}
+
+.fi-btn-color-primary {
+    box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--primary) 55%, transparent);
+}
+
+.fi-link {
+    color: var(--accent);
+}
+
+.fi-link:hover {
+    color: var(--primary);
+}
+
+.fi-badge {
+    letter-spacing: 0.01em;
+}
+
+.fi-sidebar-footer {
+    border-top: 1px solid color-mix(in srgb, var(--primary) 12%, #d5dce7);
+    background: color-mix(in srgb, #ffffff 86%, var(--bg));
+    padding: 0.8rem;
+}
+
+.kmt-sidebar-user-card {
+    border-radius: 0.95rem;
+    border: 1px solid color-mix(in srgb, var(--primary) 16%, #cfd6df);
+    background: #ffffff;
+    padding: 0.8rem;
+    box-shadow: 0 10px 24px -20px color-mix(in srgb, var(--primary) 55%, transparent);
+}
+
+.kmt-sidebar-user-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.kmt-sidebar-user-avatar {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent), var(--highlight));
+}
+
+.kmt-sidebar-user-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.kmt-sidebar-user-email {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+    color: color-mix(in srgb, var(--text) 68%, #8d99ab);
+    line-height: 1.1;
+}
+
+.kmt-sidebar-logout-btn {
+    width: 100%;
+    border: 1px solid color-mix(in srgb, var(--primary) 20%, #cdd6e2);
+    border-radius: 0.62rem;
+    background: #ffffff;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.02rem;
+    padding: 0.52rem 0.8rem;
+    cursor: pointer;
+}
+
+.kmt-sidebar-logout-btn:hover {
+    background: color-mix(in srgb, #ffffff 90%, var(--bg));
+    border-color: color-mix(in srgb, var(--accent) 38%, #c4cdd9);
+}

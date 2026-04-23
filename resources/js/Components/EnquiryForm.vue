@@ -22,6 +22,12 @@ const form = useForm({
 const page = usePage();
 const flashSuccess = computed(() => (page.props as any).flash?.success);
 
+const sanitizePhoneInput = (event: Event) => {
+    const target = event.target as HTMLInputElement;
+    const digitsOnly = target.value.replace(/\D+/g, '').slice(0, 10);
+    form.phone = digitsOnly;
+};
+
 const submit = () => {
     form.post('/enquiries', {
         preserveScroll: true,
@@ -61,7 +67,18 @@ const inputClass = computed(() =>
             </div>
             <div>
                 <label :class="labelClass" class="text-xs font-semibold uppercase tracking-widest">Phone *</label>
-                <input v-model="form.phone" type="tel" required :class="inputClass" placeholder="+91 98xxx xxxxx" />
+                <input
+                    v-model="form.phone"
+                    type="tel"
+                    required
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    :class="inputClass"
+                    placeholder="10-digit phone number"
+                    @input="sanitizePhoneInput"
+                />
                 <p v-if="form.errors.phone" class="mt-1 text-xs text-red-500">{{ form.errors.phone }}</p>
             </div>
             <div>

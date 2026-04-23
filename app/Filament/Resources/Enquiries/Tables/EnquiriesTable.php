@@ -42,9 +42,9 @@ class EnquiriesTable
                 TextColumn::make('status')
                     ->badge()
                     ->colors([
-                        'warning' => 'new',
-                        'info' => 'contacted',
-                        'primary' => 'quoted',
+                        'primary' => 'new',
+                        'gray' => 'contacted',
+                        'warning' => 'quoted',
                         'success' => 'won',
                         'danger' => ['lost', 'spam'],
                     ]),

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SiteNav from '@/Components/SiteNav.vue';
 import SiteFooter from '@/Components/SiteFooter.vue';
-import { usePage } from '@inertiajs/vue3';
+import { Head, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const page = usePage();
@@ -105,7 +105,11 @@ const globalSchema = computed(() => ({
 
 <template>
     <div class="flex min-h-screen flex-col">
-        <script type="application/ld+json" v-html="JSON.stringify(globalSchema)" />
+        <Head>
+            <component :is="'script'" type="application/ld+json">
+                {{ JSON.stringify(globalSchema) }}
+            </component>
+        </Head>
         <SiteNav />
         <main class="flex-1">
             <slot />

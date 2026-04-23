@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('product_id')->nullable();
             $table->string('name');
             $table->string('email');
             $table->string('phone', 32);
@@ -28,6 +28,7 @@ return new class extends Migration
 
             $table->index('status');
             $table->index('created_at');
+            $table->index('product_id');
         });
     }
 

@@ -58,14 +58,15 @@ const schemas = computed(() => {
         <meta name="twitter:title" :content="ogTitle" head-key="twitter:title" />
         <meta name="twitter:description" :content="ogDescription" head-key="twitter:description" />
         <meta name="twitter:image" :content="ogImage" head-key="twitter:image" />
-    </Head>
 
-    <!-- JSON-LD schemas rendered inline so SSR emits them with content,
-         not as innerHTML="..." attributes which crawlers ignore. -->
-    <script
-        v-for="(s, i) in schemas"
-        :key="`schema-${i}`"
-        type="application/ld+json"
-        v-html="JSON.stringify(s)"
-    />
+        <!-- JSON-LD scripts emitted in head with inline content -->
+        <component
+            :is="'script'"
+            v-for="(s, i) in schemas"
+            :key="`schema-${i}`"
+            type="application/ld+json"
+        >
+            {{ JSON.stringify(s) }}
+        </component>
+    </Head>
 </template>

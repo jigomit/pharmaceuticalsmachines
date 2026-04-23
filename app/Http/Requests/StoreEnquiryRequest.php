@@ -15,8 +15,8 @@ class StoreEnquiryRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:120'],
-            'email' => ['required', 'email:rfc', 'max:180'],
-            'phone' => ['required', 'string', 'max:32'],
+            'email' => ['required', 'email:rfc,dns', 'max:180'],
+            'phone' => ['required', 'regex:/^\d{10}$/'],
             'company' => ['nullable', 'string', 'max:180'],
             'country' => ['nullable', 'string', 'max:80'],
             'message' => ['required', 'string', 'min:10', 'max:3000'],
@@ -25,9 +25,20 @@ class StoreEnquiryRequest extends FormRequest
         ];
     }
 
+    protected function prepareForValidation(): void
+    {
+        $phone = (string) $this->input('phone', '');
+
+        $this->merge([
+            'phone' => preg_replace('/\D+/', '', $phone),
+        ]);
+    }
+
     public function messages(): array
     {
         return [
+            'email.email' => 'Please enter a valid email address.',
+            'phone.regex' => 'Phone number must be exactly 10 digits.',
             'website.size' => 'Spam detected.',
         ];
     }
