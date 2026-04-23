@@ -169,10 +169,6 @@ const bento = computed(() => {
             </div>
         </div>
 
-        <!-- scroll indicator -->
-        <div class="absolute inset-x-0 bottom-8 flex justify-center">
-            <div class="scroll-indicator" aria-hidden="true"></div>
-        </div>
     </section>
 
     <!-- STATS STRIP ============================================== -->

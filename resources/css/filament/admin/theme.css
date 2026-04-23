@@ -167,3 +167,12 @@
     background: color-mix(in srgb, #ffffff 90%, var(--bg));
     border-color: color-mix(in srgb, var(--accent) 38%, #c4cdd9);
 }
+
+/* Force-hide any sidebar collapse/toggle handles */
+.fi-layout-sidebar-toggle-btn-ctn,
+.fi-sidebar-open-collapse-sidebar-btn,
+.fi-sidebar-close-collapse-sidebar-btn,
+[class*='sidebar-resize'],
+[class*='sidebar-handle'] {
+    display: none !important;
+}
