@@ -98,6 +98,41 @@ $LIB = [
     'liquid_syrup_1' => "{$dir}/liquid-syrup-1.jpeg",                           // liquid syrup manufacturing plant hero
     'liquid_syrup_2' => "{$dir}/liquid-syrup-2.webp",                           // liquid syrup manufacturing plant second image
     'liquid_syrup_3' => "{$dir}/liquid-syrup-3.webp",                           // liquid syrup manufacturing plant third image
+    'stainless_steel_1' => "{$dir}/stainless-steel-1.jpg",                      // ss slat conveyor hero
+    'stainless_steel_2' => "{$dir}/stainless-steel-2.webp",                     // ss slat conveyor second image
+    'stainless_steel_3' => "{$dir}/stainless-steel-3.webp",                     // ss slat conveyor third image
+    'rotary_table_1' => "{$dir}/Rotary-table.webp",                             // rotary turn table hero
+    'rotary_table_2' => "{$dir}/Rotary-table-1.jpeg",                           // rotary turn table second image
+    'rotary_table_3' => "{$dir}/Rotary-table-2.webp",                           // rotary turn table third image
+    'change_parts_1' => "{$dir}/change-parts-1.png",                            // change parts category image
+    'changeover_parts_1' => "{$dir}/changeover-parts-1.webp",                   // change parts product hero
+    'change_parts_2' => "{$dir}/change-parts-2.webp",                           // change parts product second image
+    'change_parts_3' => "{$dir}/change-parts-3.webp",                           // change parts product third image
+    'pharma_furniture_1' => "{$dir}/pharma-furniture.webp",                     // pharma furniture category image
+    'dynamic_pass_1' => "{$dir}/Dynamic Pass.jpg",                               // dynamic pass box hero
+    'dynamic_pass_2' => "{$dir}/Dynamic-pass-1.jpeg",                           // dynamic pass box second image
+    'dynamic_pass_3' => "{$dir}/Dynamic-pass-2.avif",                           // dynamic pass box third image
+    'garment_storage_1' => "{$dir}/garment-process.jpeg",                       // garment storage cabinet hero
+    'garment_storage_2' => "{$dir}/garment-storage-1.webp",                     // garment storage cabinet second image
+    'garment_storage_3' => "{$dir}/garment-storage-2.jpg",                      // garment storage cabinet third image
+    'hot_air_tray_1' => "{$dir}/hot-air-dry.jpg",                               // hot-air tray dryer hero
+    'hot_air_tray_2' => "{$dir}/hot-air-tray-1.jpg",                            // hot-air tray dryer second image
+    'hot_air_tray_3' => "{$dir}/hot-air-2.webp",                                // hot-air tray dryer third image
+    'tray_dryers_1' => "{$dir}/tray-dryers.jpg",                                // tray dryers & storage category image
+    'ss_storage_1' => "{$dir}/ss-storage.jpeg",                                  // ss storage vessel hero
+    'ss_storage_2' => "{$dir}/ss-pressure-1.webp",                               // ss storage vessel second image
+    'ss_storage_3' => "{$dir}/ss-Pressure-2.jpg",                                // ss storage vessel third image
+    'other_machinery_1' => "{$dir}/other-machine.jpg",                           // other machinery category image
+    'rubber_stopper_1' => "{$dir}/rubber-stopper-1.jpg",                         // rubber stopper processor hero
+    'rubber_stopper_2' => "{$dir}/Rubber-Stopper-2.jpg",                         // rubber stopper processor second image
+    'rubber_stopper_3' => "{$dir}/rubber-process-3.jpg",                         // rubber stopper processor third image
+    'home_blog_vial_filling' => "{$dir}/home-vial-filling.jpg",                  // home insights card 1
+    'home_blog_linear_washing' => "{$dir}/home-linear-vial-washing.jpg",         // home insights card 2
+    'home_blog_cgmp_vs_gmp' => "{$dir}/home-cGMP-VS-GMP.jpg",                    // home insights card 3
+    'industry_pharmaceutical_1' => "{$dir}/industry-pharmaceutical.jpg",         // industries page pharmaceutical
+    'industry_biotech_1' => "{$dir}/industry-biotech-biosimilars.jpg",           // industries page biotech
+    'industry_nutraceutical_1' => "{$dir}/industry-nutraceutical.webp",          // industries page nutraceutical
+    'home_shree_ganesh' => "{$dir}/home-shree-ganesh.png",                       // homepage feature card image
 ];
 
 return [
@@ -106,7 +141,7 @@ return [
 
     // === HERO ==================================================
     'hero.primary'   => $LIB['pharma_line'],       // wide pharma line — stunning hero shot
-    'hero.secondary' => $LIB['liquid_filler'],     // liquid filling machine
+    'hero.secondary' => $LIB['home_shree_ganesh'], // homepage feature card image
     'hero.tertiary'  => $LIB['induction_sealer'],  // sealer on conveyor
 
     // === ABOUT / HERITAGE ======================================
@@ -133,17 +168,17 @@ return [
         'ointment-cream-plants'     => $LIB['ointment_cream_1'],    // uploaded ointment & cream image
         'liquid-syrup-plants'       => $LIB['liquid_syrup_main'],
         'packing-conveyors'         => $LIB['bottle_labeller'],     // conveyor with bottles
-        'change-parts'              => $LIB['bucket_labeller'],
-        'pharma-furniture'          => $LIB['packing_division'],    // pharma work area
-        'tray-dryers-storage'       => $LIB['finished_goods'],
-        'other-machinery'           => $LIB['pharma_line'],
+        'change-parts'              => $LIB['change_parts_1'],
+        'pharma-furniture'          => $LIB['pharma_furniture_1'],
+        'tray-dryers-storage'       => $LIB['tray_dryers_1'],
+        'other-machinery'           => $LIB['other_machinery_1'],
     ],
 
     // === INDUSTRY CARDS (slug → URL) ===========================
     'industry' => [
-        'pharmaceutical' => $LIB['pharma_line'],
-        'biotech'        => $LIB['liquid_filler'],
-        'nutraceutical'  => $LIB['blister_line'],
+        'pharmaceutical' => $LIB['industry_pharmaceutical_1'],
+        'biotech'        => $LIB['industry_biotech_1'],
+        'nutraceutical'  => $LIB['industry_nutraceutical_1'],
         'cosmetics'      => $LIB['tube_filler'],
         'ayurvedic'      => $LIB['packing_division'],
         'veterinary'     => $LIB['induction_sealer'],
@@ -194,18 +229,22 @@ return [
         'liquid-syrup-manufacturing-plant' => $LIB['liquid_syrup_1'],
 
         // Conveyors
-        'ss-slat-conveyor'  => $LIB['bottle_labeller'],
-        'rotary-turn-table' => $LIB['induction_sealer'],
+        'ss-slat-conveyor'  => $LIB['stainless_steel_1'],
+        'rotary-turn-table' => $LIB['rotary_table_1'],
 
         // Tray dryers / storage
-        'hot-air-tray-dryer' => $LIB['packing_division'],
-        'ss-storage-vessel'  => $LIB['liquid_filler'],
+        'hot-air-tray-dryer' => $LIB['hot_air_tray_1'],
+        'ss-storage-vessel'  => $LIB['ss_storage_1'],
 
         // Change parts
-        'format-parts-changeover-kits' => $LIB['bucket_labeller'],
+        'format-parts-changeover-kits' => $LIB['changeover_parts_1'],
+
+        // Pharma furniture
+        'dynamic-pass-box-hepa' => $LIB['dynamic_pass_1'],
+        'garment-storage-cabinet' => $LIB['garment_storage_1'],
 
         // Other
-        'rubber-stopper-processor' => $LIB['tube_filler'],
+        'rubber-stopper-processor' => $LIB['rubber_stopper_1'],
     ],
 
     // === PRODUCT GALLERY OVERRIDES (slug => [urls...]) ==========
@@ -299,12 +338,44 @@ return [
             $LIB['liquid_syrup_2'],
             $LIB['liquid_syrup_3'],
         ],
+        'ss-slat-conveyor' => [
+            $LIB['stainless_steel_2'],
+            $LIB['stainless_steel_3'],
+        ],
+        'rotary-turn-table' => [
+            $LIB['rotary_table_2'],
+            $LIB['rotary_table_3'],
+        ],
+        'format-parts-changeover-kits' => [
+            $LIB['change_parts_2'],
+            $LIB['change_parts_3'],
+        ],
+        'dynamic-pass-box-hepa' => [
+            $LIB['dynamic_pass_2'],
+            $LIB['dynamic_pass_3'],
+        ],
+        'garment-storage-cabinet' => [
+            $LIB['garment_storage_2'],
+            $LIB['garment_storage_3'],
+        ],
+        'hot-air-tray-dryer' => [
+            $LIB['hot_air_tray_2'],
+            $LIB['hot_air_tray_3'],
+        ],
+        'ss-storage-vessel' => [
+            $LIB['ss_storage_2'],
+            $LIB['ss_storage_3'],
+        ],
+        'rubber-stopper-processor' => [
+            $LIB['rubber_stopper_2'],
+            $LIB['rubber_stopper_3'],
+        ],
     ],
 
     // === BLOG HERO IMAGES ======================================
     'blog' => [
-        'how-to-choose-vial-filling-machine-buyers-guide' => $LIB['liquid_filler'],
-        'rotary-vs-linear-vial-washing-machines'          => $LIB['tube_filler'],
-        'cgmp-ss316l-why-material-matters'                => $LIB['pharma_line'],
+        'how-to-choose-vial-filling-machine-buyers-guide' => $LIB['home_blog_vial_filling'],
+        'rotary-vs-linear-vial-washing-machines'          => $LIB['home_blog_linear_washing'],
+        'cgmp-ss316l-why-material-matters'                => $LIB['home_blog_cgmp_vs_gmp'],
     ],
 ];

@@ -17,8 +17,15 @@ defineProps<{ clients: any[] }>();
     <section class="py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                <div v-for="c in clients" :key="c.id" class="flex h-28 items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-center text-sm font-semibold text-slate-700 shadow-sm">
-                    {{ c.name }}
+                <div v-for="c in clients" :key="c.id" class="flex h-32 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center text-sm font-semibold text-slate-700 shadow-sm">
+                    <img
+                        v-if="c.logo"
+                        :src="c.logo"
+                        :alt="c.name"
+                        class="h-20 w-auto max-w-full object-contain sm:h-24"
+                        loading="lazy"
+                    >
+                    <span v-else>{{ c.name }}</span>
                 </div>
             </div>
         </div>

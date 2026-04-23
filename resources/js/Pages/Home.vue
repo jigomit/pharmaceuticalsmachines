@@ -142,7 +142,7 @@ const bento = computed(() => {
                     <div class="glass-dark relative rounded-3xl p-6 shadow-2xl">
                         <!-- secondary image inside card -->
                         <div class="overflow-hidden rounded-2xl">
-                            <img :src="heroImages.secondary" alt="Filled pharmaceutical vials on a cGMP production line" class="aspect-[4/3] w-full object-cover" width="800" height="600" loading="eager" />
+                            <img :src="heroImages.secondary" alt="Filled pharmaceutical vials on a cGMP production line" class="h-[280px] w-full object-contain bg-slate-900/40 sm:h-[320px] lg:h-[360px]" width="800" height="600" loading="eager" />
                         </div>
                         <div class="mt-5 grid grid-cols-2 gap-3">
                             <div class="rounded-xl border border-white/10 bg-white/5 p-4">
