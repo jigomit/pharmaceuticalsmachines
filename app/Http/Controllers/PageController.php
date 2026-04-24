@@ -72,4 +72,19 @@ class PageController extends Controller
     {
         return Inertia::render('Terms');
     }
+
+    public function vialFillingMachineIndia(): Response
+    {
+        return Inertia::render('Seo/VialFillingMachineIndia');
+    }
+
+    public function ampouleFillingMachineIndia(): Response
+    {
+        return Inertia::render('Seo/AmpouleFillingMachineIndia');
+    }
+
+    public function pharmaceuticalMachineryManufacturerIndia(): Response
+    {
+        return Inertia::render('Seo/PharmaceuticalMachineryManufacturerIndia');
+    }
 }

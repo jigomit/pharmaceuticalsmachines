@@ -15,6 +15,13 @@ const props = defineProps<{
 const page = usePage();
 const canonical = computed(() => (page.props as any).canonical as string);
 const company = computed(() => (page.props as any).company);
+const canonicalBase = computed(() => {
+    try {
+        return new URL(canonical.value).origin;
+    } catch {
+        return '';
+    }
+});
 
 const ogTitle = computed(() => props.title ?? `${company.value?.name} | Pharmaceutical Machinery Manufacturer`);
 const ogDescription = computed(
@@ -22,7 +29,11 @@ const ogDescription = computed(
         props.description ??
         `${company.value?.name} — ${company.value?.tagline}. Leading manufacturer and exporter of injectable, filling, washing, capping and packaging pharmaceutical machinery from Ahmedabad, India.`,
 );
-const ogImage = computed(() => props.image ?? '/og-default.jpg');
+const ogImage = computed(() => {
+    const image = props.image ?? '/og-default.jpg';
+    if (image.startsWith('http://') || image.startsWith('https://')) return image;
+    return canonicalBase.value ? `${canonicalBase.value}${image.startsWith('/') ? image : `/${image}`}` : image;
+});
 
 const schemas = computed(() => {
     if (!props.schema) return [];

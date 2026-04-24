@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -16,6 +17,12 @@ class HandleInertiaRequests extends Middleware
 
     public function share(Request $request): array
     {
+        $canonical = url($request->path() === '/' ? '' : $request->path());
+        $canonicalQuery = Arr::only($request->query(), ['page']);
+        if (! empty($canonicalQuery)) {
+            $canonical .= '?'.http_build_query($canonicalQuery);
+        }
+
         return [
             ...parent::share($request),
             'company' => fn () => [
@@ -29,7 +36,7 @@ class HandleInertiaRequests extends Middleware
                 'hours' => config('company.hours'),
                 'socials' => config('company.socials'),
             ],
-            'canonical' => fn () => url($request->path() === '/' ? '' : $request->path()),
+            'canonical' => fn () => $canonical,
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
                 'error' => fn () => $request->session()->get('error'),

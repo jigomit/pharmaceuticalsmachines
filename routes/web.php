@@ -17,6 +17,9 @@ Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/terms', [PageController::class, 'terms'])->name('terms');
+Route::get('/vial-filling-machine-manufacturer-india', [PageController::class, 'vialFillingMachineIndia'])->name('seo.vial-filling-india');
+Route::get('/ampoule-filling-sealing-machine-manufacturer-india', [PageController::class, 'ampouleFillingMachineIndia'])->name('seo.ampoule-filling-india');
+Route::get('/pharmaceutical-machinery-manufacturer-ahmedabad-india', [PageController::class, 'pharmaceuticalMachineryManufacturerIndia'])->name('seo.pharma-machinery-india');
 
 Route::prefix('products')->name('products.')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('index');

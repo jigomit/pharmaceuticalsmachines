@@ -5,6 +5,14 @@ import { Link } from '@inertiajs/vue3';
 
 const props = defineProps<{ industries: any[] }>();
 const list = props.industries;
+const industryRoutes: Record<string, { label: string; href: string }> = {
+    pharmaceutical: { label: 'Injectable liquid filling', href: '/products/injectable-liquid-filling' },
+    biotech: { label: 'Sterile vial filling', href: '/products/injectable-liquid-filling/automatic-vial-filling-machine' },
+    nutraceutical: { label: 'Dry syrup & powder lines', href: '/products/injectable-powder-filling' },
+    cosmetics: { label: 'Ointment and cream plants', href: '/products/ointment-cream-plants' },
+    ayurvedic: { label: 'Liquid syrup manufacturing', href: '/products/liquid-syrup-plants' },
+    veterinary: { label: 'Washing and filling lines', href: '/products/washing-machines' },
+};
 </script>
 
 <template>
@@ -30,6 +38,14 @@ const list = props.industries;
                     <div class="p-6">
                         <h2 class="font-heading text-xl font-semibold text-slate-900 group-hover:text-[color:var(--color-brand-accent)]">{{ i.name }}</h2>
                         <p class="mt-3 text-sm leading-6 text-slate-600">{{ i.body }}</p>
+                        <Link
+                            v-if="industryRoutes[i.slug]"
+                            :href="industryRoutes[i.slug].href"
+                            class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[color:var(--color-brand)] hover:text-[color:var(--color-brand-accent)]"
+                        >
+                            {{ industryRoutes[i.slug].label }}
+                            <span aria-hidden="true">→</span>
+                        </Link>
                     </div>
                 </div>
             </ScrollReveal>

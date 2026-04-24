@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SeoHead from '@/Components/SeoHead.vue';
+import { Link } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const faqs = [
@@ -40,6 +41,14 @@ const faqSchema = computed(() => ({
                     </summary>
                     <p class="mt-3 text-sm leading-6 text-slate-600">{{ f.a }}</p>
                 </details>
+            </div>
+            <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Popular machine pages</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <Link href="/products/injectable-liquid-filling/automatic-vial-filling-machine" class="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]">Vial Filling Machine</Link>
+                    <Link href="/products/injectable-liquid-filling/ampoule-filling-sealing-machine" class="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]">Ampoule Filling Machine</Link>
+                    <Link href="/products/washing-machines" class="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]">Pharma Washing Machines</Link>
+                </div>
             </div>
         </div>
     </section>

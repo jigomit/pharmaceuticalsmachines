@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SeoHead from '@/Components/SeoHead.vue';
+import { Link } from '@inertiajs/vue3';
 
 const pillars = [
     { title: 'cGMP Construction', body: 'Every machine is built to current Good Manufacturing Practice — full material traceability, sanitary design, no dead-legs, smooth-finish welds.' },
@@ -53,6 +54,14 @@ const serviceSchema = services.map(s => ({
                     <h2 class="font-heading text-lg font-semibold text-slate-900">{{ p.title }}</h2>
                     <p class="mt-3 text-sm leading-6 text-slate-600">{{ p.body }}</p>
                 </div>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3">
+                <Link href="/products/injectable-liquid-filling/automatic-vial-filling-machine" class="inline-flex items-center rounded-full bg-[color:var(--color-brand)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]">
+                    Vial filling machine specs
+                </Link>
+                <Link href="/products/washing-machines/linear-ampoule-washing-machine" class="inline-flex items-center rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]">
+                    Ampoule washing line
+                </Link>
             </div>
         </div>
     </section>

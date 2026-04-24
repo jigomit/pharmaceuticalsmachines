@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'seo' => [
+        'google_site_verification' => env('GOOGLE_SITE_VERIFICATION'),
+        'bing_site_verification' => env('BING_SITE_VERIFICATION'),
+        'google_analytics_measurement_id' => env('GOOGLE_ANALYTICS_MEASUREMENT_ID'),
+    ],
+
 ];

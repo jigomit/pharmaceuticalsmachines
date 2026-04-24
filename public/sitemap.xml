@@ -1,356 +1,374 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-    <loc>http://127.0.0.1:8001</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <loc>http://127.0.0.1:8001/</loc>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/about</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/industries</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/quality-compliance</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/clients</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/gallery</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/faq</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/blog</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/contact</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
+    <loc>http://127.0.0.1:8001/vial-filling-machine-manufacturer-india</loc>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8001/ampoule-filling-sealing-machine-manufacturer-india</loc>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8001/pharmaceutical-machinery-manufacturer-ahmedabad-india</loc>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
     <loc>http://127.0.0.1:8001/privacy</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/terms</loc>
-    <lastmod>2026-04-13T09:59:13+00:00</lastmod>
+    <lastmod>2026-04-24T13:19:39+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/washing-machines</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-liquid-filling</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-powder-filling</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/capping-sealing</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/labelling</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/inspection</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tablet-section</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/ointment-cream-plants</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/liquid-syrup-plants</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/packing-conveyors</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/change-parts</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/pharma-furniture</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tray-dryers-storage</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/other-machinery</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/washing-machines/rotary-vial-washing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/washing-machines/linear-ampoule-washing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-24T05:32:42+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/washing-machines/automatic-rotary-bottle-washing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/washing-machines/rubber-bung-washing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-liquid-filling/automatic-vial-filling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-liquid-filling/ampoule-filling-sealing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-liquid-filling/monoblock-vial-filling-stoppering-sealing</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-powder-filling/dry-injection-powder-filling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/injectable-powder-filling/dry-syrup-powder-filling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/capping-sealing/ropp-cap-sealing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/capping-sealing/vial-flip-off-sealing-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/capping-sealing/screw-capping-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/labelling/automatic-sticker-labelling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/labelling/wet-glue-labelling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/labelling/ampoule-sticker-labelling-machine</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/inspection/manual-inspection-booth</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/inspection/semi-automatic-vial-inspection-roller</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tablet-section/single-rotary-mini-tablet-press</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tablet-section/lab-ball-mill</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tablet-section/roll-compactor</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/ointment-cream-plants/vacuum-ointment-manufacturing-plant</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/liquid-syrup-plants/liquid-syrup-manufacturing-plant</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/packing-conveyors/ss-slat-conveyor</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/packing-conveyors/rotary-turn-table</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/pharma-furniture/dynamic-pass-box-hepa</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/pharma-furniture/garment-storage-cabinet</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tray-dryers-storage/hot-air-tray-dryer</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/tray-dryers-storage/ss-storage-vessel</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/change-parts/format-parts-changeover-kits</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/products/other-machinery/rubber-stopper-processor</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/blog/how-to-choose-vial-filling-machine-buyers-guide</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/blog/rotary-vs-linear-vial-washing-machines</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>http://127.0.0.1:8001/blog/cgmp-ss316l-why-material-matters</loc>
-    <lastmod>2026-04-13T09:05:00+00:00</lastmod>
+    <lastmod>2026-04-23T06:57:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
             </url>

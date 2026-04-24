@@ -69,7 +69,11 @@ const bento = computed(() => {
 </script>
 
 <template>
-    <SeoHead description="Pharmaceutical machinery manufacturer since 1991. Vial filling, ampoule sealing, washing, capping, labelling, tablet press — cGMP built in Ahmedabad, India." />
+    <SeoHead
+        title="Kailash Machine Tools - Pharmaceutical Machinery Manufacturer in India"
+        description="Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, India. Explore vial filling, ampoule filling, washing, capping, labelling and turnkey pharma lines."
+        keywords="kailash machine tools, pharmaceutical machinery manufacturer india, vial filling machine manufacturer, ampoule filling machine, pharma industry machines"
+    />
 
     <Head>
         <link rel="preload" as="image" :href="heroImages.primary" />

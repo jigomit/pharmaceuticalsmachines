@@ -19,6 +19,7 @@ class GenerateSitemap extends Command
     public function handle(): int
     {
         $sitemap = Sitemap::create();
+        $baseUrl = rtrim((string) config('app.url', url('/')), '/');
 
         $staticRoutes = [
             ['url' => '/', 'priority' => 1.0, 'changefreq' => Url::CHANGE_FREQUENCY_WEEKLY],
@@ -31,40 +32,43 @@ class GenerateSitemap extends Command
             ['url' => '/faq', 'priority' => 0.7, 'changefreq' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/blog', 'priority' => 0.7, 'changefreq' => Url::CHANGE_FREQUENCY_WEEKLY],
             ['url' => '/contact', 'priority' => 0.8, 'changefreq' => Url::CHANGE_FREQUENCY_YEARLY],
+            ['url' => '/vial-filling-machine-manufacturer-india', 'priority' => 0.8, 'changefreq' => Url::CHANGE_FREQUENCY_MONTHLY],
+            ['url' => '/ampoule-filling-sealing-machine-manufacturer-india', 'priority' => 0.8, 'changefreq' => Url::CHANGE_FREQUENCY_MONTHLY],
+            ['url' => '/pharmaceutical-machinery-manufacturer-ahmedabad-india', 'priority' => 0.85, 'changefreq' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/privacy', 'priority' => 0.3, 'changefreq' => Url::CHANGE_FREQUENCY_YEARLY],
             ['url' => '/terms', 'priority' => 0.3, 'changefreq' => Url::CHANGE_FREQUENCY_YEARLY],
         ];
 
         foreach ($staticRoutes as $r) {
             $sitemap->add(
-                Url::create($r['url'])
+                Url::create($baseUrl.$r['url'])
                     ->setPriority($r['priority'])
                     ->setChangeFrequency($r['changefreq'])
                     ->setLastModificationDate(Carbon::now()),
             );
         }
 
-        Category::where('is_active', true)->each(function (Category $c) use ($sitemap) {
+        Category::where('is_active', true)->each(function (Category $c) use ($sitemap, $baseUrl) {
             $sitemap->add(
-                Url::create("/products/{$c->slug}")
+                Url::create("{$baseUrl}/products/{$c->slug}")
                     ->setPriority(0.85)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setLastModificationDate($c->updated_at),
             );
         });
 
-        Product::where('is_active', true)->with('category:id,slug')->each(function (Product $p) use ($sitemap) {
+        Product::where('is_active', true)->with('category:id,slug')->each(function (Product $p) use ($sitemap, $baseUrl) {
             $sitemap->add(
-                Url::create("/products/{$p->category->slug}/{$p->slug}")
+                Url::create("{$baseUrl}/products/{$p->category->slug}/{$p->slug}")
                     ->setPriority(0.8)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
                     ->setLastModificationDate($p->updated_at),
             );
         });
 
-        BlogPost::published()->each(function (BlogPost $post) use ($sitemap) {
+        BlogPost::published()->each(function (BlogPost $post) use ($sitemap, $baseUrl) {
             $sitemap->add(
-                Url::create("/blog/{$post->slug}")
+                Url::create("{$baseUrl}/blog/{$post->slug}")
                     ->setPriority(0.7)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
                     ->setLastModificationDate($post->updated_at),
@@ -76,7 +80,7 @@ class GenerateSitemap extends Command
 
         // Ping search engines (only in production with a real APP_URL).
         if (app()->environment('production')) {
-            $sitemapUrl = url('/sitemap.xml');
+            $sitemapUrl = "{$baseUrl}/sitemap.xml";
             $pings = [
                 'Google' => "https://www.google.com/ping?sitemap={$sitemapUrl}",
                 'Bing'   => "https://www.bing.com/ping?sitemap={$sitemapUrl}",

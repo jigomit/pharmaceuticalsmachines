@@ -87,6 +87,13 @@ const timeline = [
                     <p class="rev mt-6 text-base leading-8 text-slate-600">
                         Every machine we ship is built to be measurable, serviceable and validatable for two decades after commissioning. We don't just deliver equipment — we deliver regulatory peace of mind.
                     </p>
+                    <p class="rev mt-4 text-sm leading-7 text-slate-600">
+                        Explore our core lines for
+                        <Link href="/products/injectable-liquid-filling" class="font-semibold text-[color:var(--color-brand)] hover:text-[color:var(--color-brand-accent)]">vial and ampoule filling machines</Link>,
+                        <Link href="/products/washing-machines" class="font-semibold text-[color:var(--color-brand)] hover:text-[color:var(--color-brand-accent)]">pharmaceutical washing machines</Link>,
+                        and
+                        <Link href="/products/capping-sealing" class="font-semibold text-[color:var(--color-brand)] hover:text-[color:var(--color-brand-accent)]">capping and sealing machines</Link>.
+                    </p>
                     <div class="rev mt-10">
                         <h3 class="font-heading text-xl font-semibold text-slate-900">What we stand for</h3>
                         <ul class="mt-4 space-y-4 text-sm leading-6 text-slate-700">
