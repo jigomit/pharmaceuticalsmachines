@@ -12,7 +12,7 @@ class ClientSeeder extends Seeder
         $clients = [
             ['name' => 'Zydus Lifesciences', 'logo' => '/images/brand/ZYDUS.jpeg', 'industry' => 'Pharmaceuticals', 'country' => 'India'],
             ['name' => 'Torrent Pharma', 'logo' => '/images/brand/torrent-pharma.png', 'industry' => 'Pharmaceuticals', 'country' => 'India'],
-            ['name' => 'Cadila Healthcare', 'industry' => 'Pharmaceuticals', 'country' => 'India'],
+            ['name' => 'Cadila Healthcare', 'logo' => '/images/brand/cadila-healthcare.jpg', 'industry' => 'Pharmaceuticals', 'country' => 'India'],
             ['name' => 'Intas Pharmaceuticals', 'logo' => '/images/brand/Intas-Pharma.webp', 'industry' => 'Pharmaceuticals', 'country' => 'India'],
             ['name' => 'Claris Lifesciences', 'logo' => '/images/brand/claris.jpeg', 'industry' => 'Injectables', 'country' => 'India'],
             ['name' => 'Sun Pharma', 'logo' => '/images/brand/sun-pharma.png', 'industry' => 'Pharmaceuticals', 'country' => 'India'],

@@ -22,6 +22,7 @@ class RecentEnquiries extends TableWidget
             ->columns([
                 TextColumn::make('created_at')
                     ->label('Received')
+                    ->timezone('Asia/Kolkata')
                     ->dateTime('d M Y, h:i A'),
                 TextColumn::make('name')
                     ->searchable()

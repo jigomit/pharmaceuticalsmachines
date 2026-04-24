@@ -117,6 +117,16 @@ const globalSchema = computed(() => ({
         <SiteFooter />
 
         <a
+            :href="`tel:${company?.phone?.replace(/\s/g, '')}`"
+            class="fixed bottom-22 right-5 z-40 inline-flex size-14 items-center justify-center rounded-full bg-[color:var(--color-brand)] text-white shadow-lg shadow-slate-900/20 transition hover:scale-105 md:hidden"
+            aria-label="Call us"
+        >
+            <svg class="size-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.2a1 1 0 01.98.804l.74 3.699a1 1 0 01-.272.93l-1.53 1.53a16 16 0 006.91 6.91l1.53-1.53a1 1 0 01.93-.272l3.699.74A1 1 0 0121 16.8V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+
+        <a
             :href="`https://wa.me/${company?.whatsapp}?text=${encodeURIComponent('Hello, I would like to enquire about your pharmaceutical machinery.')}`"
             target="_blank"
             rel="noopener"

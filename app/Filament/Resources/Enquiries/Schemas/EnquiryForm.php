@@ -19,13 +19,15 @@ class EnquiryForm
                     ->label('Product enquired about')
                     ->relationship('product', 'name')
                     ->searchable()
-                    ->preload(),
-                TextInput::make('name')->required(),
-                TextInput::make('email')->email()->required(),
-                TextInput::make('phone')->tel()->required(),
-                TextInput::make('company'),
-                TextInput::make('country'),
-                Textarea::make('message')->required()->columnSpanFull()->rows(5),
+                    ->preload()
+                    ->extraFieldWrapperAttributes(['class' => 'kmt-product-select-no-clear'])
+                    ->disabledOn('edit'),
+                TextInput::make('name')->required()->disabledOn('edit'),
+                TextInput::make('email')->email()->required()->disabledOn('edit'),
+                TextInput::make('phone')->tel()->required()->disabledOn('edit'),
+                TextInput::make('company')->disabledOn('edit'),
+                TextInput::make('country')->disabledOn('edit'),
+                Textarea::make('message')->required()->columnSpanFull()->rows(5)->disabledOn('edit'),
             ])->columns(2),
 
             Section::make('Pipeline')->schema([

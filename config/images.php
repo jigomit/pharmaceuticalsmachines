@@ -29,11 +29,11 @@ $LIB = [
     'rotary_vial_3'      => "{$dir}/WhatsApp Image 2026-04-15 at 5.04.55 PM.jpeg", // rotary vial washing machine third image updated
     'linear_bottle_1'    => "{$dir}/Gemini_Generated_Image_xu9u3xu9u3xu9u3x.png", // linear ampoule washing machine updated image
     'linear_ampoule_2'   => "{$dir}/WhatsApp Image 2026-04-15 at 6.09.31 PM.jpeg", // linear ampoule washing machine second image updated
-    'linear_ampoule_3'   => "{$dir}/Linear-Ampoule-3.jpg",                    // linear ampoule washing machine third image
+    'linear_ampoule_3'   => "{$dir}/result_0.jpeg",                             // linear ampoule washing machine third image (replaces Linear-Ampoule-3.jpg)
     'auto_rotary_bottle_2' => "{$dir}/automatic-rotary-bottle-washing-2.jpg", // automatic rotary bottle washing machine second image
     'auto_rotary_bottle_1' => "{$dir}/Gemini_Generated_Image_20lzv720lzv720lz.png", // automatic rotary bottle washing machine first image updated
     'auto_rotary_bottle_3' => "{$dir}/Rotary-Bottle-Washing-Machine-3.jpg",   // automatic rotary bottle washing machine third image
-    'rubber_aluminium_2' => "{$dir}/rubber-aluminium-horizontal-2.webp",      // rubber bung washing machine (legacy)
+    'rubber_aluminium_2' => "{$dir}/Veterinary-image.png",                     // replacement for missing legacy file
     'rubber_stop_2' => "{$dir}/rubber-bung-stoper-2.jpg",                     // rubber bung washing machine second image
     'rubber_bung_1' => "{$dir}/Rubber Bung Washing Machine-1.png",             // rubber bung washing machine first image updated
     'rubber_bung_3' => "{$dir}/Rubber-Bung-Washing-3.png",                    // rubber bung washing machine third image
@@ -50,7 +50,7 @@ $LIB = [
     'ropp_cap_2' => "{$dir}/ropp-machine-2.jpeg",                            // ropp cap sealing machine second image updated
     'ropp_cap_3' => "{$dir}/ropp-machine-3.jpeg",                            // ropp cap sealing machine third image updated
     'automatic_vial_1' => "{$dir}/automatic-vial-filling-machine-1.png",      // automatic vial filling machine hero
-    'vial_filling_3' => "{$dir}/vial-filling-with-3.jpg",                       // automatic vial filling machine gallery 3
+    'vial_filling_3' => "{$dir}/home-vial-filling.jpg",                         // replacement for missing gallery file
     'automatic_vial_3' => "{$dir}/Ampoule Filling-3.png",                       // automatic vial filling machine updated third image
     'ampoule_filling_1' => "{$dir}/Ampoule-filling-2.png",                     // ampoule filling & sealing machine hero
     'ampoule_filling_2' => "{$dir}/Automatic-Six-Head-2.webp",                 // ampoule filling & sealing machine second image
@@ -132,6 +132,9 @@ $LIB = [
     'industry_pharmaceutical_1' => "{$dir}/industry-pharmaceutical.jpg",         // industries page pharmaceutical
     'industry_biotech_1' => "{$dir}/industry-biotech-biosimilars.jpg",           // industries page biotech
     'industry_nutraceutical_1' => "{$dir}/industry-nutraceutical.webp",          // industries page nutraceutical
+    'industry_cosmetics_1' => "{$dir}/cosmetics-personalcare.png",               // industries page cosmetics & personal care
+    'industry_ayurvedic_1' => "{$dir}/ayurvedi-herbal.png",                      // industries page ayurvedic / herbal
+    'industry_veterinary_1' => "{$dir}/Veterinary-image.png",                    // industries page veterinary
     'home_shree_ganesh' => "{$dir}/home-shree-ganesh.png",                       // homepage feature card image
 ];
 
@@ -179,9 +182,9 @@ return [
         'pharmaceutical' => $LIB['industry_pharmaceutical_1'],
         'biotech'        => $LIB['industry_biotech_1'],
         'nutraceutical'  => $LIB['industry_nutraceutical_1'],
-        'cosmetics'      => $LIB['tube_filler'],
-        'ayurvedic'      => $LIB['packing_division'],
-        'veterinary'     => $LIB['induction_sealer'],
+        'cosmetics'      => $LIB['industry_cosmetics_1'],
+        'ayurvedic'      => $LIB['industry_ayurvedic_1'],
+        'veterinary'     => $LIB['industry_veterinary_1'],
     ],
 
     // === PRODUCT HERO IMAGES (slug → URL) ======================

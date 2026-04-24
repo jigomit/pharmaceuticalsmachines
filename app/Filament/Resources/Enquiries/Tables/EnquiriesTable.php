@@ -17,6 +17,7 @@ class EnquiriesTable
             ->columns([
                 TextColumn::make('created_at')
                     ->label('Received')
+                    ->timezone('Asia/Kolkata')
                     ->dateTime('d M Y H:i')
                     ->sortable(),
                 TextColumn::make('name')

@@ -62,9 +62,12 @@ const isActive = (href: string) => {
             <div class="flex items-center gap-3">
                 <a
                     :href="`tel:${company?.phone?.replace(/\s/g, '')}`"
-                    class="hidden font-mono text-xs tracking-wider text-[color:var(--color-brand)] md:inline"
+                    class="hidden md:inline-flex size-9 items-center justify-center rounded-full border border-[color:var(--color-brand)]/20 text-[color:var(--color-brand)] transition hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]"
+                    aria-label="Call us"
                 >
-                    {{ company?.phone }}
+                    <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.2a1 1 0 01.98.804l.74 3.699a1 1 0 01-.272.93l-1.53 1.53a16 16 0 006.91 6.91l1.53-1.53a1 1 0 01.93-.272l3.699.74A1 1 0 0121 16.8V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
                 </a>
                 <Link
                     href="/contact"
