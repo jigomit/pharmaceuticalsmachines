@@ -119,13 +119,13 @@ const timeline = [
                 <div class="absolute inset-y-0 left-5 w-px bg-gradient-to-b from-teal-400 via-slate-300 to-transparent sm:left-1/2" />
                 <ScrollReveal :stagger="0.12" :y="30" target=".tline">
                     <ul class="space-y-10">
-                        <li v-for="(t, i) in timeline" :key="i" class="tline relative grid gap-4 sm:grid-cols-2">
-                            <div :class="i % 2 === 0 ? 'sm:pr-10 sm:text-right' : 'sm:col-start-2 sm:pl-10'">
+                        <li v-for="(t, i) in timeline" :key="i" class="tline relative grid gap-4 pl-12 sm:grid-cols-2 sm:pl-0">
+                            <div :class="i % 2 === 0 ? 'text-left sm:pr-10 sm:text-right' : 'text-left sm:col-start-2 sm:pl-10'">
                                 <span class="font-heading text-sm font-semibold uppercase tracking-widest text-[color:var(--color-brand-accent)]">{{ t.year }}</span>
                                 <h3 class="mt-1 font-heading text-xl font-semibold text-slate-900">{{ t.title }}</h3>
                                 <p class="mt-2 text-sm leading-6 text-slate-600">{{ t.body }}</p>
                             </div>
-                            <div class="absolute left-5 top-1 size-4 -translate-x-1/2 rounded-full border-4 border-white bg-[color:var(--color-brand-accent)] shadow-lg sm:left-1/2" />
+                            <div class="absolute left-5 top-2 size-4 -translate-x-1/2 rounded-full border-4 border-white bg-[color:var(--color-brand-accent)] shadow-lg sm:left-1/2" />
                         </li>
                     </ul>
                 </ScrollReveal>

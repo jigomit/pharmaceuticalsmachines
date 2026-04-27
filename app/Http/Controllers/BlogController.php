@@ -7,6 +7,9 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+
+
+
 class BlogController extends Controller
 {
     public function index(): Response

@@ -393,8 +393,24 @@ const bento = computed(() => {
         </div>
         <div class="mt-8">
             <InfiniteMarquee :speed="50">
-                <div v-for="c in clients" :key="c.id" class="flex h-14 items-center justify-center rounded-lg border border-slate-200 bg-white px-8 text-sm font-semibold tracking-wider text-slate-600 grayscale transition hover:grayscale-0">
-                    {{ c.name }}
+                <div
+                    v-for="c in clients"
+                    :key="c.id"
+                    class="flex h-20 min-w-[190px] items-center justify-center rounded-lg border border-slate-200 bg-white px-6 shadow-sm transition"
+                >
+                    <img
+                        v-if="c.logo"
+                        :src="c.logo"
+                        :alt="c.name"
+                        class="h-12 w-auto max-w-[150px] object-contain"
+                        loading="lazy"
+                    >
+                    <span
+                        v-else
+                        class="text-sm font-semibold tracking-wider text-slate-600"
+                    >
+                        {{ c.name }}
+                    </span>
                 </div>
             </InfiniteMarquee>
         </div>
