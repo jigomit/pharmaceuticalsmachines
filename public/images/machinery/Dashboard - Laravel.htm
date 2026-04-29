@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://firesafty.test/admin -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Fire Shield Services provides fire hydrant, sprinkler, detection systems, AMC, safety training, and approval support for industrial and commercial facilities.">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Laravel">
+        <link rel="canonical" href="http://firesafty.test/admin">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Laravel">
+        <meta property="og:title" content="Laravel">
+        <meta property="og:description" content="Industrial and commercial fire safety solutions including installation, compliance support, maintenance, and training.">
+        <meta property="og:url" content="http://firesafty.test/admin">
+        <meta property="og:image" content="http://firesafty.test/Untitled%20design%20(21).png">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Laravel">
+        <meta name="twitter:description" content="Fire safety systems, approvals, AMC, and training support by Fire Shield Services.">
+        <meta name="twitter:image" content="http://firesafty.test/Untitled%20design%20(21).png">
+        <script type="application/ld+json">
+            {"<?php $__contextArgs = [];\nif (context()->has($__contextArgs[0])) :\nif (isset($value)) { $__contextPrevious[] = $value; }\n$value = context()->get($__contextArgs[0]); ?>":"https://schema.org","@type":"LocalBusiness","name":"Laravel","url":"http://firesafty.test","image":"http://firesafty.test/Untitled%20design%20(21).png","telephone":"+91 73597 47409","email":"fireshieldservices01@gmail.com","address":{"@type":"PostalAddress","streetAddress":"M4/29, Swatantra Senani Nagar, Pragatinagar, Naranpura","addressLocality":"Ahmedabad","addressRegion":"Gujarat","postalCode":"380013","addressCountry":"IN"},"areaServed":[{"@type":"City","name":"Ahmedabad"},{"@type":"State","name":"Gujarat"}],"serviceType":["Fire safety system installation services in Ahmedabad","Fire hydrant and sprinkler installation company in Gujarat","Fire NOC approval consultant in Ahmedabad","Annual fire safety maintenance contract in Gujarat","Fire safety training and AMC services for businesses"]}
+        </script>
+
+        <title inertia="">Dashboard - Laravel</title>
+
+        <link rel="icon" href="http://firesafty.test/Untitled%20design%20(18).png" type="image/png">
+        <link rel="apple-touch-icon" href="http://firesafty.test/Untitled%20design%20(18).png">
+
+        <link rel="preload" as="style" href="./Dashboard - Laravel_files/app-1scBC8dD.css"><link rel="preload" as="style" href="./Dashboard - Laravel_files/AdminLayout-C98zoq5w.css"><link rel="modulepreload" as="script" href="./Dashboard - Laravel_files/app-C-YvvEwF.js"><link rel="modulepreload" as="script" href="./Dashboard - Laravel_files/Dashboard-ClmfQLRs.js"><link rel="modulepreload" as="script" href="http://firesafty.test/build/assets/AdminLayout-BiIf0J6y.js"><link rel="modulepreload" as="script" href="http://firesafty.test/build/assets/_plugin-vue_export-helper-DlAUqK2U.js"><link rel="stylesheet" href="./Dashboard - Laravel_files/app-1scBC8dD.css"><link rel="stylesheet" href="./Dashboard - Laravel_files/AdminLayout-C98zoq5w.css"><script type="module" src="./Dashboard - Laravel_files/app-C-YvvEwF.js"></script><script type="module" src="./Dashboard - Laravel_files/Dashboard-ClmfQLRs.js"></script>            <script id="browser-logger-active">
+(function() {
+    const ENDPOINT = 'http://firesafty.test/_boost/browser-logs';
+    const logQueue = [];
+    let flushTimeout = null;
+
+    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
+
+    // Store original console methods
+    const originalConsole = {
+        log: console.log,
+        info: console.info,
+        error: console.error,
+        warn: console.warn,
+        table: console.table
+    };
+
+    // Helper to safely stringify values
+    function safeStringify(obj) {
+        const seen = new WeakSet();
+        return JSON.stringify(obj, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+                if (seen.has(value)) return '[Circular]';
+                seen.add(value);
+            }
+            if (value instanceof Error) {
+                return {
+                    name: value.name,
+                    message: value.message,
+                    stack: value.stack
+                };
+            }
+            return value;
+        });
+    }
+
+    // Batch and send logs
+    function flushLogs() {
+        if (logQueue.length === 0) return;
+
+        const batch = logQueue.splice(0, logQueue.length);
+
+        fetch(ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ logs: batch })
+        }).catch(err => {
+            // Silently fail to avoid infinite loops
+            originalConsole.error('Failed to send logs:', err);
+        });
+    }
+
+    // Debounced flush (100ms)
+    function scheduleFlush() {
+        if (flushTimeout) clearTimeout(flushTimeout);
+        flushTimeout = setTimeout(flushLogs, 100);
+    }
+
+    // Intercept console methods
+    ['log', 'info', 'error', 'warn', 'table'].forEach(method => {
+        console[method] = function(...args) {
+            // Call original method
+            originalConsole[method].apply(console, args);
+
+            // Capture log data
+            try {
+                logQueue.push({
+                    type: method,
+                    timestamp: new Date().toISOString(),
+                    data: args.map(arg => {
+                        try {
+                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
+                        } catch (e) {
+                            return String(arg);
+                        }
+                    }),
+                    url: window.location.href,
+                    userAgent: navigator.userAgent
+                });
+
+                scheduleFlush();
+            } catch (e) {
+                // Fail silently
+            }
+        };
+    });
+
+    // Global error handlers for uncaught errors
+    const originalOnError = window.onerror;
+    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
+        try {
+            logQueue.push({
+                type: 'uncaught_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: errorMsg,
+                    filename: url,
+                    lineno: lineNumber,
+                    colno: colNumber,
+                    error: error ? {
+                        name: error.name,
+                        message: error.message,
+                        stack: error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Call original handler if it exists
+        if (originalOnError && typeof originalOnError === 'function') {
+            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
+        }
+
+        // Let the error continue to propagate
+        return false;
+    }
+    window.addEventListener('error', (event) => {
+        try {
+            logQueue.push({
+                type: 'window_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: event.message,
+                    filename: event.filename,
+                    lineno: event.lineno,
+                    colno: event.colno,
+                    error: event.error ? {
+                        name: event.error.name,
+                        message: event.error.message,
+                        stack: event.error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the error continue to propagate
+        return false;
+    });
+    window.addEventListener('unhandledrejection', (event) => {
+        try {
+            logQueue.push({
+                type: 'error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: 'Unhandled Promise Rejection',
+                    reason: event.reason instanceof Error ? {
+                        name: event.reason.name,
+                        message: event.reason.message,
+                        stack: event.reason.stack
+                    } : event.reason
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the rejection continue to propagate
+        return false;
+    });
+
+    // Flush on page unload
+    window.addEventListener('beforeunload', () => {
+        if (logQueue.length > 0) {
+            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
+        }
+    });
+})();
+</script>
+<link rel="modulepreload" as="script" crossorigin="" href="./Dashboard - Laravel_files/Dashboard-ClmfQLRs.js"><link rel="modulepreload" as="script" crossorigin="" href="http://firesafty.test/build/assets/AdminLayout-BiIf0J6y.js"><link rel="modulepreload" as="script" crossorigin="" href="http://firesafty.test/build/assets/_plugin-vue_export-helper-DlAUqK2U.js"><link rel="stylesheet" crossorigin="" href="./Dashboard - Laravel_files/AdminLayout-C98zoq5w.css"><style>
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: #e52421;
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #e52421, 0 0 5px #e52421;
+      opacity: 1.0;
+
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: #e52421;
+      border-left-color: #e52421;
+      border-radius: 50%;
+
+      animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style><meta content="noindex, nofollow" name="robots" inertia="robots"></head>
+    <body class="font-sans antialiased">
+        <div id="app" data-page="{&quot;component&quot;:&quot;Admin\/Dashboard&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;name&quot;:&quot;Laravel&quot;,&quot;seo&quot;:{&quot;appUrl&quot;:&quot;http:\/\/firesafty.test&quot;,&quot;ogImageUrl&quot;:&quot;http:\/\/firesafty.test\/Untitled%20design%20(21).png&quot;},&quot;auth&quot;:{&quot;user&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Administrator&quot;,&quot;email&quot;:&quot;dhaval48@gmail.com&quot;,&quot;email_verified_at&quot;:null,&quot;created_at&quot;:&quot;2026-04-28T05:12:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2026-04-28T05:20:28.000000Z&quot;,&quot;is_admin&quot;:true}},&quot;flash&quot;:{&quot;success&quot;:null},&quot;stats&quot;:{&quot;total_inquiries&quot;:2,&quot;inquiries_last_7_days&quot;:2,&quot;inquiries_today&quot;:0},&quot;seriesByDay&quot;:[{&quot;date&quot;:&quot;2026-03-31&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-01&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-02&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-03&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-04&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-05&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-06&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-07&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-08&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-09&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-10&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-11&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-12&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-13&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-14&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-15&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-16&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-17&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-18&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-19&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-20&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-21&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-22&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-23&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-24&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-25&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-26&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-27&quot;,&quot;count&quot;:0},{&quot;date&quot;:&quot;2026-04-28&quot;,&quot;count&quot;:2},{&quot;date&quot;:&quot;2026-04-29&quot;,&quot;count&quot;:0}],&quot;seriesByService&quot;:[{&quot;label&quot;:&quot;Fire Pump Room System Setup&quot;,&quot;count&quot;:1},{&quot;label&quot;:&quot;Fire Hydrant System Installation&quot;,&quot;count&quot;:1}],&quot;recentInquiries&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;da5tyeruyeyjruffufjjfj&quot;,&quot;email&quot;:&quot;mayurprajapati123@gmail.com&quot;,&quot;phone&quot;:&quot;2005200555&quot;,&quot;service&quot;:&quot;Fire Pump Room System Setup&quot;,&quot;created_at&quot;:&quot;28 Apr 2026, 07:14&quot;},{&quot;id&quot;:1,&quot;name&quot;:&quot;patel&quot;,&quot;email&quot;:&quot;anamika23@gmail.com&quot;,&quot;phone&quot;:&quot;0987654321&quot;,&quot;service&quot;:&quot;Fire Hydrant System Installation&quot;,&quot;created_at&quot;:&quot;28 Apr 2026, 06:19&quot;}]},&quot;url&quot;:&quot;\/admin&quot;,&quot;version&quot;:&quot;a02ed6d2283f476025d5268847db9dba&quot;,&quot;clearHistory&quot;:false,&quot;encryptHistory&quot;:false}" data-v-app=""><!----><div data-v-d82f8ba6="" class="min-h-screen bg-brand-ivory font-sans text-brand-black lg:h-screen lg:max-h-screen lg:overflow-hidden"><div data-v-d82f8ba6="" class="mx-auto flex min-h-screen max-w-[110rem] flex-col lg:h-full lg:min-h-0 lg:flex-row lg:overflow-hidden"><aside data-v-d82f8ba6="" class="hidden h-full w-60 shrink-0 overflow-hidden border-r border-black/10 bg-brand-charcoal lg:flex lg:flex-col"><div data-v-d82f8ba6="" class="flex h-full flex-col px-4 py-4 text-white"><div class="flex items-start justify-start pb-3"><img src="./Dashboard - Laravel_files/fireshield (1).png" alt="Fire Shield Services logo" class="h-12 w-auto max-w-full object-contain"></div><nav class="flex flex-col gap-1.5"><a class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium transition bg-white/12 text-white" href="http://firesafty.test/admin"><span>Dashboard</span><span class="h-2 w-2 rounded-full bg-brand-red opacity-0 transition group-hover:opacity-80 opacity-100"></span></a><a class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium transition text-white/80 hover:bg-white/8 hover:text-white" href="http://firesafty.test/admin/quote-inquiries"><span>Get a Quote Inquiry</span><span class="h-2 w-2 rounded-full bg-brand-red opacity-0 transition group-hover:opacity-80"></span></a></nav></div></aside><div data-v-d82f8ba6="" class="flex min-h-screen flex-1 flex-col lg:min-h-0 lg:h-full lg:overflow-hidden"><header data-v-d82f8ba6="" class="sticky top-0 z-30 flex shrink-0 items-center justify-between gap-4 border-b border-black/10 bg-white/92 px-4 py-4 shadow-brand/10 backdrop-blur lg:static lg:top-auto lg:px-8"><div class="flex items-center gap-3"><button class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white text-brand-charcoal transition hover:border-brand-red/25 hover:text-brand-red-deep lg:hidden" type="button" aria-label="Open menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg></button><div><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/55 uppercase"> Admin </p><p class="mt-0.5 text-base font-semibold tracking-tight text-brand-black">Dashboard</p></div></div><details class="group relative"><summary class="flex cursor-pointer list-none items-center gap-3 rounded-xl border border-black/10 bg-white px-3 py-2 transition hover:border-black/20"><div class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-charcoal text-xs font-semibold text-white">A</div><div class="text-left leading-tight"><p class="text-xs font-semibold text-brand-black">Administrator</p><p class="text-[0.65rem] font-medium tracking-wide text-brand-charcoal/50 uppercase"> Admin </p></div><svg class="h-4 w-4 text-brand-charcoal/55 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="absolute right-0 z-40 mt-2 w-40 rounded-xl border border-black/10 bg-white p-2 shadow-xl"><form action="http://firesafty.test/admin/logout" method="post"><button class="w-full rounded-lg px-3 py-2 text-left text-xs font-semibold tracking-wide text-brand-red uppercase transition hover:bg-brand-red/10" type="submit"> Log out </button></form></div></details></header><main data-v-d82f8ba6="" class="flex-1 px-4 py-7 lg:min-h-0 lg:overflow-y-auto lg:px-8 lg:py-9"><div><p class="text-sm leading-relaxed text-brand-charcoal/75"> Overview of quote requests from your public site. </p><div class="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3"><article class="rounded-[1.25rem] border border-black/8 bg-white p-6 shadow-sm"><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/58 uppercase">Total inquiries</p><p class="mt-3 text-3xl font-semibold tracking-tight text-brand-black">2</p><p class="mt-2 text-xs leading-relaxed text-brand-charcoal/65">All-time submissions</p></article><article class="rounded-[1.25rem] border border-black/8 bg-white p-6 shadow-sm"><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/58 uppercase">Last 7 days</p><p class="mt-3 text-3xl font-semibold tracking-tight text-brand-black">2</p><p class="mt-2 text-xs leading-relaxed text-brand-charcoal/65">Recent demand signal</p></article><article class="rounded-[1.25rem] border border-black/8 bg-white p-6 shadow-sm"><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/58 uppercase">Today</p><p class="mt-3 text-3xl font-semibold tracking-tight text-brand-black">0</p><p class="mt-2 text-xs leading-relaxed text-brand-charcoal/65">Since midnight</p></article></div><div class="mt-6 grid gap-4 xl:grid-cols-[1.6fr_1fr]"><section class="rounded-[1.25rem] border border-black/8 bg-white p-6 shadow-sm"><div class="flex flex-wrap items-end justify-between gap-3"><div><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/58 uppercase"> Trend </p><h2 class="mt-1 text-base font-semibold text-brand-black"> Inquiries (last 30 days) </h2></div><a class="text-sm font-semibold text-brand-red transition hover:text-brand-red-deep" href="http://firesafty.test/admin/quote-inquiries"> View inquiries </a></div><div class="mt-5 h-64"><canvas role="img" width="1790" height="512" style="display: block; box-sizing: border-box; height: 256px; width: 895px;"><p></p></canvas></div></section><section class="rounded-[1.25rem] border border-black/8 bg-white p-6 shadow-sm"><p class="text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/58 uppercase"> Breakdown </p><h2 class="mt-1 text-base font-semibold text-brand-black"> Inquiries by service </h2><div class="mt-5 h-64"><canvas role="img" width="1790" height="512" style="display: block; box-sizing: border-box; height: 256px; width: 895px;"><p></p></canvas></div></section></div><div class="mt-10"><div class="flex items-end justify-between gap-4"><h2 class="text-lg font-semibold text-brand-black">Recent inquiries</h2><a class="text-sm font-semibold text-brand-red transition hover:text-brand-red-deep" href="http://firesafty.test/admin/quote-inquiries"> View all </a></div><div class="mt-4 overflow-hidden rounded-[1.25rem] border border-black/8 bg-white shadow-sm"><table class="min-w-full divide-y divide-black/8 text-left text-sm"><thead class="bg-brand-cream/55 text-[0.65rem] font-semibold tracking-[0.22em] text-brand-charcoal/72 uppercase"><tr><th class="px-4 py-3">Customer</th><th class="hidden px-4 py-3 md:table-cell">Service</th><th class="hidden px-4 py-3 lg:table-cell">Contact</th><th class="px-4 py-3">Date</th></tr></thead><tbody class="divide-y divide-black/8 text-brand-black"><tr class="align-top"><td class="px-4 py-3"><p class="font-medium">da5tyeruyeyjruffufjjfj</p><p class="mt-1 text-xs text-brand-charcoal/65 md:hidden">Fire Pump Room System Setup</p></td><td class="hidden px-4 py-3 text-xs md:table-cell">Fire Pump Room System Setup</td><td class="hidden px-4 py-3 text-xs lg:table-cell"><span class="block">mayurprajapati123@gmail.com</span><span class="mt-1 block text-brand-charcoal/70">2005200555</span></td><td class="whitespace-nowrap px-4 py-3 text-xs text-brand-charcoal/75">28 Apr 2026, 07:14</td></tr><tr class="align-top"><td class="px-4 py-3"><p class="font-medium">patel</p><p class="mt-1 text-xs text-brand-charcoal/65 md:hidden">Fire Hydrant System Installation</p></td><td class="hidden px-4 py-3 text-xs md:table-cell">Fire Hydrant System Installation</td><td class="hidden px-4 py-3 text-xs lg:table-cell"><span class="block">anamika23@gmail.com</span><span class="mt-1 block text-brand-charcoal/70">0987654321</span></td><td class="whitespace-nowrap px-4 py-3 text-xs text-brand-charcoal/75">28 Apr 2026, 06:19</td></tr></tbody></table><!----></div></div></div></main></div></div><!----><!----></div></div>    
+
+</body></html>
