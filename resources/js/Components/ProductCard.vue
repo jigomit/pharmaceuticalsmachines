@@ -30,6 +30,7 @@ defineProps<{
                 :alt="product.name + ' manufacturer — Kailash Machine Tools Ahmedabad'"
                 :loading="eager ? 'eager' : 'lazy'"
                 :fetchpriority="eager ? 'high' : 'auto'"
+                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 46vw, 92vw"
                 width="800"
                 height="600"
                 class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"

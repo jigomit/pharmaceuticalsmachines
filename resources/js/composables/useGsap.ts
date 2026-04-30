@@ -24,10 +24,21 @@ export function useGsap(): GsapHandle {
         if (typeof window === 'undefined') return;
 
         reducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reducedMotion.value) {
+        const smallScreen = window.matchMedia('(max-width: 1023px)').matches;
+        if (reducedMotion.value || smallScreen) {
             ready.value = true;
             return;
         }
+
+        // Keep GSAP/ScrollTrigger off the critical rendering path.
+        await new Promise<void>((resolve) => {
+            const ric = (window as Window & { requestIdleCallback?: (cb: () => void) => void }).requestIdleCallback;
+            if (ric) {
+                ric(() => resolve());
+            } else {
+                window.setTimeout(() => resolve(), 1);
+            }
+        });
 
         const [gsapMod, stMod] = await Promise.all([
             import('gsap'),
@@ -35,6 +46,10 @@ export function useGsap(): GsapHandle {
         ]);
 
         gsapMod.gsap.registerPlugin(stMod.ScrollTrigger);
+        stMod.ScrollTrigger.config({
+            ignoreMobileResize: true,
+            limitCallbacks: true,
+        });
         gsap.value = gsapMod.gsap;
         ScrollTrigger.value = stMod.ScrollTrigger;
         ready.value = true;

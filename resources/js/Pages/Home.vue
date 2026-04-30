@@ -76,7 +76,13 @@ const bento = computed(() => {
     />
 
     <Head>
-        <link rel="preload" as="image" :href="heroImages.primary" />
+        <link
+            rel="preload"
+            as="image"
+            :href="heroImages.primary"
+            :imagesrcset="heroImages.primary"
+            imagesizes="100vw"
+        />
     </Head>
 
     <!-- CINEMATIC HERO ============================================== -->
@@ -88,6 +94,7 @@ const bento = computed(() => {
                 alt="Pharmaceutical machinery manufacturer Kailash Machine Tools — vial filling line at Ahmedabad factory"
                 class="size-full object-cover ken-burns"
                 fetchpriority="high"
+                loading="eager"
                 decoding="async"
                 width="1800" height="1200"
                 sizes="100vw"
@@ -153,6 +160,7 @@ const bento = computed(() => {
                                 width="800"
                                 height="600"
                                 loading="eager"
+                                sizes="(min-width: 1024px) 36vw, 92vw"
                             />
                         </div>
                         <div class="mt-5 grid grid-cols-2 gap-3">
@@ -270,6 +278,7 @@ const bento = computed(() => {
                         :class="['absolute inset-0 size-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110', c.tall ? 'aspect-auto' : 'aspect-[16/10]']"
                         loading="lazy"
                         width="1200" height="800"
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
                     <div class="relative flex h-full min-h-[220px] flex-col justify-end p-6">
@@ -436,7 +445,16 @@ const bento = computed(() => {
             <ScrollReveal :stagger="0.1" :y="30" target=".post" class="mt-12 grid gap-6 lg:grid-cols-3">
                 <Link v-for="post in latestPosts" :key="post.id" :href="`/blog/${post.slug}`" class="post group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-[var(--shadow-brand)]">
                     <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
-                        <img v-if="post.hero_image" :src="post.hero_image" :alt="post.title" class="size-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" width="800" height="500" />
+                        <img
+                            v-if="post.hero_image"
+                            :src="post.hero_image"
+                            :alt="post.title"
+                            class="size-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy"
+                            width="800"
+                            height="500"
+                            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
+                        />
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-teal-600">
