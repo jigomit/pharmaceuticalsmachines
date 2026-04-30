@@ -14,8 +14,8 @@ withDefaults(
 <template>
     <span :class="['inline-flex items-center gap-2.5', $props.class]">
         <img
-            src="/images/brand/kmt-logo.png"
-            srcset="/images/brand/kmt-logo.png 1x, /images/brand/kmt-logo-2x.png 2x"
+            src="/images/brand/kmt-logo.optimized.webp"
+            srcset="/images/brand/kmt-logo.optimized.webp 1x, /images/brand/kmt-logo-2x.optimized.webp 2x"
             alt="Kailash Machine Tools"
             width="56"
             height="38"

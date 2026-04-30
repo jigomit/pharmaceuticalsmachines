@@ -26,7 +26,7 @@ const props = withDefaults(
         stagger: 0.08,
         start: 'top 80%',
         once: true,
-        target: '> *',
+        target: ':scope > *',
     },
 );
 
@@ -36,7 +36,13 @@ const { gsap, ScrollTrigger, ready, reducedMotion } = useGsap();
 const play = () => {
     if (!root.value || !gsap.value || !ScrollTrigger.value) return;
 
-    const targets = root.value.querySelectorAll(props.target);
+    let targets: Element[] = [];
+    try {
+        targets = Array.from(root.value.querySelectorAll(props.target));
+    } catch {
+        // Fallback for selector parsing edge-cases in some browsers.
+        targets = Array.from(root.value.children);
+    }
     if (!targets.length) return;
 
     gsap.value.set(targets, { opacity: 0, y: props.y, x: props.x, scale: props.scale });

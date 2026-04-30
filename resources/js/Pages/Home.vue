@@ -145,8 +145,15 @@ const bento = computed(() => {
                 <div v-motion :initial="{ opacity: 0, scale: 0.92, y: 40 }" :enter="{ opacity: 1, scale: 1, y: 0, transition: { duration: 1200, delay: 400 } }" class="relative">
                     <div class="glass-dark relative rounded-3xl p-6 shadow-2xl">
                         <!-- secondary image inside card -->
-                        <div class="overflow-hidden rounded-2xl">
-                            <img :src="heroImages.secondary" alt="Filled pharmaceutical vials on a cGMP production line" class="h-[280px] w-full object-contain bg-slate-900/40 sm:h-[320px] lg:h-[360px]" width="800" height="600" loading="eager" />
+                        <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                            <img
+                                :src="heroImages.secondary"
+                                alt="Filled pharmaceutical vials on a cGMP production line"
+                                class="size-full object-contain object-center"
+                                width="800"
+                                height="600"
+                                loading="eager"
+                            />
                         </div>
                         <div class="mt-5 grid grid-cols-2 gap-3">
                             <div class="rounded-xl border border-white/10 bg-white/5 p-4">
