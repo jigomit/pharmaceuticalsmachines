@@ -6,6 +6,7 @@ import { computed } from 'vue';
 
 const page = usePage();
 const company = computed(() => (page.props as any).company);
+const mapQuery = 'E 502, Radhey Residency, 3, Vatva, Ahmedabad, Gujarat 382445, India';
 </script>
 
 <template>
@@ -66,7 +67,7 @@ const company = computed(() => (page.props as any).company);
 
             <div class="mt-12 overflow-hidden rounded-3xl border border-slate-200">
                 <iframe
-                    src="https://www.google.com/maps?q=22.947000,72.626100&z=15&output=embed"
+                    :src="`https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=17&output=embed`"
                     class="h-96 w-full"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"

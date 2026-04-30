@@ -19,6 +19,7 @@ const addr = computed(() => ({
     postalCode: company.value?.address?.postal_code,
     addressCountry: company.value?.address?.country,
 }));
+const mapQuery = 'E 502, Radhey Residency, 3, Vatva, Ahmedabad, Gujarat 382445, India';
 
 const globalSchema = computed(() => ({
     '@context': 'https://schema.org',
@@ -84,7 +85,7 @@ const globalSchema = computed(() => ({
                 { '@type': 'Country', name: 'Vietnam' },
                 { '@type': 'Country', name: 'Indonesia' },
             ],
-            hasMap: 'https://www.google.com/maps?q=22.947,72.6261',
+            hasMap: `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}`,
         },
         {
             '@type': 'WebSite',
