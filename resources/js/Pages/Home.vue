@@ -76,13 +76,7 @@ const bento = computed(() => {
     />
 
     <Head>
-        <link
-            rel="preload"
-            as="image"
-            :href="heroImages.primary"
-            :imagesrcset="heroImages.primary"
-            imagesizes="100vw"
-        />
+        <link rel="preload" as="image" :href="heroImages.primary" fetchpriority="high" />
     </Head>
 
     <!-- CINEMATIC HERO ============================================== -->
