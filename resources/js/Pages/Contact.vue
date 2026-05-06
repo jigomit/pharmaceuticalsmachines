@@ -21,7 +21,7 @@ const mapQuery = 'E 502, Radhey Residency, 3, Vatva, Ahmedabad, Gujarat 382445, 
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">Contact</p>
             <h1 class="mt-3 max-w-4xl text-4xl font-semibold sm:text-5xl">Let's design the right line for your product.</h1>
             <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-200">Share your product, batch size and target output — our application engineers will come back with a machine specification within 48 hours.</p>
-        </div>
+        </div>       
     </section>
 
     <section class="py-16">
