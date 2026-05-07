@@ -135,7 +135,7 @@ $LIB = [
     'industry_cosmetics_1' => "{$dir}/cosmetics-personalcare.optimized.webp",               // industries page cosmetics & personal care
     'industry_ayurvedic_1' => "{$dir}/ayurvedi-herbal.optimized.webp",                      // industries page ayurvedic / herbal
     'industry_veterinary_1' => "{$dir}/Veterinary-image.optimized.webp",                    // industries page veterinary
-    'home_shree_ganesh' => "{$dir}/home-shree-ganesh.optimized.webp",            // homepage feature card optimized image
+    'home_shree_ganesh' => "{$dir}/home-shree-ganesh.png",                       // homepage feature card image
 ];
 
 return [

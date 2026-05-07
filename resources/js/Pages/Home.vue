@@ -188,7 +188,7 @@ const bento = computed(() => {
     <section class="relative -mt-16 px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-7xl">
             <ScrollReveal :stagger="0.12" :y="24" target=".stat-card">
-                <div class="glass grid divide-x divide-slate-200 overflow-hidden rounded-3xl shadow-xl md:grid-cols-4">
+                <div class="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl md:grid-cols-4 md:divide-x md:divide-slate-200">
                     <div v-for="(s, i) in stats" :key="i" class="stat-card p-8 text-center">
                         <div class="font-heading text-4xl font-semibold text-[color:var(--color-brand)] sm:text-5xl">
                             <AnimatedCounter :to="s.to" :suffix="s.suffix" />
