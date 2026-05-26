@@ -27,7 +27,7 @@ withDefaults(
                 Kailash Machine Tools
             </span>
             <span :class="['mt-0.5 text-[9px] font-semibold uppercase tracking-[0.2em]', light ? 'text-teal-300' : 'text-teal-600']">
-                Since 1991
+                Since 1989
             </span>
         </span>
     </span>

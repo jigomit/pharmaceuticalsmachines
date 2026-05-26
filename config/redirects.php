@@ -38,4 +38,15 @@ return [
     // Legacy WordPress index pages
     '/machines' => '/products',
     '/product' => '/products',
+
+    // Product slug changes
+    '/products/washing-machines/automatic-servo-ampoule-vials-pfs-washing-machine' => '/products/washing-machines/automatic-round-bottle-sticker-labelling-machine',
+    '/products/washing-machines/automatic-servo-pfs-washing-machine' => '/products/washing-machines/automatic-round-bottle-sticker-labelling-machine',
+    '/products/washing-machines/automatic-ampoule-vials-washing-machine' => '/products/washing-machines/automatic-tunnel-type-rotary-vial-washing-machine',
+    '/products/injectable-liquid-filling/automatic-eye-drop-filling-capping-sealing-machine' => '/products/injectable-liquid-filling/automatic-eye-drop-filling-sealing-machine',
+    '/products/injectable-powder-filling/semi-automatic-auger-powder-filling-machine' => '/products/injectable-powder-filling/semi-type-single-head-machine',
+    '/products/capping-sealing/vial-flip-off-sealing-machine' => '/products/capping-sealing/automatic-multi-head-vials-cap-machine',
+    '/products/capping-sealing/automatic-multi-head-vial-cap-sealing-machine' => '/products/capping-sealing/automatic-multi-head-vials-cap-machine',
+    '/products/capping-sealing/Automatic-Multi-Head-Vials-Cap-Machine' => '/products/capping-sealing/automatic-multi-head-vials-cap-machine',
+    '/products/other-machinery/membrane-filter-holder' => '/products/other-machinery/wire-mesh-piston',
 ];

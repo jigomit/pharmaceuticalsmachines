@@ -8,7 +8,7 @@ import { MotionPlugin } from '@vueuse/motion';
 import AppLayout from '@/Layouts/AppLayout.vue';
 
 const appName = 'Kailash Machine Tools';
-const defaultTitle = `${appName} — Pharmaceutical Machinery Manufacturer Since 1991`;
+const defaultTitle = `${appName} — Pharmaceutical Machinery Manufacturer Since 1989`;
 const formatTitle = (title?: string) => {
     if (!title) return defaultTitle;
     // Avoid brand duplication: only append " | appName" if title doesn't already include it.

@@ -24,24 +24,51 @@ $LIB = [
     'packing_division'   => "{$dir}/pharma-packing-division.optimized.webp",             // pharma packing area
     'finished_goods'     => "{$dir}/pharma-finished-goods.optimized.webp",               // pharma finished goods
     'washing_machine'    => "{$dir}/washing-machine.optimized.webp", // washing machine optimized image
+    'vial_outer_wash_1'  => "{$dir}/vial-washing-machine.jpg", // vial outer washing machine hero
     'rotary_vial'        => "{$dir}/rotry-vial-1.optimized.webp",             // rotary vial washing machine optimized
     'rotary_vial_2'      => "{$dir}/ROTARY-VIAL-WASHING-2.webp",              // rotary vial washing machine alt
     'rotary_vial_3'      => "{$dir}/WhatsApp Image 2026-04-15 at 5.04.55 PM.optimized.webp", // rotary vial washing machine third image updated
     'linear_bottle_1'    => "{$dir}/Gemini_Generated_Image_xu9u3xu9u3xu9u3x.optimized.webp", // linear ampoule washing machine updated image
+    'high_speed_linear_vial_1' => "{$dir}/High-Speed-Linear-Vial-Washing-1.png",             // high speed linear vial washing machine hero
+    'high_speed_linear_vial_2' => "{$dir}/High-Speed-Linear-Vial-Washing-2.png",             // high speed linear vial washing machine second image
+    'high_speed_linear_vial_3' => "{$dir}/High-Speed-Linear-Vial-Washing-3.png",             // high speed linear vial washing machine third image
     'linear_ampoule_2'   => "{$dir}/WhatsApp Image 2026-04-15 at 6.09.31 PM.optimized.webp", // linear ampoule washing machine second image updated
     'linear_ampoule_3'   => "{$dir}/result_0.optimized.webp",                             // linear ampoule washing machine third image (replaces Linear-Ampoule-3.jpg)
     'auto_rotary_bottle_2' => "{$dir}/automatic-rotary-bottle-washing-2.optimized.webp", // automatic rotary bottle washing machine second image
     'auto_rotary_bottle_1' => "{$dir}/Gemini_Generated_Image_20lzv720lzv720lz.optimized.webp", // automatic rotary bottle washing machine first image updated
     'auto_rotary_bottle_3' => "{$dir}/Rotary-Bottle-Washing-Machine-3.optimized.webp",   // automatic rotary bottle washing machine third image
+    'auto_rotary_ampoule_vial_1' => "{$dir}/AUTOMATIC-ROTARY-VIAL-WASHING-MACHINE.jpg",  // automatic rotary ampoule vial washing machine hero
+    'auto_rotary_ampoule_vial_2' => "{$dir}/Automatic-Rotary-2.jpg",                      // automatic rotary ampoule vial washing machine second image
+    'auto_rotary_ampoule_vial_3' => "{$dir}/Automatic-Rotary-3.png",                      // automatic rotary ampoule vial washing machine third image
+    'multi_jet_ampoule_1' => "{$dir}/multi-jet-ampoule-1.jpg",                            // multi jet ampoule vial washing machine hero
+    'multi_jet_ampoule_2' => "{$dir}/Multi Jet Ampoule-2.png",                            // multi jet ampoule vial washing machine second image
+    'multi_jet_ampoule_3' => "{$dir}/Multi-Jet-3.png",                                    // multi jet ampoule vial washing machine third image
+    'round_bottle_sticker_1' => "{$dir}/AUTOMATIC ROUND BOTTLE STICKER LABELLING MACHINE.jpg (2).jpeg", // replacement hero for renamed slug
+    'round_bottle_sticker_2' => "{$dir}/Automatic-Round-Bottle-Sticker-Labelling-2.jpeg",               // replacement gallery image 2
+    'round_bottle_sticker_3' => "{$dir}/Automatic-Round-Bottle-Sticker-Labelling-3.jpeg",               // replacement gallery image 3
     'rubber_aluminium_2' => "{$dir}/Veterinary-image.optimized.webp",                     // replacement for missing legacy file
-    'rubber_stop_2' => "{$dir}/rubber-bung-stoper-2.optimized.webp",                     // rubber bung washing machine second image
-    'rubber_bung_1' => "{$dir}/Rubber Bung Washing Machine-1.optimized.webp",             // rubber bung washing machine first image updated
-    'rubber_bung_3' => "{$dir}/Rubber-Bung-Washing-3.optimized.webp",                    // rubber bung washing machine third image
+    'rubber_stop_2' => "{$dir}/rubber-bung-stoper-2.optimized.webp",                     // rubber bung washing machine second image (legacy)
+    'rubber_bung_1' => "{$dir}/Rubber-bung-1.jpeg",                                      // rubber bung washing machine hero
+    'rubber_bung_2' => "{$dir}/Rubber-bung-2.jpeg",                                      // rubber bung washing machine second image
+    'rubber_bung_3' => "{$dir}/rubber-bung-3.jpg",                                       // rubber bung washing machine third image
     'injectable_liquid_1' => "{$dir}/injectable-liquid-1.optimized.webp",   // injectable liquid filling category optimized
+    'eye_drop_fill_1' => "{$dir}/AUTOMATIC EYE DROP FILLING MACHINE.jpg (1).jpeg",       // automatic eye drop filling sealing machine hero
+    'servo_vials_liquid_fill_1' => "{$dir}/INLINER BOTTLE FILLING MACHINE LINEAR LIQUID FILLING MACHINE.jpg.jpeg", // automatic servo vials liquid filling machine hero
+    'servo_bottle_liquid_fill_1' => "{$dir}/Automatic-Servo-Bottle-Liquid-Filling-Machine.png", // automatic servo bottle liquid filling machine hero
+    'tunnel_rotary_vial_1' => "{$dir}/Automatic Linear Roatry vials  Washing Machine  Model  120 (1).png", // tunnel type rotary vial washing machine hero
+    'online_vial_inspection_1' => "{$dir}/Online Vials visual Inspection Machine (1).png", // online vial cap inspection machine hero
+    'online_vials_cap_inspection_1' => "{$dir}/online-vial-powder-machine.jpg", // online vials cap inspection machine hero
+    'tube_fill_1' => "{$dir}/SEMI AUTOMATIC TUBE FILLING MACHINE (1).webp",                // semi automatic tube filling machine hero
+    'wire_mesh_piston_1' => "{$dir}/WIRE MESH PISTON (2).jpeg",                            // wire mesh piston hero
     'injectable_powder_1' => "{$dir}/injectable-powder.optimized.webp",     // injectable powder filling category optimized
     'dry_injection_powder_1' => "{$dir}/dry-powder-1.optimized.webp",                 // dry injection powder filling machine hero updated
     'dry_injection_powder_2' => "{$dir}/dry-powder-2.optimized.webp",                  // dry injection powder filling machine second image updated
     'dry_injection_powder_3' => "{$dir}/dry-machine-3-ezremove.optimized.webp",        // dry injection powder filling machine third image updated
+    'auger_powder_1' => "{$dir}/Auger-Powder-Filling-Machine.jpg",                     // automatic auger powder filling machine hero
+    'automatic_auger_powder_new_1' => "{$dir}/automatic-servo-make-augur-type-powder-filling-machine-dryfill-60-twin.jpg", // automatic auger powder filling machine updated hero
+    'auger_powder_2' => "{$dir}/Automatic Servo Auger-1.jpeg",                         // automatic auger powder filling machine second image
+    'auger_powder_3' => "{$dir}/Automatic Servo Auger-2.webp",                         // automatic auger powder filling machine third image
+    'semi_type_single_head_auger_1' => "{$dir}/semi-automatic-powder-machine.jpeg",   // semi type single head auger type powder filling machine hero
     'dry_syrup_powder_1' => "{$dir}/dry-syrup-1.optimized.webp",                       // dry syrup powder filling machine hero updated
     'dry_syrup_powder_2' => "{$dir}/dry-syrup-2.optimized.webp",                      // dry syrup powder filling machine second image updated
     'dry_syrup_powder_3' => "{$dir}/dry-syrup-3.optimized.webp",                      // dry syrup powder filling machine third image updated
@@ -61,6 +88,7 @@ $LIB = [
     'vial_flip_off_1' => "{$dir}/vial-filling-1.optimized.webp",                          // vial flip off sealing machine hero updated
     'vial_flip_off_2' => "{$dir}/vial-ripper-2.optimized.webp",                          // vial flip off sealing machine second image updated
     'vial_flip_off_3' => "{$dir}/vial-flip-3.avif",                            // vial flip off sealing machine third image updated
+    'multi_head_vials_cap_machine_1' => "{$dir}/AUTOMATIC MULTI HEAD VIALS CAP SEALING MACHINE (1).png", // automatic multi head vials cap machine hero
     'screw_cap_1' => "{$dir}/screw-capping-1.optimized.webp",                             // screw capping machine hero updated
     'screw_cap_2' => "{$dir}/screw-cap-2.optimized.webp",                                // screw capping machine second image
     'screw_cap_3' => "{$dir}/screw-capping-3.optimized.webp",                             // screw capping machine third image updated
@@ -193,22 +221,33 @@ return [
     'product' => [
         // Washing — closest pharma-machine shots
         'rotary-vial-washing-machine'              => $LIB['rotary_vial'],
+        'vial-outer-washing-machine'               => $LIB['vial_outer_wash_1'],
         'linear-ampoule-washing-machine'           => $LIB['linear_bottle_1'],
         'automatic-rotary-bottle-washing-machine'  => $LIB['auto_rotary_bottle_1'],
+        'automatic-rotary-ampoule-vial-washing-machine' => $LIB['auto_rotary_ampoule_vial_1'],
+        'high-speed-linear-vial-washing-machine'   => $LIB['high_speed_linear_vial_1'],
+        'multi-jet-ampoule-vial-washing-machine'   => $LIB['multi_jet_ampoule_1'],
+        'automatic-round-bottle-sticker-labelling-machine' => $LIB['round_bottle_sticker_1'],
+        'automatic-tunnel-type-rotary-vial-washing-machine' => $LIB['tunnel_rotary_vial_1'],
         'rubber-bung-washing-machine'              => $LIB['rubber_bung_1'],
 
         // Liquid Filling
         'automatic-vial-filling-machine'            => $LIB['automatic_vial_1'],
         'ampoule-filling-sealing-machine'           => $LIB['ampoule_filling_1'],
         'monoblock-vial-filling-stoppering-sealing' => $LIB['monoblock_vial_1'],
+        'automatic-eye-drop-filling-sealing-machine' => $LIB['eye_drop_fill_1'],
+        'automatic-servo-vials-liquid-filling-machine' => $LIB['servo_vials_liquid_fill_1'],
+        'automatic-servo-bottle-liquid-filling-machine' => $LIB['servo_bottle_liquid_fill_1'],
 
         // Powder Filling
-        'dry-injection-powder-filling-machine' => $LIB['dry_injection_powder_1'],
-        'dry-syrup-powder-filling-machine'     => $LIB['dry_syrup_powder_1'],
+        'dry-injection-powder-filling-machine'      => $LIB['dry_injection_powder_1'],
+        'dry-syrup-powder-filling-machine'           => $LIB['dry_syrup_powder_1'],
+        'automatic-auger-powder-filling-machine'     => $LIB['automatic_auger_powder_new_1'],
+        'semi-type-single-head-machine'              => $LIB['semi_type_single_head_auger_1'],
 
         // Capping / Sealing — use real sealer
         'ropp-cap-sealing-machine'       => $LIB['ropp_cap_1'],
-        'vial-flip-off-sealing-machine'  => $LIB['vial_flip_off_1'],
+        'automatic-multi-head-vials-cap-machine' => $LIB['multi_head_vials_cap_machine_1'],
         'screw-capping-machine'          => $LIB['screw_cap_1'],
 
         // Labelling — use real labelling line
@@ -219,6 +258,8 @@ return [
         // Inspection
         'manual-inspection-booth'               => $LIB['manual_ampoule_1'],
         'semi-automatic-vial-inspection-roller' => $LIB['semi_auto_visual_1'],
+        'online-vial-cap-inspection-machine'    => $LIB['online_vial_inspection_1'],
+        'online-vials-cap-inspection-machine'   => $LIB['online_vials_cap_inspection_1'],
 
         // Tablet section
         'single-rotary-mini-tablet-press' => $LIB['single_rotary_mini_1'],
@@ -247,6 +288,8 @@ return [
         'garment-storage-cabinet' => $LIB['garment_storage_1'],
 
         // Other
+        'tube-filling-sealing-machine' => $LIB['tube_fill_1'],
+        'wire-mesh-piston' => $LIB['wire_mesh_piston_1'],
         'rubber-stopper-processor' => $LIB['rubber_stopper_1'],
     ],
 
@@ -257,22 +300,44 @@ return [
             $LIB['rotary_vial_2'],
             $LIB['rotary_vial_3'],
         ],
+        'vial-outer-washing-machine' => [],
         'linear-ampoule-washing-machine' => [
             $LIB['linear_ampoule_2'],
             $LIB['linear_ampoule_3'],
         ],
+        'high-speed-linear-vial-washing-machine' => [
+            $LIB['high_speed_linear_vial_2'],
+            $LIB['high_speed_linear_vial_3'],
+        ],
+        'multi-jet-ampoule-vial-washing-machine' => [
+            $LIB['multi_jet_ampoule_2'],
+            $LIB['multi_jet_ampoule_3'],
+        ],
+        'automatic-tunnel-type-rotary-vial-washing-machine' => [],
+        'automatic-servo-vials-liquid-filling-machine' => [],
+        'automatic-servo-bottle-liquid-filling-machine' => [],
+        'automatic-round-bottle-sticker-labelling-machine' => [],
+        'online-vial-cap-inspection-machine' => [],
+        'online-vials-cap-inspection-machine' => [],
+        'tube-filling-sealing-machine' => [],
+        'wire-mesh-piston' => [],
         'automatic-rotary-bottle-washing-machine' => [
             $LIB['auto_rotary_bottle_2'],
             $LIB['auto_rotary_bottle_3'],
         ],
+        'automatic-rotary-ampoule-vial-washing-machine' => [
+            $LIB['auto_rotary_ampoule_vial_2'],
+            $LIB['auto_rotary_ampoule_vial_3'],
+        ],
         'rubber-bung-washing-machine' => [
-            $LIB['rubber_stop_2'],
+            $LIB['rubber_bung_2'],
             $LIB['rubber_bung_3'],
         ],
         'automatic-vial-filling-machine' => [
             $LIB['pharma_line'],
             $LIB['automatic_vial_3'],
         ],
+        'automatic-eye-drop-filling-sealing-machine' => [],
         'ampoule-filling-sealing-machine' => [
             $LIB['ampoule_filling_2'],
             $LIB['ampoule_filling_3'],
@@ -289,10 +354,9 @@ return [
             $LIB['dry_syrup_powder_2'],
             $LIB['dry_syrup_powder_3'],
         ],
-        'vial-flip-off-sealing-machine' => [
-            $LIB['vial_flip_off_2'],
-            $LIB['vial_flip_off_3'],
-        ],
+        'automatic-auger-powder-filling-machine' => [],
+        'semi-type-single-head-machine' => [],
+        'automatic-multi-head-vials-cap-machine' => [],
         'ropp-cap-sealing-machine' => [
             $LIB['ropp_cap_2'],
             $LIB['ropp_cap_3'],

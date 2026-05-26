@@ -16,5 +16,5 @@ Explore Our Machinery
 Warm regards,
 **Kailash Machine Tools Team**
 
-*Precision Pharma Machinery, Engineered Since 1991*
+*Speeding Up Your Production, Scaling Up Your Success — Since 1989*
 </x-mail::message>

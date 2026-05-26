@@ -15,6 +15,15 @@ const maskedPhone = computed(() => {
     let pointer = 0;
     return phone.replace(/\d/g, () => maskedDigits[pointer++] ?? 'X');
 });
+const maskedPhoneAlt = computed(() => {
+    const phone = String(company.value?.phone_alt ?? '');
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length < 4) return phone;
+
+    const maskedDigits = `${digits.slice(0, -4)}XXXX`;
+    let pointer = 0;
+    return phone.replace(/\d/g, () => maskedDigits[pointer++] ?? 'X');
+});
 
 const cols = [
     {
@@ -72,7 +81,7 @@ const cols = [
                 <div class="lg:col-span-2">
                     <KmtLogo light />
                     <p class="mt-4 text-sm leading-6 text-slate-300">
-                        {{ company?.tagline }}. Leading manufacturer and exporter of injectable &amp; packaging line pharmaceutical machinery from Ahmedabad, India — trusted since 1991.
+                        {{ company?.tagline }} {{ company?.subtitle }} from Ahmedabad, India — trusted since {{ company?.founded ?? 1989 }}.
                     </p>
                     <p class="mt-4 text-xs uppercase tracking-widest text-teal-300">
                         Formerly Shree Ganesh Pharmatech
@@ -103,6 +112,7 @@ const cols = [
                     <h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Phone &amp; WhatsApp</h3>
                     <div class="mt-3 space-y-1.5 text-sm">
                         <a :href="`tel:${company?.phone?.replace(/\s/g, '')}`" class="block font-semibold text-teal-300 hover:text-white">{{ maskedPhone }}</a>
+                        <a v-if="company?.phone_alt" :href="`tel:${company?.phone_alt?.replace(/\s/g, '')}`" class="block text-slate-300 hover:text-white">{{ maskedPhoneAlt }}</a>
                         <a :href="`https://wa.me/${company?.whatsapp}`" target="_blank" rel="noopener" class="block text-slate-300 hover:text-white">WhatsApp · Mon–Sat 10–7 IST</a>
                     </div>
                 </div>
@@ -110,6 +120,7 @@ const cols = [
                     <h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Email</h3>
                     <div class="mt-3 space-y-1.5 text-sm">
                         <a :href="`mailto:${company?.email}`" class="block text-slate-300 hover:text-white">{{ company?.email }}</a>
+                        <a v-if="company?.email_alt" :href="`mailto:${company?.email_alt}`" class="block text-slate-300 hover:text-white">{{ company?.email_alt }}</a>
                         <p class="text-xs text-slate-400">Responses within 24 business hours</p>
                     </div>
                 </div>

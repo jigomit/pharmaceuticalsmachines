@@ -110,7 +110,7 @@ const bento = computed(() => {
                         <span class="absolute inline-flex size-full animate-ping rounded-full bg-teal-300 opacity-75"></span>
                         <span class="relative inline-flex size-2 rounded-full bg-teal-300"></span>
                     </span>
-                    Engineering since 1991 · Formerly Shree Ganesh Pharmatech
+                    Engineering since 1989 · Formerly Shree Ganesh Pharmatech
                 </span>
                 <h1 v-motion :initial="{ opacity: 0, y: 24 }" :enter="{ opacity: 1, y: 0, transition: { duration: 900, delay: 100 } }" class="mt-7 font-heading text-balance text-[2.75rem] leading-[0.95] sm:text-6xl lg:text-[5rem]">
                     Precision <span class="text-gradient-brand">pharmaceutical</span><br>

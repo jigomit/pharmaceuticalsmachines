@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             BlogPostSeeder::class,
             ImageSeeder::class,
+            ExportCountrySeeder::class,
         ]);
     }
 }

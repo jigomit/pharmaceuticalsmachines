@@ -16,7 +16,7 @@ const industryRoutes: Record<string, { label: string; href: string }> = {
 </script>
 
 <template>
-    <SeoHead title="Industries — Pharma, Biotech, Nutraceutical, Cosmetics" description="Pharmaceutical, biotech, nutraceutical, cosmetic, veterinary and Ayurvedic manufacturers we serve — since 1991, from Ahmedabad India." />
+    <SeoHead title="Industries — Pharma, Biotech, Nutraceutical, Cosmetics" description="Pharmaceutical, biotech, nutraceutical, cosmetic, veterinary and Ayurvedic manufacturers we serve — since 1989, from Ahmedabad India." />
 
     <section class="relative isolate overflow-hidden text-white">
         <div class="mesh-hero-animated absolute inset-0" />

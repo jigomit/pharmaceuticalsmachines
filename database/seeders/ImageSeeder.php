@@ -23,7 +23,8 @@ class ImageSeeder extends Seeder
             $hero = Image::forProduct($p->slug, $catSlug);
 
             // Optional per-product gallery override (keeps hero first).
-            $override = config("images.product_gallery.{$p->slug}", []);
+            $hasOverride = config()->has("images.product_gallery.{$p->slug}");
+            $override = config("images.product_gallery.{$p->slug}");
 
             // 3 supporting images = hero + 2 sibling gallery shots
             $gallery = Image::gallery();
@@ -35,7 +36,7 @@ class ImageSeeder extends Seeder
 
             $images = array_values(array_unique(array_filter(array_merge([$hero], is_array($override) ? $override : []))));
 
-            if (count($images) < 3) {
+            if (! $hasOverride && count($images) < 3) {
                 $needed = 3 - count($images);
                 $fallback = collect($gallery)
                     ->reject(fn ($u) => in_array($u, $images, true))

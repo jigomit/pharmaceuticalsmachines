@@ -10,7 +10,7 @@ defineProps<{
 }>();
 
 const timeline = [
-    { year: '1991', title: 'Kailash Machine Tools founded', body: 'Mr. Hitesh Mevada opens a precision workshop in Ahmedabad focused on pharmaceutical tooling.' },
+    { year: '1989', title: 'Kailash Machine Tools founded', body: 'Founded by the visionary Late Shri Chandubhai Mevada, establishing a benchmark in the pharmaceutical machinery industry built on integrity and technical mastery.' },
     { year: '2002', title: 'Expansion into injectable lines', body: 'First ampoule filling & sealing machines delivered to mid-tier Indian pharma manufacturers.' },
     { year: '2010', title: 'Export markets opened', body: 'Installations in Middle East, Southeast Asia and East Africa begin.' },
     { year: '2016', title: 'Shree Ganesh Pharmatech era', body: 'Re-branded as Shree Ganesh Pharmatech; product range expanded to complete turnkey lines.' },
@@ -20,8 +20,8 @@ const timeline = [
 
 <template>
     <SeoHead
-        title="About Us — Pharmaceutical Machinery Since 1991"
-        description="Kailash Machine Tools (formerly Shree Ganesh Pharmatech / Ganesh Machine Tools) — Ahmedabad, India manufacturer of injectable & packaging line machinery since 1991."
+        title="About Us — Pharmaceutical Machinery Since 1989"
+        description="Kailash Machine Tools (formerly Shree Ganesh Pharmatech / Ganesh Machine Tools) — Ahmedabad, India manufacturer of injectable & packaging line machinery since 1989."
     />
 
     <!-- HERO with image -->
@@ -37,7 +37,7 @@ const timeline = [
                 Three decades of precision engineering, <span class="text-gradient-brand">now a brand built for the next decade.</span>
             </h1>
             <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-                Kailash Machine Tools is a pharmaceutical machinery manufacturer from Ahmedabad, Gujarat — founded in 1991, previously known as Shree Ganesh Pharmatech, and known across the industry as Ganesh Machine Tools. Today, we combine 34 years of workshop heritage with modern servo automation to deliver cGMP-ready injectable and packaging lines to pharma manufacturers worldwide.
+                Kailash Machine Tools is a premier manufacturer and exporter of pharmaceutical machinery from Ahmedabad, Gujarat — established in 1989 by Late Shri Chandubhai Mevada, previously known as Shree Ganesh Pharmatech. Today, under the leadership of Mr. Hitesh Mevada (Proprietor), we combine 37 years of precision engineering with cutting-edge servo automation to deliver cGMP-ready injectable and packaging lines to pharma manufacturers worldwide.
             </p>
         </div>
     </section>

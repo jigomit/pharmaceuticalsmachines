@@ -46,7 +46,9 @@ const mapQuery = 'E 502, Radhey Residency, 3, Vatva, Ahmedabad, Gujarat 382445, 
                         </address>
                         <div class="mt-5 space-y-2 text-sm">
                             <a :href="`tel:${company?.phone?.replace(/\\s/g,'')}`" class="block font-semibold text-white hover:text-teal-200">{{ company?.phone }}</a>
+                            <a v-if="company?.phone_alt" :href="`tel:${company?.phone_alt?.replace(/\\s/g,'')}`" class="block text-slate-100 hover:text-teal-200">{{ company?.phone_alt }}</a>
                             <a :href="`mailto:${company?.email}`" class="block text-slate-100 hover:text-white">{{ company?.email }}</a>
+                            <a v-if="company?.email_alt" :href="`mailto:${company?.email_alt}`" class="block text-slate-100 hover:text-white">{{ company?.email_alt }}</a>
                         </div>
                     </div>
 
