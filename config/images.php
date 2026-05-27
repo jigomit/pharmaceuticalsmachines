@@ -129,6 +129,9 @@ $LIB = [
     'stainless_steel_1' => "{$dir}/stainless-steel-1.optimized.webp",                      // ss slat conveyor hero
     'stainless_steel_2' => "{$dir}/stainless-steel-2.webp",                     // ss slat conveyor second image
     'stainless_steel_3' => "{$dir}/stainless-steel-3.webp",                     // ss slat conveyor third image
+    'ss_roller_1' => "{$dir}/stainless-steel-roller.jpeg",                      // ss roller conveyor hero
+    'ss_roller_2' => "{$dir}/stainless-steel-roller-2.jpeg",                    // ss roller conveyor second image
+    'ss_roller_3' => "{$dir}/stainless-steel-roller-3.jpg",                     // ss roller conveyor third image
     'rotary_table_1' => "{$dir}/Rotary-table.webp",                             // rotary turn table hero
     'rotary_table_2' => "{$dir}/Rotary-table-1.optimized.webp",                           // rotary turn table second image
     'rotary_table_3' => "{$dir}/Rotary-table-2.webp",                           // rotary turn table third image
@@ -137,7 +140,7 @@ $LIB = [
     'change_parts_2' => "{$dir}/change-parts-2.webp",                           // change parts product second image
     'change_parts_3' => "{$dir}/change-parts-3.webp",                           // change parts product third image
     'pharma_furniture_1' => "{$dir}/pharma-furniture.webp",                     // pharma furniture category image
-    'dynamic_pass_1' => "{$dir}/Dynamic Pass.optimized.webp",                               // dynamic pass box hero
+    'dynamic_pass_1' => "{$dir}/Dynamic-image.jpeg",                                        // dynamic pass box hero
     'dynamic_pass_2' => "{$dir}/Dynamic-pass-1.optimized.webp",                           // dynamic pass box second image
     'dynamic_pass_3' => "{$dir}/Dynamic-pass-2.avif",                           // dynamic pass box third image
     'garment_storage_1' => "{$dir}/garment-process.optimized.webp",                       // garment storage cabinet hero
@@ -274,6 +277,7 @@ return [
 
         // Conveyors
         'ss-slat-conveyor'  => $LIB['stainless_steel_1'],
+        'ss-roller-conveyor' => $LIB['ss_roller_1'],
         'rotary-turn-table' => $LIB['rotary_table_1'],
 
         // Tray dryers / storage
@@ -408,6 +412,10 @@ return [
         'ss-slat-conveyor' => [
             $LIB['stainless_steel_2'],
             $LIB['stainless_steel_3'],
+        ],
+        'ss-roller-conveyor' => [
+            $LIB['ss_roller_2'],
+            $LIB['ss_roller_3'],
         ],
         'rotary-turn-table' => [
             $LIB['rotary_table_2'],

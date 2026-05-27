@@ -591,21 +591,110 @@ class ProductSeeder extends Seeder
                 'category' => 'packing-conveyors',
                 'name' => 'Stainless-Steel Slat Conveyor',
                 'slug' => 'ss-slat-conveyor',
-                'short_description' => 'SS slat-chain conveyor for connecting filling, capping, labelling and packaging stations in pharma lines.',
-                'features' => ['SS 304 frame', 'Variable speed', 'Tool-free belt change', 'Side guides adjustable'],
-                'applications' => ['Line connection between machines'],
-                'specs' => ['Length' => '2 – 6 m', 'Speed' => '0 – 25 m/min'],
+                'short_description' => 'Stainless-steel slat conveyor for smooth transportation of bottles, vials, containers, cartons, and packaged products between pharmaceutical production and packaging machines with SS304 / SS316 GMP construction.',
+                'long_description' => "A Stainless-Steel Slat Conveyor is a durable and hygienic conveying system used in pharmaceutical industries for smooth transportation of bottles, vials, containers, cartons, and packaged products between different production and packaging machines. It is specially designed for continuous operation in GMP-compliant environments.\n\n**Applications**\n- Bottle conveying in filling lines\n- Vial and container transfer\n- Labeling and capping machine connection\n- Inspection and packaging lines\n- Pharmaceutical production automation\n- Material handling in cleanroom areas\n\n**Key Features**\n- SS304 / SS316 stainless steel construction\n- GMP-compliant hygienic design\n- Smooth and continuous product movement\n- Adjustable conveyor speed with VFD\n- Low maintenance and noise-free operation\n- Strong and corrosion-resistant structure\n- Modular and customizable design\n- Easy cleaning and sanitization\n\n**Advantages**\n- Improves production efficiency\n- Reduces manual handling\n- Ensures smooth product flow\n- Suitable for high-speed pharma lines\n- Long-lasting and reliable performance\n\n**Typical Technical Specifications**\n- Material: SS304 / SS316\n- Conveyor Type: Slat Chain Conveyor\n- Speed Control: Variable Frequency Drive (VFD)\n- Application: Pharma, Food, Cosmetic, Chemical\n- Operation: Automatic\n- Chain Material: Stainless Steel / Plastic Slats\n- Conveyor Length: Customizable",
+                'features' => [
+                    'SS304 / SS316 stainless steel construction',
+                    'GMP-compliant hygienic design',
+                    'Smooth and continuous product movement',
+                    'Adjustable conveyor speed with VFD',
+                    'Low maintenance and noise-free operation',
+                    'Strong and corrosion-resistant structure',
+                    'Modular and customizable design',
+                    'Easy cleaning and sanitization',
+                ],
+                'applications' => [
+                    'Bottle conveying in filling lines',
+                    'Vial and container transfer',
+                    'Labeling and capping machine connection',
+                    'Inspection and packaging lines',
+                    'Pharmaceutical production automation',
+                    'Material handling in cleanroom areas',
+                ],
+                'specs' => [
+                    'Material' => 'SS304 / SS316',
+                    'Conveyor Type' => 'Slat Chain Conveyor',
+                    'Speed Control' => 'Variable Frequency Drive (VFD)',
+                    'Application' => 'Pharma, Food, Cosmetic, Chemical',
+                    'Operation' => 'Automatic',
+                    'Chain Material' => 'Stainless Steel / Plastic Slats',
+                    'Conveyor Length' => 'Customizable',
+                ],
                 'sort_order' => 1,
+                'meta_title' => 'Stainless-Steel Slat Conveyor Manufacturer | Pharma Packing Conveyors',
+                'meta_description' => 'SS304 / SS316 stainless-steel slat conveyor for pharmaceutical lines with VFD speed control, GMP hygienic design, and smooth bottle/vial/container transfer.',
+            ],
+            [
+                'category' => 'packing-conveyors',
+                'name' => 'Stainless-Steel Roller Conveyor',
+                'slug' => 'ss-roller-conveyor',
+                'short_description' => 'Stainless-steel roller conveyor for smooth material handling of cartons, bottles, drums, trays, and containers in pharmaceutical packaging lines with SS304 / SS316 GMP construction.',
+                'long_description' => "A Stainless-Steel Roller Conveyor is widely used in pharmaceutical manufacturing and packaging lines for smooth material handling and transportation of cartons, bottles, drums, trays, and containers between different processing machines. These conveyors are designed according to GMP standards to maintain hygiene, durability, and operational efficiency.\n\n**Applications**\n- Pharmaceutical packaging lines\n- Carton and bottle movement\n- Material transfer between machines\n- Inspection and sorting areas\n- Secondary packaging sections\n- Warehouse and dispatch handling\n\n**Key Features**\n- SS304 / SS316 stainless steel construction\n- Corrosion-resistant and hygienic design\n- Smooth roller movement with low noise\n- Heavy-duty load carrying capacity\n- Adjustable height and length options\n- Easy cleaning and maintenance\n- Suitable for cleanroom environments\n- Modular and customizable structure\n\n**Advantages**\n- Improves material flow efficiency\n- Reduces manual handling\n- Minimizes product damage\n- Long operational life\n- Easy integration with pharma machinery\n\n**Typical Technical Specifications**\n- Material: SS304 / SS316\n- Roller Type: Free Roll / Powered Rollers\n- Conveyor Length: Customizable\n- Roller Diameter: 38 mm - 89 mm\n- Load Capacity: As per requirement\n- Application: Pharma, Food, Cosmetic, Chemical\n- Operation: Manual / Motorized",
+                'features' => [
+                    'SS304 / SS316 stainless steel construction',
+                    'Corrosion-resistant and hygienic design',
+                    'Smooth roller movement with low noise',
+                    'Heavy-duty load carrying capacity',
+                    'Adjustable height and length options',
+                    'Easy cleaning and maintenance',
+                    'Suitable for cleanroom environments',
+                    'Modular and customizable structure',
+                ],
+                'applications' => [
+                    'Pharmaceutical packaging lines',
+                    'Carton and bottle movement',
+                    'Material transfer between machines',
+                    'Inspection and sorting areas',
+                    'Secondary packaging sections',
+                    'Warehouse and dispatch handling',
+                ],
+                'specs' => [
+                    'Material' => 'SS304 / SS316',
+                    'Roller Type' => 'Free Roll / Powered Rollers',
+                    'Conveyor Length' => 'Customizable',
+                    'Roller Diameter' => '38 mm – 89 mm',
+                    'Load Capacity' => 'As per requirement',
+                    'Application' => 'Pharma, Food, Cosmetic, Chemical',
+                    'Operation' => 'Manual / Motorized',
+                ],
+                'sort_order' => 3,
+                'meta_title' => 'Stainless-Steel Roller Conveyor Manufacturer | Pharma Packing Conveyors',
+                'meta_description' => 'SS304 / SS316 stainless-steel roller conveyor for pharmaceutical packaging lines with smooth roller movement, customizable length, and GMP-compliant hygienic design.',
             ],
             [
                 'category' => 'packing-conveyors',
                 'name' => 'Rotary Turn Table',
                 'slug' => 'rotary-turn-table',
-                'short_description' => 'SS rotary turn table for bottle accumulation at infeed or outfeed of filling lines.',
-                'features' => ['800/1000/1200 mm diameter', 'Variable speed', 'SS 304 top plate'],
-                'applications' => ['Infeed / outfeed accumulation'],
-                'specs' => ['Diameter' => '800 – 1200 mm'],
+                'short_description' => 'Rotary turn table for smooth movement, collection, feeding, and buffering of bottles, vials, jars, or containers between pharmaceutical packaging machines with SS304 / SS316 GMP construction.',
+                'long_description' => "A Rotary Turn Table is a supporting machine used in pharmaceutical packaging and production lines for smooth movement, collection, feeding, and buffering of bottles, vials, jars, or containers between machines. It helps maintain continuous product flow and reduces manual handling.\n\n**Common Applications in Pharma Industry**\n- Bottle feeding before filling or labeling machines\n- Collection of filled bottles after capping/sealing\n- Buffering products during machine stoppage\n- Product transfer in L shape or U shape conveyor lines\n- Accumulation and unscrambling of vials/bottles\n\n**Key Features**\n- SS304 / SS316 stainless steel GMP construction\n- Adjustable speed with VFD control\n- Smooth and noiseless operation\n- Compact and space-saving design\n- Compatible with round, square, and irregular bottles\n- Height adjustable structure\n- Easy integration with conveyor systems\n- Hygienic and easy-to-clean surface\n\n**Advantages**\n- Improves production efficiency\n- Reduces bottle jams and product damage\n- Maintains continuous line synchronization\n- Minimizes manual labor\n- Suitable for high-speed pharmaceutical lines\n\n**Typical Technical Specifications**\n- Material: SS304 / SS316\n- Diameter: 600 mm - 1500 mm\n- Speed Control: Variable Frequency Drive (VFD)\n- Application: Pharma, Food, Cosmetic, Chemical\n- Operation: Automatic / Semi-Automatic\n- Bottle Type: Round, Square, Oval",
+                'features' => [
+                    'SS304 / SS316 stainless steel GMP construction',
+                    'Adjustable speed with VFD control',
+                    'Smooth and noiseless operation',
+                    'Compact and space-saving design',
+                    'Compatible with round, square, and irregular bottles',
+                    'Height adjustable structure',
+                    'Easy integration with conveyor systems',
+                    'Hygienic and easy-to-clean surface',
+                ],
+                'applications' => [
+                    'Bottle feeding before filling or labeling machines',
+                    'Collection of filled bottles after capping/sealing',
+                    'Buffering products during machine stoppage',
+                    'Product transfer in L shape or U shape conveyor lines',
+                    'Accumulation and unscrambling of vials/bottles',
+                ],
+                'specs' => [
+                    'Material' => 'SS304 / SS316',
+                    'Diameter' => '600 mm – 1500 mm',
+                    'Speed Control' => 'Variable Frequency Drive (VFD)',
+                    'Application' => 'Pharma, Food, Cosmetic, Chemical',
+                    'Operation' => 'Automatic / Semi-Automatic',
+                    'Bottle Type' => 'Round, Square, Oval',
+                ],
                 'sort_order' => 2,
+                'meta_title' => 'Rotary Turn Table Manufacturer | Pharma Packaging Conveyors',
+                'meta_description' => 'Rotary turn table for pharmaceutical packaging lines with SS304 / SS316 construction, VFD speed control, 600–1500 mm diameter, and smooth bottle/vial feeding and buffering.',
             ],
 
             // PHARMA FURNITURE
@@ -623,10 +712,70 @@ class ProductSeeder extends Seeder
                 'category' => 'pharma-furniture',
                 'name' => 'Garment Storage Cabinet',
                 'slug' => 'garment-storage-cabinet',
-                'short_description' => 'SS 304 / 316 garment storage cabinet with hanger rail and perforated shelves for cleanroom gown storage.',
-                'features' => ['Hanger rail', 'Perforated shelves', 'Double-door access'],
-                'applications' => ['Cleanroom gowning areas'],
+                'short_description' => 'Garment storage cabinet for pharmaceutical and cleanroom environments to safely store cleanroom garments, uniforms, aprons, gloves, masks, caps, and other protective clothing with GMP-compliant stainless steel construction.',
+                'long_description' => "A Garment Storage Cabinet is specially designed for pharmaceutical and cleanroom environments to safely store cleanroom garments, uniforms, aprons, gloves, masks, caps, and other protective clothing. These cabinets are manufactured using GMP-compliant stainless steel construction to maintain hygiene, cleanliness, and contamination control in pharma production areas.
+
+**Applications**
+- Pharmaceutical cleanrooms
+- GMP production areas
+- Research laboratories
+- Healthcare and biotech facilities
+- Sterile garment storage rooms
+- Cleanroom changing areas
+
+**Key Features**
+- SS304 / SS316 stainless steel construction
+- GMP-compliant hygienic design
+- Corrosion-resistant and durable body
+- Multiple storage compartments
+- Ventilated shelves for airflow
+- Lockable doors for safety
+- Easy cleaning and maintenance
+- Smooth finish with rounded edges
+
+**Advantages**
+- Maintains garment hygiene and cleanliness
+- Prevents contamination in cleanroom areas
+- Organized storage solution
+- Long-lasting and rust-resistant
+- Suitable for sterile environments
+
+**Typical Technical Specifications**
+- Material: SS304 / SS316
+- Finish: Matt / Mirror Finish
+- Storage Type: Shelves / Hanging Compartments
+- Door Type: Hinged / Sliding
+- Application: Pharma, Cleanroom, Laboratory
+- Operation: Manual",
+                'features' => [
+                    'SS304 / SS316 stainless steel construction',
+                    'GMP-compliant hygienic design',
+                    'Corrosion-resistant and durable body',
+                    'Multiple storage compartments',
+                    'Ventilated shelves for airflow',
+                    'Lockable doors for safety',
+                    'Easy cleaning and maintenance',
+                    'Smooth finish with rounded edges',
+                ],
+                'applications' => [
+                    'Pharmaceutical cleanrooms',
+                    'GMP production areas',
+                    'Research laboratories',
+                    'Healthcare and biotech facilities',
+                    'Sterile garment storage rooms',
+                    'Cleanroom changing areas',
+                ],
+                'specs' => [
+                    'Material' => 'SS304 / SS316',
+                    'Finish' => 'Matt / Mirror Finish',
+                    'Storage Type' => 'Shelves / Hanging Compartments',
+                    'Door Type' => 'Hinged / Sliding',
+                    'Application' => 'Pharma, Cleanroom, Laboratory',
+                    'Operation' => 'Manual',
+                ],
                 'sort_order' => 2,
+                'meta_title' => 'Garment Storage Cabinet Manufacturer | GMP Pharma Furniture',
+                'meta_description' => 'GMP-compliant SS304 / SS316 garment storage cabinet for pharma cleanrooms with ventilated shelves, lockable doors, and hygienic contamination-control design.',
             ],
 
             // TRAY DRYER
