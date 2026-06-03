@@ -18,7 +18,7 @@ class ProductsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('hero_image')
+                ImageColumn::make('hero_image_preview_url')
                     ->label('Image')
                     ->circular()
                     ->defaultImageUrl(fn () => asset('images/brand/placeholder.png')),

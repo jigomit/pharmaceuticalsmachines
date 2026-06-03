@@ -14,7 +14,7 @@ import { Link } from '@inertiajs/vue3';
         <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">India Focused Manufacturing</p>
             <h1 class="mt-3 text-balance text-4xl font-semibold sm:text-5xl">Vial filling machine manufacturer in India.</h1>
-            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">We engineer vial filling and rubber stoppering systems for sterile injectables with documented FAT/SAT and IQ/OQ/PQ support.</p>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">We engineer vial filling and rubber stoppering systems for sterile injectables with documented FAT/SAT and IQ/OQ support.</p>
         </div>
     </section>
 

@@ -3,6 +3,7 @@ import SeoHead from '@/Components/SeoHead.vue';
 import EnquiryForm from '@/Components/EnquiryForm.vue';
 import ProductCard from '@/Components/ProductCard.vue';
 import ImageLightbox from '@/Components/ImageLightbox.vue';
+import { useSiteUrl } from '@/composables/useSiteUrl';
 import { Link } from '@inertiajs/vue3';
 import { computed, ref } from 'vue';
 
@@ -23,8 +24,8 @@ const lightboxIndex = ref(0);
 
 const openLightbox = (i: number) => { lightboxIndex.value = i; lightboxOpen.value = true; };
 
-const SITE = 'https://pharmaceuticalsmachines.com';
-const productUrl = computed(() => `${SITE}/products/${props.product.category?.slug}/${props.product.slug}`);
+const site = useSiteUrl();
+const productUrl = computed(() => `${site.value}/products/${props.product.category?.slug}/${props.product.slug}`);
 
 const productSchema = computed(() => ({
     '@context': 'https://schema.org',
@@ -37,11 +38,11 @@ const productSchema = computed(() => ({
     manufacturer: {
         '@type': 'Organization',
         name: 'Kailash Machine Tools',
-        url: SITE,
+        url: site.value,
         address: 'Vatva, Ahmedabad, Gujarat, India',
     },
     category: props.product.category?.name,
-    image: gallery.value.length ? gallery.value : [`${SITE}/og-default.jpg`],
+    image: gallery.value.length ? gallery.value : [`${site.value}/og-default.jpg`],
     url: productUrl.value,
     material: 'AISI 316L stainless steel (product-contact parts)',
     countryOfOrigin: 'IN',
@@ -57,7 +58,7 @@ const productSchema = computed(() => ({
             valueAddedTaxIncluded: false,
             description: 'Price on request — quotation issued within 48 hours',
         },
-        seller: { '@type': 'Organization', name: 'Kailash Machine Tools', url: SITE },
+        seller: { '@type': 'Organization', name: 'Kailash Machine Tools', url: site.value },
         areaServed: 'Worldwide',
     },
 }));
@@ -66,9 +67,9 @@ const breadcrumbSchema = computed(() => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE}/products` },
-        { '@type': 'ListItem', position: 3, name: props.product.category?.name, item: `${SITE}/products/${props.product.category?.slug}` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.value}/` },
+        { '@type': 'ListItem', position: 2, name: 'Products', item: `${site.value}/products` },
+        { '@type': 'ListItem', position: 3, name: props.product.category?.name, item: `${site.value}/products/${props.product.category?.slug}` },
         { '@type': 'ListItem', position: 4, name: props.product.name, item: productUrl.value },
     ],
 }));
@@ -85,12 +86,12 @@ const faqSchema = computed(() => ({
         {
             '@type': 'Question',
             name: `Is the ${props.product.name} cGMP compliant?`,
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes. SS 316L product-contact parts, Ra < 0.4 µm finish, and full IQ/OQ/PQ documentation are included on every machine.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. SS 316L product-contact parts, Ra < 0.4 µm finish, and full IQ/OQ documentation are included on every machine.' },
         },
         {
             '@type': 'Question',
             name: 'Do you provide installation and validation support?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes — FAT at our Ahmedabad floor, plus on-site SAT, operator training, and IQ/OQ/PQ execution at your facility.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes — FAT at our Ahmedabad floor, plus on-site SAT, operator training, and IQ/OQ execution at your facility.' },
         },
         {
             '@type': 'Question',
@@ -198,7 +199,7 @@ const faqSchema = computed(() => ({
                     <div class="mt-8 grid grid-cols-2 gap-3 text-xs">
                         <div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> cGMP compliant build</div>
                         <div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> SS 316L contact parts</div>
-                        <div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> IQ / OQ / PQ support</div>
+                        <div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> IQ / OQ support</div>
                         <div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> 24-month warranty</div>
                     </div>
                 </div>

@@ -98,7 +98,7 @@ const timeline = [
                         <h3 class="font-heading text-xl font-semibold text-slate-900">What we stand for</h3>
                         <ul class="mt-4 space-y-4 text-sm leading-6 text-slate-700">
                             <li class="flex gap-3"><span class="mt-1 size-2 shrink-0 rounded-full bg-[color:var(--color-brand-accent)]"></span><div><strong class="block text-slate-900">Precision, always</strong>±0.5 % fill accuracy, ±0.5 mm label registration, µm-level surface finish on contact parts.</div></li>
-                            <li class="flex gap-3"><span class="mt-1 size-2 shrink-0 rounded-full bg-[color:var(--color-brand-accent)]"></span><div><strong class="block text-slate-900">cGMP by design</strong>SS 316L, documented material traceability, FAT/SAT, IQ/OQ/PQ on every build.</div></li>
+                            <li class="flex gap-3"><span class="mt-1 size-2 shrink-0 rounded-full bg-[color:var(--color-brand-accent)]"></span><div><strong class="block text-slate-900">cGMP by design</strong>SS 316L, documented material traceability, FAT/SAT, IQ/OQ on every build.</div></li>
                             <li class="flex gap-3"><span class="mt-1 size-2 shrink-0 rounded-full bg-[color:var(--color-brand-accent)]"></span><div><strong class="block text-slate-900">Responsive support</strong>Spare parts stocked regionally; remote diagnostics; on-site service within 72 hours.</div></li>
                             <li class="flex gap-3"><span class="mt-1 size-2 shrink-0 rounded-full bg-[color:var(--color-brand-accent)]"></span><div><strong class="block text-slate-900">Honest pricing</strong>Transparent scope, no hidden validation or change-part surcharges.</div></li>
                         </ul>

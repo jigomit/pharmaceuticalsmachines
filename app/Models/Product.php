@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
@@ -41,6 +42,25 @@ class Product extends Model
     public function getUrlAttribute(): string
     {
         return url("/products/{$this->category->slug}/{$this->slug}");
+    }
+
+    public function getHeroImagePreviewUrlAttribute(): ?string
+    {
+        $hero = $this->attributes['hero_image'] ?? null;
+
+        if (! $hero) {
+            return null;
+        }
+
+        if (filter_var($hero, FILTER_VALIDATE_URL)) {
+            return $hero;
+        }
+
+        if (str_starts_with($hero, '/')) {
+            return asset(ltrim($hero, '/'));
+        }
+
+        return Storage::url($hero);
     }
 
     public function related()

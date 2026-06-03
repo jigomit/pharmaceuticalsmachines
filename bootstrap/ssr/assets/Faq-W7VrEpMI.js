@@ -1,5 +1,6 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
-import { computed, defineComponent, useSSRContext } from "vue";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
+import { computed, createTextVNode, defineComponent, unref, useSSRContext, withCtx } from "vue";
+import { Link } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Pages/Faq.vue?vue&type=script&setup=true&lang.ts
 var Faq_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
@@ -9,11 +10,11 @@ var Faq_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComp
 		const faqs = [
 			{
 				q: "What is Kailash Machine Tools?",
-				a: "Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, Gujarat, India — founded in 1991 and previously known as Shree Ganesh Pharmatech."
+				a: "Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, Gujarat, India — engineering pharmaceutical machinery since 1989 and previously known as Shree Ganesh Pharmatech."
 			},
 			{
 				q: "Are your machines cGMP compliant?",
-				a: "Yes. All our machines are designed and built to current Good Manufacturing Practice, with SS 316L contact parts, documented FAT/SAT, and IQ/OQ/PQ validation support included."
+				a: "Yes. All our machines are designed and built to current Good Manufacturing Practice, with SS 316L contact parts, documented FAT/SAT, and IQ/OQ validation support included."
 			},
 			{
 				q: "Which countries do you export to?",
@@ -63,7 +64,38 @@ var Faq_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComp
 			ssrRenderList(faqs, (f, i) => {
 				_push(`<details class="group p-6"><summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold text-slate-900">${ssrInterpolate(f.q)} <svg class="size-5 shrink-0 transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm leading-6 text-slate-600">${ssrInterpolate(f.a)}</p></details>`);
 			});
-			_push(`<!--]--></div></div></section><!--]-->`);
+			_push(`<!--]--></div><div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5"><p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Popular machine pages</p><div class="mt-3 flex flex-wrap gap-2">`);
+			_push(ssrRenderComponent(unref(Link), {
+				href: "/products/injectable-liquid-filling/automatic-vial-filling-machine",
+				class: "rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]"
+			}, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) _push(`Vial Filling Machine`);
+					else return [createTextVNode("Vial Filling Machine")];
+				}),
+				_: 1
+			}, _parent));
+			_push(ssrRenderComponent(unref(Link), {
+				href: "/products/injectable-liquid-filling/ampoule-filling-sealing-machine",
+				class: "rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]"
+			}, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) _push(`Ampoule Filling Machine`);
+					else return [createTextVNode("Ampoule Filling Machine")];
+				}),
+				_: 1
+			}, _parent));
+			_push(ssrRenderComponent(unref(Link), {
+				href: "/products/washing-machines",
+				class: "rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-accent)]"
+			}, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) _push(`Pharma Washing Machines`);
+					else return [createTextVNode("Pharma Washing Machines")];
+				}),
+				_: 1
+			}, _parent));
+			_push(`</div></div></div></section><!--]-->`);
 		};
 	}
 });

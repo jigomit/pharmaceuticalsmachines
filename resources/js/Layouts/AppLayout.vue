@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import SiteNav from '@/Components/SiteNav.vue';
 import SiteFooter from '@/Components/SiteFooter.vue';
+import { useSiteUrl } from '@/composables/useSiteUrl';
 import { Head, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const page = usePage();
 const company = computed(() => (page.props as any).company);
-
-const SITE = 'https://pharmaceuticalsmachines.com';
+const site = useSiteUrl();
 
 const sameAs = computed(() => Object.values(company.value?.socials ?? {}).filter(Boolean));
 
@@ -26,13 +26,13 @@ const globalSchema = computed(() => ({
     '@graph': [
         {
             '@type': 'Organization',
-            '@id': `${SITE}/#organization`,
+            '@id': `${site.value}/#organization`,
             name: company.value?.name,
             alternateName: ['Shree Ganesh Pharmatech', 'Ganesh Machine Tools', 'Kailash Pharmatech'],
-            url: SITE,
-            logo: { '@type': 'ImageObject', url: `${SITE}/images/brand/kmt-logo-square.png`, width: 512, height: 512 },
-            image: `${SITE}/og-default.jpg`,
-            foundingDate: '1991',
+            url: site.value,
+            logo: { '@type': 'ImageObject', url: `${site.value}/images/brand/kmt-logo-square.png`, width: 512, height: 512 },
+            image: `${site.value}/og-default.jpg`,
+            foundingDate: String(company.value?.founded ?? 1989),
             foundingLocation: { '@type': 'Place', name: 'Ahmedabad, Gujarat, India' },
             slogan: company.value?.tagline,
             email: company.value?.email,
@@ -55,12 +55,12 @@ const globalSchema = computed(() => ({
         },
         {
             '@type': 'LocalBusiness',
-            '@id': `${SITE}/#localbusiness`,
+            '@id': `${site.value}/#localbusiness`,
             name: company.value?.name,
-            image: `${SITE}/og-default.jpg`,
+            image: `${site.value}/og-default.jpg`,
             telephone: company.value?.phone,
             email: company.value?.email,
-            url: SITE,
+            url: site.value,
             priceRange: '$$$',
             address: addr.value,
             geo: {
@@ -89,14 +89,14 @@ const globalSchema = computed(() => ({
         },
         {
             '@type': 'WebSite',
-            '@id': `${SITE}/#website`,
-            url: SITE,
+            '@id': `${site.value}/#website`,
+            url: site.value,
             name: company.value?.name,
             inLanguage: 'en-IN',
-            publisher: { '@id': `${SITE}/#organization` },
+            publisher: { '@id': `${site.value}/#organization` },
             potentialAction: {
                 '@type': 'SearchAction',
-                target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/products?q={search_term_string}` },
+                target: { '@type': 'EntryPoint', urlTemplate: `${site.value}/products?q={search_term_string}` },
                 'query-input': 'required name=search_term_string',
             },
         },

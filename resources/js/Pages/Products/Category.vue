@@ -2,20 +2,21 @@
 import SeoHead from '@/Components/SeoHead.vue';
 import ProductCard from '@/Components/ProductCard.vue';
 import ScrollReveal from '@/Components/ScrollReveal.vue';
+import { useSiteUrl } from '@/composables/useSiteUrl';
 import { Link } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const props = defineProps<{ category: any; products: any[]; otherCategories: any[] }>();
 
-const SITE = 'https://pharmaceuticalsmachines.com';
+const site = useSiteUrl();
 
 const breadcrumbSchema = computed(() => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE}/products` },
-        { '@type': 'ListItem', position: 3, name: props.category.name, item: `${SITE}/products/${props.category.slug}` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.value}/` },
+        { '@type': 'ListItem', position: 2, name: 'Products', item: `${site.value}/products` },
+        { '@type': 'ListItem', position: 3, name: props.category.name, item: `${site.value}/products/${props.category.slug}` },
     ],
 }));
 
@@ -27,7 +28,7 @@ const itemListSchema = computed(() => ({
     itemListElement: props.products.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `${SITE}/products/${props.category.slug}/${p.slug}`,
+        url: `${site.value}/products/${props.category.slug}/${p.slug}`,
         name: p.name,
     })),
 }));

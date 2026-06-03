@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import SeoHead from '@/Components/SeoHead.vue';
+import { useSiteUrl } from '@/composables/useSiteUrl';
 import { Link } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const props = defineProps<{ post: any; related: any[] }>();
+
+const site = useSiteUrl();
 
 const articleSchema = computed(() => ({
     '@context': 'https://schema.org',
@@ -11,9 +14,9 @@ const articleSchema = computed(() => ({
     headline: props.post.title,
     description: props.post.excerpt,
     author: { '@type': 'Organization', name: props.post.author_name },
-    publisher: { '@type': 'Organization', name: 'Kailash Machine Tools', logo: { '@type': 'ImageObject', url: 'https://pharmaceuticalsmachines.com/og-default.jpg' } },
+    publisher: { '@type': 'Organization', name: 'Kailash Machine Tools', logo: { '@type': 'ImageObject', url: `${site.value}/og-default.jpg` } },
     datePublished: props.post.published_at,
-    mainEntityOfPage: `https://pharmaceuticalsmachines.com/blog/${props.post.slug}`,
+    mainEntityOfPage: `${site.value}/blog/${props.post.slug}`,
 }));
 
 const formattedBody = computed(() => {

@@ -19,7 +19,7 @@ var ProductCard_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ de
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(`<div class="relative aspect-[4/3] overflow-hidden bg-slate-100"${_scopeId}>`);
-						if (__props.product.hero_image) _push(`<img${ssrRenderAttr("src", __props.product.hero_image)}${ssrRenderAttr("alt", __props.product.name + " manufacturer — Kailash Machine Tools Ahmedabad")}${ssrRenderAttr("loading", __props.eager ? "eager" : "lazy")}${ssrRenderAttr("fetchpriority", __props.eager ? "high" : "auto")} width="800" height="600" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"${_scopeId}>`);
+						if (__props.product.hero_image) _push(`<img${ssrRenderAttr("src", __props.product.hero_image)}${ssrRenderAttr("alt", __props.product.name + " manufacturer — Kailash Machine Tools Ahmedabad")}${ssrRenderAttr("loading", __props.eager ? "eager" : "lazy")}${ssrRenderAttr("fetchpriority", __props.eager ? "high" : "auto")} sizes="(min-width: 1024px) 24vw, (min-width: 640px) 46vw, 92vw" width="800" height="600" class="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"${_scopeId}>`);
 						else _push(`<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200"${_scopeId}><svg class="size-16 text-slate-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"${_scopeId}><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10h6m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"${_scopeId}></path></svg></div>`);
 						_push(`<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[color:var(--color-brand)]/70 via-[color:var(--color-brand)]/15 to-transparent"${_scopeId}></div>`);
 						if (__props.product.is_featured) _push(`<span class="absolute left-4 top-4 rounded-full bg-teal-500 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow"${_scopeId}>Featured</span>`);
@@ -39,6 +39,7 @@ var ProductCard_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ de
 							alt: __props.product.name + " manufacturer — Kailash Machine Tools Ahmedabad",
 							loading: __props.eager ? "eager" : "lazy",
 							fetchpriority: __props.eager ? "high" : "auto",
+							sizes: "(min-width: 1024px) 24vw, (min-width: 640px) 46vw, 92vw",
 							width: "800",
 							height: "600",
 							class: "absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"

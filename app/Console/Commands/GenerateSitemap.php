@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Support\SeoUrl;
 use App\Models\BlogPost;
 use App\Models\Category;
 use App\Models\Product;
@@ -19,7 +20,7 @@ class GenerateSitemap extends Command
     public function handle(): int
     {
         $sitemap = Sitemap::create();
-        $baseUrl = rtrim((string) config('app.url', url('/')), '/');
+        $baseUrl = SeoUrl::baseUrl();
 
         $staticRoutes = [
             ['url' => '/', 'priority' => 1.0, 'changefreq' => Url::CHANGE_FREQUENCY_WEEKLY],

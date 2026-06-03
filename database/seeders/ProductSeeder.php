@@ -362,15 +362,44 @@ class ProductSeeder extends Seeder
                 'category' => 'injectable-powder-filling',
                 'name' => 'Dry Injection Powder Filling Machine',
                 'slug' => 'dry-injection-powder-filling-machine',
-                'model_code' => 'KMT-DPF-120',
-                'short_description' => 'Double-head servo auger dry powder filling machine with rubber bunging for dry injectable products. Up to 120 vials per minute.',
-                'features' => ['Double-head servo auger dosing', 'In-line check-weighing', 'Nitrogen purge', 'Automatic rubber bung insertion', 'Fill accuracy ±1 %'],
-                'applications' => ['Sterile antibiotics', 'Dry injection vials', 'High-potency APIs (with containment)'],
-                'specs' => ['Output' => '60 – 120 vials/min', 'Fill weight' => '50 mg – 3 g', 'Accuracy' => '±1 %'],
+                'model_code' => 'SGPVFR-120-240',
+                'short_description' => 'Compact cGMP dry injection powder filling machine model SGPVFR-120-240 with 30–240 vials/min filling speed, ±1% fill accuracy under controlled humidity, vacuum powder suction, and built-in rubber stoppering.',
+                'long_description' => "Dry injection powder filling machine model SGPVFR-120-240 designed for sterile injectable powder filling with high volumetric accuracy and integrated rubber stoppering.\n\n**Technical Specification**\n- Model: SGPVFR-120-240\n- Filling Speed: 30 - 120 - 240 Vials/minute based on 5-10ml vial (depending upon size/types of vial & powder density)\n- Design: Left --> Right\n- Powder Fill Size: 30 mg to 1.5 grams single dose (with change parts); 1.5 grams to 6 grams double, triple and four doses; fill range depending upon vial opening and bulk density of powder\n- Fill Accuracy: Under controlled level of humidity (i.e. 28%) ±1% depending upon consistency and uniformity of bulk density of injectable powder\n- Product Conveyor: 50 mm (2\") wide Delrin conveyor\n- Powder Suction: Through Vacuum\n- Powder Delivered: Through Air/Nitrogen (customer to provide)\n- Vial Diameter: 5 mm to 45 mm max\n- Vial Height: 75 mm maximum\n\n**Salient Features**\n- Compact cGMP model\n- No Vial, No Filling system eliminates wastage of costly powder\n- Multiple dosing system\n- High volumetric filling accuracy of ±1% of uniform density injectable powder can be ensured by setting the depth of piston in the port of powder wheel\n- Built-in rubber stoppering unit saves lot of space in the sterile area and reduces the length of laminar flow\n- Individual drive for the filling and sealing to match the speed of filling and sealing\n- All motors are provided with appropriate contractors and relays for protection against any overload or jamming\n- Safety clutch system to avoid vial breakage\n- Variable frequency drive for speed control\n- All contact parts are easily removable for mandatory autoclaving/sterilization\n- Digital counter for counting production output",
+                'features' => [
+                    'Compact cGMP model',
+                    'No Vial, No Filling system eliminates wastage of costly powder',
+                    'Multiple dosing system',
+                    'High volumetric filling accuracy of ±1% with piston depth adjustment in powder wheel port',
+                    'Built-in rubber stoppering unit saves space in sterile area and reduces laminar flow length',
+                    'Individual drive for filling and sealing to match operating speeds',
+                    'Motors with contractors and relays for overload or jamming protection',
+                    'Safety clutch system to avoid vial breakage',
+                    'Variable frequency drive for speed control',
+                    'All contact parts easily removable for autoclaving/sterilization',
+                    'Digital counter for production output',
+                ],
+                'applications' => [
+                    'Sterile antibiotics',
+                    'Dry injection vials',
+                    'Injectable powder under controlled humidity',
+                    'High-potency APIs (with containment)',
+                ],
+                'specs' => [
+                    'Model' => 'SGPVFR-120-240',
+                    'Filling Speed' => '30 - 120 - 240 Vials/minute (5-10ml vial, depending on vial size/type & powder density)',
+                    'Design' => 'Left --> Right',
+                    'Powder Fill Size' => '30 mg to 1.5 g single dose; 1.5 g to 6 g double/triple/four doses (change parts)',
+                    'Fill Accuracy' => '±1% under controlled humidity (~28%)',
+                    'Product Conveyor' => '50 mm (2") wide Delrin conveyor',
+                    'Powder Suction' => 'Through Vacuum',
+                    'Powder Delivered' => 'Through Air/Nitrogen (customer to provide)',
+                    'Vial Diameter' => '5 mm to 45 mm max',
+                    'Vial Height' => '75 mm maximum',
+                ],
                 'is_featured' => true,
                 'sort_order' => 1,
-                'meta_title' => 'Dry Injection Powder Filling Machine Manufacturer | 120 VPM',
-                'meta_description' => 'Servo auger dry powder filling machine with rubber bunging, 120 vials/min, ±1% accuracy. cGMP, Ahmedabad India.',
+                'meta_title' => 'Dry Injection Powder Filling Machine SGPVFR-120-240 | Kailash Machine Tools',
+                'meta_description' => 'Dry injection powder filling machine SGPVFR-120-240 with 30-240 vials/min, ±1% accuracy, vacuum suction, nitrogen delivery, and built-in rubber stoppering for sterile injectables.',
             ],
             [
                 'category' => 'injectable-powder-filling',
@@ -929,6 +958,6 @@ class ProductSeeder extends Seeder
         $featText = empty($features) ? '' : "\n\n**Key Features**\n- ".implode("\n- ", $features);
         $appText = empty($applications) ? '' : "\n\n**Applications**\n- ".implode("\n- ", $applications);
 
-        return "Kailash Machine Tools manufactures and exports the {$name} — {$short} Built in our Ahmedabad (Gujarat, India) facility with SS 316L pharmaceutical-grade construction, PLC-HMI controls, and full cGMP compliance. Every machine ships with FAT certification, installation &amp; on-site commissioning, and IQ/OQ/PQ validation support.{$featText}{$appText}\n\n**Compliance &amp; Documentation**\n- cGMP compliant build\n- AISI 316L contact parts\n- Full documentation: design qualification, FAT protocol, IQ/OQ/PQ\n- CE-ready variants available for export\n\n**Why Kailash Machine Tools**\nSince 1989, we have delivered injectable &amp; packaging line machinery to pharmaceutical manufacturers across India, the Middle East, Southeast Asia and Africa. Formerly operating as Shree Ganesh Pharmatech, we combine three decades of precision engineering with modern servo-automation to give you equipment that runs reliably for decades. Request a quotation for this {$name} today.";
+        return "Kailash Machine Tools manufactures and exports the {$name} — {$short} Built in our Ahmedabad (Gujarat, India) facility with SS 316L pharmaceutical-grade construction, PLC-HMI controls, and full cGMP compliance. Every machine ships with FAT certification, installation &amp; on-site commissioning, and IQ/OQ validation support.{$featText}{$appText}\n\n**Compliance &amp; Documentation**\n- cGMP compliant build\n- AISI 316L contact parts\n- Full documentation: design qualification, FAT protocol, IQ/OQ\n- CE-ready variants available for export\n\n**Why Kailash Machine Tools**\nSince 1989, we have delivered injectable &amp; packaging line machinery to pharmaceutical manufacturers across India, the Middle East, Southeast Asia and Africa. Formerly operating as Shree Ganesh Pharmatech, we combine three decades of precision engineering with modern servo-automation to give you equipment that runs reliably for decades. Request a quotation for this {$name} today.";
     }
 }

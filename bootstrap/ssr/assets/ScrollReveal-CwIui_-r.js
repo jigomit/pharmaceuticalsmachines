@@ -13,12 +13,22 @@ function useGsap() {
 	onMounted(async () => {
 		if (typeof window === "undefined") return;
 		reducedMotion.value = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-		if (reducedMotion.value) {
+		const smallScreen = window.matchMedia("(max-width: 1023px)").matches;
+		if (reducedMotion.value || smallScreen) {
 			ready.value = true;
 			return;
 		}
+		await new Promise((resolve) => {
+			const ric = window.requestIdleCallback;
+			if (ric) ric(() => resolve());
+			else window.setTimeout(() => resolve(), 1);
+		});
 		const [gsapMod, stMod] = await Promise.all([import("gsap"), import("gsap/ScrollTrigger")]);
 		gsapMod.gsap.registerPlugin(stMod.ScrollTrigger);
+		stMod.ScrollTrigger.config({
+			ignoreMobileResize: true,
+			limitCallbacks: true
+		});
 		gsap.value = gsapMod.gsap;
 		ScrollTrigger.value = stMod.ScrollTrigger;
 		ready.value = true;
@@ -51,7 +61,7 @@ var ScrollReveal_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ d
 			type: Boolean,
 			default: true
 		},
-		target: { default: "> *" }
+		target: { default: ":scope > *" }
 	},
 	setup(__props) {
 		const props = __props;
@@ -59,7 +69,12 @@ var ScrollReveal_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ d
 		const { gsap, ScrollTrigger, ready, reducedMotion } = useGsap();
 		const play = () => {
 			if (!root.value || !gsap.value || !ScrollTrigger.value) return;
-			const targets = root.value.querySelectorAll(props.target);
+			let targets = [];
+			try {
+				targets = Array.from(root.value.querySelectorAll(props.target));
+			} catch {
+				targets = Array.from(root.value.children);
+			}
 			if (!targets.length) return;
 			gsap.value.set(targets, {
 				opacity: 0,

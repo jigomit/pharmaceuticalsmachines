@@ -25,7 +25,7 @@ import { Link } from '@inertiajs/vue3';
                 <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-700">
                     <li>Compatible with 1 ml to larger ampoule formats and change-part kits.</li>
                     <li>Integrated line logic for no-ampoule no-fill and process safety.</li>
-                    <li>FAT/SAT plus IQ/OQ/PQ documentation for inspection readiness.</li>
+                    <li>FAT/SAT plus IQ/OQ documentation for inspection readiness.</li>
                 </ul>
                 <div class="mt-6 flex flex-wrap gap-3">
                     <Link href="/products/injectable-liquid-filling/ampoule-filling-sealing-machine" class="rounded-full bg-[color:var(--color-brand)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]">View Ampoule Filling & Sealing Machine</Link>

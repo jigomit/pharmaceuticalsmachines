@@ -1,4 +1,4 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
 import { createTextVNode, defineComponent, unref, useSSRContext, withCtx } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { ssrRenderComponent } from "vue/server-renderer";

@@ -1,6 +1,6 @@
-import { computed, createBlock, createCommentVNode, createVNode, defineComponent, openBlock, unref, useSSRContext, withCtx } from "vue";
+import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, defineComponent, mergeProps, openBlock, renderList, resolveDynamicComponent, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
-import { ssrRenderAttr, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
+import { ssrInterpolate, ssrRenderAttr, ssrRenderComponent, ssrRenderList, ssrRenderVNode } from "vue/server-renderer";
 //#region resources/js/Components/SeoHead.vue?vue&type=script&setup=true&lang.ts
 var SeoHead_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
 	__name: "SeoHead",
@@ -19,16 +19,26 @@ var SeoHead_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ define
 		const page = usePage();
 		const canonical = computed(() => page.props.canonical);
 		const company = computed(() => page.props.company);
+		const canonicalBase = computed(() => {
+			try {
+				return new URL(canonical.value).origin;
+			} catch {
+				return "";
+			}
+		});
 		const ogTitle = computed(() => props.title ?? `${company.value?.name} | Pharmaceutical Machinery Manufacturer`);
 		const ogDescription = computed(() => props.description ?? `${company.value?.name} — ${company.value?.tagline}. Leading manufacturer and exporter of injectable, filling, washing, capping and packaging pharmaceutical machinery from Ahmedabad, India.`);
-		const ogImage = computed(() => props.image ?? "/og-default.jpg");
+		const ogImage = computed(() => {
+			const image = props.image ?? "/og-default.jpg";
+			if (image.startsWith("http://") || image.startsWith("https://")) return image;
+			return canonicalBase.value ? `${canonicalBase.value}${image.startsWith("/") ? image : `/${image}`}` : image;
+		});
 		const schemas = computed(() => {
 			if (!props.schema) return [];
 			return Array.isArray(props.schema) ? props.schema : [props.schema];
 		});
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<!--[-->`);
-			_push(ssrRenderComponent(unref(Head), { title: __props.title }, {
+			_push(ssrRenderComponent(unref(Head), mergeProps({ title: __props.title }, _attrs), {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(`<meta name="description"${ssrRenderAttr("content", ogDescription.value)} head-key="description"${_scopeId}><link rel="canonical"${ssrRenderAttr("href", canonical.value)} head-key="canonical"${_scopeId}><link rel="alternate" hreflang="en"${ssrRenderAttr("href", canonical.value)} head-key="alt-en"${_scopeId}><link rel="alternate" hreflang="x-default"${ssrRenderAttr("href", canonical.value)} head-key="alt-default"${_scopeId}>`);
@@ -36,7 +46,20 @@ var SeoHead_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ define
 						else _push(`<!---->`);
 						if (__props.noindex) _push(`<meta name="robots" content="noindex,nofollow" head-key="robots"${_scopeId}>`);
 						else _push(`<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" head-key="robots"${_scopeId}>`);
-						_push(`<meta name="author" content="Kailash Machine Tools" head-key="author"${_scopeId}><meta name="publisher" content="Kailash Machine Tools" head-key="publisher"${_scopeId}><meta name="geo.region" content="IN-GJ" head-key="geo-region"${_scopeId}><meta name="geo.placename" content="Ahmedabad" head-key="geo-place"${_scopeId}><meta name="geo.position" content="22.947;72.6261" head-key="geo-pos"${_scopeId}><meta name="ICBM" content="22.947, 72.6261" head-key="icbm"${_scopeId}><meta property="og:site_name"${ssrRenderAttr("content", company.value?.name)} head-key="og:site_name"${_scopeId}><meta property="og:type"${ssrRenderAttr("content", __props.type ?? "website")} head-key="og:type"${_scopeId}><meta property="og:title"${ssrRenderAttr("content", ogTitle.value)} head-key="og:title"${_scopeId}><meta property="og:description"${ssrRenderAttr("content", ogDescription.value)} head-key="og:description"${_scopeId}><meta property="og:url"${ssrRenderAttr("content", canonical.value)} head-key="og:url"${_scopeId}><meta property="og:image"${ssrRenderAttr("content", ogImage.value)} head-key="og:image"${_scopeId}><meta property="og:locale" content="en_IN" head-key="og:locale"${_scopeId}><meta name="twitter:card" content="summary_large_image" head-key="twitter:card"${_scopeId}><meta name="twitter:title"${ssrRenderAttr("content", ogTitle.value)} head-key="twitter:title"${_scopeId}><meta name="twitter:description"${ssrRenderAttr("content", ogDescription.value)} head-key="twitter:description"${_scopeId}><meta name="twitter:image"${ssrRenderAttr("content", ogImage.value)} head-key="twitter:image"${_scopeId}>`);
+						_push(`<meta name="author" content="Kailash Machine Tools" head-key="author"${_scopeId}><meta name="publisher" content="Kailash Machine Tools" head-key="publisher"${_scopeId}><meta name="geo.region" content="IN-GJ" head-key="geo-region"${_scopeId}><meta name="geo.placename" content="Ahmedabad" head-key="geo-place"${_scopeId}><meta name="geo.position" content="22.947;72.6261" head-key="geo-pos"${_scopeId}><meta name="ICBM" content="22.947, 72.6261" head-key="icbm"${_scopeId}><meta property="og:site_name"${ssrRenderAttr("content", company.value?.name)} head-key="og:site_name"${_scopeId}><meta property="og:type"${ssrRenderAttr("content", __props.type ?? "website")} head-key="og:type"${_scopeId}><meta property="og:title"${ssrRenderAttr("content", ogTitle.value)} head-key="og:title"${_scopeId}><meta property="og:description"${ssrRenderAttr("content", ogDescription.value)} head-key="og:description"${_scopeId}><meta property="og:url"${ssrRenderAttr("content", canonical.value)} head-key="og:url"${_scopeId}><meta property="og:image"${ssrRenderAttr("content", ogImage.value)} head-key="og:image"${_scopeId}><meta property="og:locale" content="en_IN" head-key="og:locale"${_scopeId}><meta name="twitter:card" content="summary_large_image" head-key="twitter:card"${_scopeId}><meta name="twitter:title"${ssrRenderAttr("content", ogTitle.value)} head-key="twitter:title"${_scopeId}><meta name="twitter:description"${ssrRenderAttr("content", ogDescription.value)} head-key="twitter:description"${_scopeId}><meta name="twitter:image"${ssrRenderAttr("content", ogImage.value)} head-key="twitter:image"${_scopeId}><!--[-->`);
+						ssrRenderList(schemas.value, (s, i) => {
+							ssrRenderVNode(_push, createVNode(resolveDynamicComponent("script"), {
+								key: `schema-${i}`,
+								type: "application/ld+json"
+							}, {
+								default: withCtx((_, _push, _parent, _scopeId) => {
+									if (_push) _push(`${ssrInterpolate(JSON.stringify(s))}`);
+									else return [createTextVNode(toDisplayString(JSON.stringify(s)), 1)];
+								}),
+								_: 2
+							}), _parent, _scopeId);
+						});
+						_push(`<!--]-->`);
 					} else return [
 						createVNode("meta", {
 							name: "description",
@@ -161,16 +184,20 @@ var SeoHead_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ define
 							name: "twitter:image",
 							content: ogImage.value,
 							"head-key": "twitter:image"
-						}, null, 8, ["content"])
+						}, null, 8, ["content"]),
+						(openBlock(true), createBlock(Fragment, null, renderList(schemas.value, (s, i) => {
+							return openBlock(), createBlock(resolveDynamicComponent("script"), {
+								key: `schema-${i}`,
+								type: "application/ld+json"
+							}, {
+								default: withCtx(() => [createTextVNode(toDisplayString(JSON.stringify(s)), 1)]),
+								_: 2
+							}, 1024);
+						}), 128))
 					];
 				}),
 				_: 1
 			}, _parent));
-			_push(`<!--[-->`);
-			ssrRenderList(schemas.value, (s, i) => {
-				_push(`<script type="application/ld+json">${JSON.stringify(s) ?? ""}<\/script>`);
-			});
-			_push(`<!--]--><!--]-->`);
 		};
 	}
 });

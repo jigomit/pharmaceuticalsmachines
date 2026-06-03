@@ -14,7 +14,7 @@ import { Link } from '@inertiajs/vue3';
         <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">Kailash Machine Tools</p>
             <h1 class="mt-3 text-balance text-4xl font-semibold sm:text-5xl">Pharmaceutical machinery manufacturer in Ahmedabad, India.</h1>
-            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">Since 1990, we have built cGMP-focused machinery for injectable and packaging lines, serving Indian and international pharmaceutical manufacturers.</p>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">Since 1989, we have built cGMP-focused machinery for injectable and packaging lines, serving Indian and international pharmaceutical manufacturers.</p>
         </div>
     </section>
 

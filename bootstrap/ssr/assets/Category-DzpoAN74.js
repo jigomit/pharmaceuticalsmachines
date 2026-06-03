@@ -1,11 +1,11 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
-import { t as ScrollReveal_default } from "./ScrollReveal-oDITbbxE.js";
-import { t as ProductCard_default } from "./ProductCard-C-SlM2Bk.js";
+import { t as useSiteUrl } from "./useSiteUrl-CLhO3Ycn.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
+import { t as ScrollReveal_default } from "./ScrollReveal-CwIui_-r.js";
+import { t as ProductCard_default } from "./ProductCard-bYE7QR9h.js";
 import { Fragment, computed, createBlock, createTextVNode, createVNode, defineComponent, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Pages/Products/Category.vue?vue&type=script&setup=true&lang.ts
-var SITE = "https://pharmaceuticalsmachines.com";
 var Category_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
 	__name: "Category",
 	__ssrInlineRender: true,
@@ -16,6 +16,7 @@ var Category_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defin
 	},
 	setup(__props) {
 		const props = __props;
+		const site = useSiteUrl();
 		const breadcrumbSchema = computed(() => ({
 			"@context": "https://schema.org",
 			"@type": "BreadcrumbList",
@@ -24,19 +25,19 @@ var Category_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defin
 					"@type": "ListItem",
 					position: 1,
 					name: "Home",
-					item: `${SITE}/`
+					item: `${site.value}/`
 				},
 				{
 					"@type": "ListItem",
 					position: 2,
 					name: "Products",
-					item: `${SITE}/products`
+					item: `${site.value}/products`
 				},
 				{
 					"@type": "ListItem",
 					position: 3,
 					name: props.category.name,
-					item: `${SITE}/products/${props.category.slug}`
+					item: `${site.value}/products/${props.category.slug}`
 				}
 			]
 		}));
@@ -48,7 +49,7 @@ var Category_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defin
 			itemListElement: props.products.map((p, i) => ({
 				"@type": "ListItem",
 				position: i + 1,
-				url: `${SITE}/products/${props.category.slug}/${p.slug}`,
+				url: `${site.value}/products/${props.category.slug}/${p.slug}`,
 				name: p.name
 			}))
 		}));

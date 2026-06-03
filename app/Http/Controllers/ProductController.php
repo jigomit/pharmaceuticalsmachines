@@ -4,19 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ProductController extends Controller
 {
-    public function index(): Response
+    public function index(Request $request): Response
     {
+        $query = trim((string) $request->query('q', ''));
+
+        $searchResults = collect();
+        if ($query !== '') {
+            $searchResults = Product::query()
+                ->where('is_active', true)
+                ->with('category:id,slug,name')
+                ->where(function ($q) use ($query) {
+                    $q->where('name', 'like', "%{$query}%")
+                        ->orWhere('short_description', 'like', "%{$query}%")
+                        ->orWhere('model_code', 'like', "%{$query}%");
+                })
+                ->orderBy('name')
+                ->limit(48)
+                ->get(['id', 'category_id', 'name', 'slug', 'short_description', 'hero_image', 'model_code']);
+        }
+
         return Inertia::render('Products/Index', [
             'categories' => Category::where('is_active', true)
                 ->withCount(['products' => fn ($q) => $q->where('is_active', true)])
                 ->orderBy('sort_order')
                 ->get(['id', 'name', 'slug', 'tagline', 'short_description', 'icon', 'hero_image']),
+            'searchQuery' => $query,
+            'searchResults' => $searchResults,
         ]);
     }
 

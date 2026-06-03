@@ -1,12 +1,12 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
-import { t as EnquiryForm_default } from "./EnquiryForm-C7PFK15L.js";
-import { t as ImageLightbox_default } from "./ImageLightbox-Cy5zirLC.js";
-import { t as ProductCard_default } from "./ProductCard-C-SlM2Bk.js";
+import { t as useSiteUrl } from "./useSiteUrl-CLhO3Ycn.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
+import { t as EnquiryForm_default } from "./EnquiryForm-jNfgMV7e.js";
+import { t as ImageLightbox_default } from "./ImageLightbox-DlQZBwDr.js";
+import { t as ProductCard_default } from "./ProductCard-bYE7QR9h.js";
 import { computed, createTextVNode, defineComponent, ref, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Pages/Products/Show.vue?vue&type=script&setup=true&lang.ts
-var SITE = "https://pharmaceuticalsmachines.com";
 var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
 	__name: "Show",
 	__ssrInlineRender: true,
@@ -27,7 +27,8 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 		const activeImage = ref(0);
 		const lightboxOpen = ref(false);
 		const lightboxIndex = ref(0);
-		const productUrl = computed(() => `${SITE}/products/${props.product.category?.slug}/${props.product.slug}`);
+		const site = useSiteUrl();
+		const productUrl = computed(() => `${site.value}/products/${props.product.category?.slug}/${props.product.slug}`);
 		const productSchema = computed(() => ({
 			"@context": "https://schema.org",
 			"@type": "Product",
@@ -42,11 +43,11 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 			manufacturer: {
 				"@type": "Organization",
 				name: "Kailash Machine Tools",
-				url: SITE,
+				url: site.value,
 				address: "Vatva, Ahmedabad, Gujarat, India"
 			},
 			category: props.product.category?.name,
-			image: gallery.value.length ? gallery.value : [`${SITE}/og-default.jpg`],
+			image: gallery.value.length ? gallery.value : [`${site.value}/og-default.jpg`],
 			url: productUrl.value,
 			material: "AISI 316L stainless steel (product-contact parts)",
 			countryOfOrigin: "IN",
@@ -68,7 +69,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 				seller: {
 					"@type": "Organization",
 					name: "Kailash Machine Tools",
-					url: SITE
+					url: site.value
 				},
 				areaServed: "Worldwide"
 			}
@@ -81,19 +82,19 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					"@type": "ListItem",
 					position: 1,
 					name: "Home",
-					item: `${SITE}/`
+					item: `${site.value}/`
 				},
 				{
 					"@type": "ListItem",
 					position: 2,
 					name: "Products",
-					item: `${SITE}/products`
+					item: `${site.value}/products`
 				},
 				{
 					"@type": "ListItem",
 					position: 3,
 					name: props.product.category?.name,
-					item: `${SITE}/products/${props.product.category?.slug}`
+					item: `${site.value}/products/${props.product.category?.slug}`
 				},
 				{
 					"@type": "ListItem",
@@ -120,7 +121,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					name: `Is the ${props.product.name} cGMP compliant?`,
 					acceptedAnswer: {
 						"@type": "Answer",
-						text: "Yes. SS 316L product-contact parts, Ra < 0.4 µm finish, and full IQ/OQ/PQ documentation are included on every machine."
+						text: "Yes. SS 316L product-contact parts, Ra < 0.4 µm finish, and full IQ/OQ documentation are included on every machine."
 					}
 				},
 				{
@@ -128,7 +129,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					name: "Do you provide installation and validation support?",
 					acceptedAnswer: {
 						"@type": "Answer",
-						text: "Yes — FAT at our Ahmedabad floor, plus on-site SAT, operator training, and IQ/OQ/PQ execution at your facility."
+						text: "Yes — FAT at our Ahmedabad floor, plus on-site SAT, operator training, and IQ/OQ execution at your facility."
 					}
 				},
 				{
@@ -196,7 +197,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 				_: 1
 			}, _parent));
 			_push(`</li><li>/</li><li class="text-slate-900">${ssrInterpolate(__props.product.name)}</li></ol></div></nav><section class="bg-white py-12 sm:py-16"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-10 lg:grid-cols-12"><div class="lg:col-span-7"><button type="button" class="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100">`);
-			if (gallery.value[activeImage.value]) _push(`<img${ssrRenderAttr("src", gallery.value[activeImage.value])}${ssrRenderAttr("alt", __props.product.name + " — " + __props.product.category.name)} class="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" width="1200" height="900" loading="eager" fetchpriority="high">`);
+			if (gallery.value[activeImage.value]) _push(`<img${ssrRenderAttr("src", gallery.value[activeImage.value])}${ssrRenderAttr("alt", __props.product.name + " — " + __props.product.category.name)} class="absolute inset-0 size-full object-contain transition-transform duration-500 group-hover:scale-105" width="1200" height="900" loading="eager" fetchpriority="high">`);
 			else _push(`<!---->`);
 			_push(`<span class="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-slate-700 shadow opacity-0 transition-opacity group-hover:opacity-100"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path></svg> Expand </span><span class="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-medium text-[color:var(--color-brand)]">${ssrInterpolate(__props.product.category.name)}</span></button>`);
 			if (gallery.value.length > 1) {
@@ -217,7 +218,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 				});
 				_push(`<!--]--></dl></div>`);
 			} else _push(`<!---->`);
-			_push(`<div class="mt-8 flex flex-wrap gap-3"><a href="#enquire" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]"> Request Quotation <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a><a href="https://wa.me/919825018210" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:border-teal-500 hover:text-teal-600"> Chat on WhatsApp </a></div><div class="mt-8 grid grid-cols-2 gap-3 text-xs"><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> cGMP compliant build</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> SS 316L contact parts</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> IQ / OQ / PQ support</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> 24-month warranty</div></div></div></div></div></section><section class="bg-slate-50 py-16"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-12 lg:grid-cols-3"><div class="lg:col-span-2"><article class="prose prose-slate max-w-none"><div>${__props.product.long_description?.replace(/\n\n/g, "<br><br>") ?? ""}</div></article>`);
+			_push(`<div class="mt-8 flex flex-wrap gap-3"><a href="#enquire" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]"> Request Quotation <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a><a href="https://wa.me/919825018210" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:border-teal-500 hover:text-teal-600"> Chat on WhatsApp </a></div><div class="mt-8 grid grid-cols-2 gap-3 text-xs"><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> cGMP compliant build</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> SS 316L contact parts</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> IQ / OQ support</div><div class="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-slate-600"><svg class="size-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> 24-month warranty</div></div></div></div></div></section><section class="bg-slate-50 py-16"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-12 lg:grid-cols-3"><div class="lg:col-span-2"><article class="prose prose-slate max-w-none"><div>${__props.product.long_description?.replace(/\n\n/g, "<br><br>") ?? ""}</div></article>`);
 			if (__props.product.features?.length) {
 				_push(`<div class="mt-12"><h2 class="font-heading text-2xl font-semibold text-slate-900">Features</h2><ul class="mt-6 grid gap-3 sm:grid-cols-2"><!--[-->`);
 				ssrRenderList(__props.product.features, (f, i) => {

@@ -4,8 +4,8 @@ import { Link } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const faqs = [
-    { q: 'What is Kailash Machine Tools?', a: 'Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, Gujarat, India — founded in 1991 and previously known as Shree Ganesh Pharmatech.' },
-    { q: 'Are your machines cGMP compliant?', a: 'Yes. All our machines are designed and built to current Good Manufacturing Practice, with SS 316L contact parts, documented FAT/SAT, and IQ/OQ/PQ validation support included.' },
+    { q: 'What is Kailash Machine Tools?', a: 'Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, Gujarat, India — engineering pharmaceutical machinery since 1989 and previously known as Shree Ganesh Pharmatech.' },
+    { q: 'Are your machines cGMP compliant?', a: 'Yes. All our machines are designed and built to current Good Manufacturing Practice, with SS 316L contact parts, documented FAT/SAT, and IQ/OQ validation support included.' },
     { q: 'Which countries do you export to?', a: 'We export across India, the Middle East (UAE, Saudi Arabia, Egypt), Southeast Asia (Vietnam, Philippines, Indonesia), Africa (Kenya, Nigeria, Tanzania), and select European markets.' },
     { q: 'Do you provide installation and commissioning?', a: 'Yes, our service engineers travel on-site for installation, commissioning, and operator training. Remote support and spare-parts stocking are available globally.' },
     { q: 'What is the typical lead time?', a: 'Standard machines: 6 – 10 weeks from PO. Customised / turnkey lines: 12 – 18 weeks depending on scope.' },

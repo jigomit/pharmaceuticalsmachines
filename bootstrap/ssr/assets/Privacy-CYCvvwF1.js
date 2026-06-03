@@ -1,4 +1,4 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
 import { defineComponent, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
 //#region resources/js/Pages/Privacy.vue?vue&type=script&setup=true&lang.ts

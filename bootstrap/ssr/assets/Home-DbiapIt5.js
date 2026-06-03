@@ -1,9 +1,9 @@
 import { t as _plugin_vue_export_helper_default } from "./_plugin-vue_export-helper-jrA-gPFe.js";
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
-import { t as ScrollReveal_default } from "./ScrollReveal-oDITbbxE.js";
-import { t as AnimatedCounter_default } from "./AnimatedCounter-PkZHsldm.js";
-import { t as ProductCard_default } from "./ProductCard-C-SlM2Bk.js";
-import { t as CategoryIcon_default } from "./CategoryIcon-Bm7pAnF1.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
+import { t as ScrollReveal_default } from "./ScrollReveal-CwIui_-r.js";
+import { t as AnimatedCounter_default } from "./AnimatedCounter-BAd1eGAI.js";
+import { t as ProductCard_default } from "./ProductCard-bYE7QR9h.js";
+import { t as CategoryIcon_default } from "./CategoryIcon-BOcVQdSI.js";
 import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, defineComponent, mergeProps, onBeforeUnmount, onMounted, openBlock, ref, renderList, resolveDirective, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, usePage } from "@inertiajs/vue3";
 import { ssrGetDirectiveProps, ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot } from "vue/server-renderer";
@@ -144,7 +144,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 		const pillars = [
 			{
 				title: "cGMP by design",
-				body: "SS 316L, documented traceability, FAT/SAT, IQ/OQ/PQ on every build."
+				body: "SS 316L, documented traceability, FAT/SAT, IQ/OQ on every build."
 			},
 			{
 				title: "Injectable specialists",
@@ -183,7 +183,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 			{
 				step: "05",
 				title: "Commission",
-				body: "On-site SAT, operator training, IQ/OQ/PQ execution, documentation handover."
+				body: "On-site SAT, operator training, IQ/OQ execution, documentation handover."
 			},
 			{
 				step: "06",
@@ -256,19 +256,24 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 		return (_ctx, _push, _parent, _attrs) => {
 			const _directive_motion = resolveDirective("motion");
 			_push(`<!--[-->`);
-			_push(ssrRenderComponent(SeoHead_default, { description: "Pharmaceutical machinery manufacturer since 1991. Vial filling, ampoule sealing, washing, capping, labelling, tablet press — cGMP built in Ahmedabad, India." }, null, _parent));
+			_push(ssrRenderComponent(SeoHead_default, {
+				title: "Kailash Machine Tools - Pharmaceutical Machinery Manufacturer in India",
+				description: "Kailash Machine Tools is a pharmaceutical machinery manufacturer in Ahmedabad, India. Explore vial filling, ampoule filling, washing, capping, labelling and turnkey pharma lines.",
+				keywords: "kailash machine tools, pharmaceutical machinery manufacturer india, vial filling machine manufacturer, ampoule filling machine, pharma industry machines"
+			}, null, _parent));
 			_push(ssrRenderComponent(unref(Head), null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(`<link rel="preload" as="image"${ssrRenderAttr("href", __props.heroImages.primary)}${_scopeId}>`);
+					if (_push) _push(`<link rel="preload" as="image"${ssrRenderAttr("href", __props.heroImages.primary)} fetchpriority="high"${_scopeId}>`);
 					else return [createVNode("link", {
 						rel: "preload",
 						as: "image",
-						href: __props.heroImages.primary
+						href: __props.heroImages.primary,
+						fetchpriority: "high"
 					}, null, 8, ["href"])];
 				}),
 				_: 1
 			}, _parent));
-			_push(`<section class="relative isolate overflow-hidden text-white"><div class="absolute inset-0 -z-20"><img${ssrRenderAttr("src", __props.heroImages.primary)} alt="Pharmaceutical machinery manufacturer Kailash Machine Tools — vial filling line at Ahmedabad factory" class="size-full object-cover ken-burns" fetchpriority="high" decoding="async" width="1800" height="1200" sizes="100vw"></div><div class="absolute inset-0 -z-10 bg-gradient-to-br from-[color:var(--color-brand)]/95 via-[color:var(--color-brand)]/80 to-[#061433]/95"></div><div class="mesh-hero-animated absolute inset-0 -z-10 opacity-60 mix-blend-screen"></div><div class="bg-grid-dark grid-pattern-fade absolute inset-0 -z-10 opacity-30"></div><div class="noise-overlay absolute inset-0 -z-10"></div><div class="mx-auto grid max-w-7xl gap-12 px-4 pt-24 pb-32 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pt-36 lg:pb-40"><div class="lg:col-span-7"><span${ssrRenderAttrs(mergeProps({
+			_push(`<section class="relative isolate overflow-hidden text-white"><div class="absolute inset-0 -z-20"><img${ssrRenderAttr("src", __props.heroImages.primary)} alt="Pharmaceutical machinery manufacturer Kailash Machine Tools — vial filling line at Ahmedabad factory" class="size-full object-cover ken-burns" fetchpriority="high" loading="eager" decoding="async" width="1800" height="1200" sizes="100vw"></div><div class="absolute inset-0 -z-10 bg-gradient-to-br from-[color:var(--color-brand)]/95 via-[color:var(--color-brand)]/80 to-[#061433]/95"></div><div class="mesh-hero-animated absolute inset-0 -z-10 opacity-60 mix-blend-screen"></div><div class="bg-grid-dark grid-pattern-fade absolute inset-0 -z-10 opacity-30"></div><div class="noise-overlay absolute inset-0 -z-10"></div><div class="mx-auto grid max-w-7xl gap-12 px-4 pt-24 pb-32 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pt-36 lg:pb-40"><div class="lg:col-span-7"><span${ssrRenderAttrs(mergeProps({
 				initial: {
 					opacity: 0,
 					y: 12
@@ -279,7 +284,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					transition: { duration: 700 }
 				},
 				class: "inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.22em] text-teal-200 backdrop-blur"
-			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-teal-300 opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-teal-300"></span></span> Engineering since 1991 · Formerly Shree Ganesh Pharmatech </span><h1${ssrRenderAttrs(mergeProps({
+			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-teal-300 opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-teal-300"></span></span> Engineering since 1989 · Formerly Shree Ganesh Pharmatech </span><h1${ssrRenderAttrs(mergeProps({
 				initial: {
 					opacity: 0,
 					y: 24
@@ -384,7 +389,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					}
 				},
 				class: "mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-slate-400"
-			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> cGMP</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> SS 316L</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> FAT / SAT</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> IQ / OQ / PQ</span></div></div><div class="relative lg:col-span-5"><div${ssrRenderAttrs(mergeProps({
+			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> cGMP</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> SS 316L</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> FAT / SAT</span><span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"></path></svg> IQ / OQ</span></div></div><div class="relative lg:col-span-5"><div${ssrRenderAttrs(mergeProps({
 				initial: {
 					opacity: 0,
 					scale: .92,
@@ -400,7 +405,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					}
 				},
 				class: "relative"
-			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><div class="glass-dark relative rounded-3xl p-6 shadow-2xl"><div class="overflow-hidden rounded-2xl"><img${ssrRenderAttr("src", __props.heroImages.secondary)} alt="Filled pharmaceutical vials on a cGMP production line" class="aspect-[4/3] w-full object-cover" width="800" height="600" loading="eager"></div><div class="mt-5 grid grid-cols-2 gap-3"><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Vial fill</div><div class="mt-1 font-heading text-2xl font-semibold">±0.5 %</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Output</div><div class="mt-1 font-heading text-2xl font-semibold">300 BPM</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Contact parts</div><div class="mt-1 font-heading text-sm font-semibold">SS 316 L</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Finish</div><div class="mt-1 font-heading text-sm font-semibold">Ra &lt; 0.4 µm</div></div></div></div><div class="absolute -left-10 -top-10 -z-10 size-48 rounded-full bg-teal-400/40 blur-3xl"></div><div class="absolute -bottom-12 -right-12 -z-10 size-64 rounded-full bg-cyan-400/40 blur-3xl"></div></div></div></div><div class="absolute inset-x-0 bottom-8 flex justify-center"><div class="scroll-indicator" aria-hidden="true"></div></div></section><section class="relative -mt-16 px-4 sm:px-6 lg:px-8"><div class="mx-auto max-w-7xl">`);
+			}, ssrGetDirectiveProps(_ctx, _directive_motion)))}><div class="glass-dark relative rounded-3xl p-6 shadow-2xl"><div class="aspect-[4/3] overflow-hidden rounded-2xl"><img${ssrRenderAttr("src", __props.heroImages.secondary)} alt="Filled pharmaceutical vials on a cGMP production line" class="size-full object-contain object-center" width="800" height="600" loading="eager" sizes="(min-width: 1024px) 36vw, 92vw"></div><div class="mt-5 grid grid-cols-2 gap-3"><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Vial fill</div><div class="mt-1 font-heading text-2xl font-semibold">±0.5 %</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Output</div><div class="mt-1 font-heading text-2xl font-semibold">300 BPM</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Contact parts</div><div class="mt-1 font-heading text-sm font-semibold">SS 316 L</div></div><div class="rounded-xl border border-white/10 bg-white/5 p-4"><div class="font-mono text-[10px] uppercase tracking-widest text-teal-300">Finish</div><div class="mt-1 font-heading text-sm font-semibold">Ra &lt; 0.4 µm</div></div></div></div><div class="absolute -left-10 -top-10 -z-10 size-48 rounded-full bg-teal-400/40 blur-3xl"></div><div class="absolute -bottom-12 -right-12 -z-10 size-64 rounded-full bg-cyan-400/40 blur-3xl"></div></div></div></div></section><section class="relative -mt-16 px-4 sm:px-6 lg:px-8"><div class="mx-auto max-w-7xl">`);
 			_push(ssrRenderComponent(ScrollReveal_default, {
 				stagger: .12,
 				y: 24,
@@ -408,7 +413,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<div class="glass grid divide-x divide-slate-200 overflow-hidden rounded-3xl shadow-xl md:grid-cols-4"${_scopeId}><!--[-->`);
+						_push(`<div class="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl md:grid-cols-4 md:divide-x md:divide-slate-200"${_scopeId}><!--[-->`);
 						ssrRenderList(stats, (s, i) => {
 							_push(`<div class="stat-card p-8 text-center"${_scopeId}><div class="font-heading text-4xl font-semibold text-[color:var(--color-brand)] sm:text-5xl"${_scopeId}>`);
 							_push(ssrRenderComponent(AnimatedCounter_default, {
@@ -418,7 +423,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 							_push(`</div><div class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"${_scopeId}>${ssrInterpolate(s.label)}</div></div>`);
 						});
 						_push(`<!--]--></div>`);
-					} else return [createVNode("div", { class: "glass grid divide-x divide-slate-200 overflow-hidden rounded-3xl shadow-xl md:grid-cols-4" }, [(openBlock(), createBlock(Fragment, null, renderList(stats, (s, i) => {
+					} else return [createVNode("div", { class: "grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl md:grid-cols-4 md:divide-x md:divide-slate-200" }, [(openBlock(), createBlock(Fragment, null, renderList(stats, (s, i) => {
 						return createVNode("div", {
 							key: i,
 							class: "stat-card p-8 text-center"
@@ -536,7 +541,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 							}, {
 								default: withCtx((_, _push, _parent, _scopeId) => {
 									if (_push) {
-										if (c.hero_image) _push(`<img${ssrRenderAttr("src", c.hero_image)}${ssrRenderAttr("alt", c.name + " — Kailash Machine Tools")} class="${ssrRenderClass(["absolute inset-0 size-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110", c.tall ? "aspect-auto" : "aspect-[16/10]"])}" loading="lazy" width="1200" height="800"${_scopeId}>`);
+										if (c.hero_image) _push(`<img${ssrRenderAttr("src", c.hero_image)}${ssrRenderAttr("alt", c.name + " — Kailash Machine Tools")} class="${ssrRenderClass(["absolute inset-0 size-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110", c.tall ? "aspect-auto" : "aspect-[16/10]"])}" loading="lazy" width="1200" height="800" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"${_scopeId}>`);
 										else _push(`<!---->`);
 										_push(`<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"${_scopeId}></div><div class="relative flex h-full min-h-[220px] flex-col justify-end p-6"${_scopeId}><div class="mb-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/10 backdrop-blur"${_scopeId}>`);
 										_push(ssrRenderComponent(CategoryIcon_default, {
@@ -552,7 +557,8 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 											class: ["absolute inset-0 size-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110", c.tall ? "aspect-auto" : "aspect-[16/10]"],
 											loading: "lazy",
 											width: "1200",
-											height: "800"
+											height: "800",
+											sizes: "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
 										}, null, 10, ["src", "alt"])) : createCommentVNode("", true),
 										createVNode("div", { class: "absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" }),
 										createVNode("div", { class: "relative flex h-full min-h-[220px] flex-col justify-end p-6" }, [
@@ -584,7 +590,8 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 									class: ["absolute inset-0 size-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110", c.tall ? "aspect-auto" : "aspect-[16/10]"],
 									loading: "lazy",
 									width: "1200",
-									height: "800"
+									height: "800",
+									sizes: "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
 								}, null, 10, ["src", "alt"])) : createCommentVNode("", true),
 								createVNode("div", { class: "absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" }),
 								createVNode("div", { class: "relative flex h-full min-h-[220px] flex-col justify-end p-6" }, [
@@ -689,7 +696,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<div class="reveal-item"${_scopeId}><p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600"${_scopeId}>Quality &amp; Compliance</p></div><h2 class="reveal-item mt-3 font-heading text-balance text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl"${_scopeId}> Auditable by design. <span class="text-gradient-brand"${_scopeId}>Validated on delivery.</span></h2><p class="reveal-item mt-6 max-w-xl text-base leading-8 text-slate-600"${_scopeId}> Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ/PQ protocols in the box. </p><ul class="reveal-item mt-8 space-y-3 text-sm text-slate-700"${_scopeId}><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> cGMP + EU-GMP aligned construction</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> SS 316L contact parts, Ra &lt; 0.4 µm finish</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> FAT / SAT protocols, IQ/OQ/PQ documentation</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> CE-ready variants for EU export</li></ul>`);
+						_push(`<div class="reveal-item"${_scopeId}><p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600"${_scopeId}>Quality &amp; Compliance</p></div><h2 class="reveal-item mt-3 font-heading text-balance text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl"${_scopeId}> Auditable by design. <span class="text-gradient-brand"${_scopeId}>Validated on delivery.</span></h2><p class="reveal-item mt-6 max-w-xl text-base leading-8 text-slate-600"${_scopeId}> Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ protocols in the box. </p><ul class="reveal-item mt-8 space-y-3 text-sm text-slate-700"${_scopeId}><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> cGMP + EU-GMP aligned construction</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> SS 316L contact parts, Ra &lt; 0.4 µm finish</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> FAT / SAT protocols, IQ/OQ documentation</li><li class="flex items-start gap-3"${_scopeId}><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"${_scopeId}><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"${_scopeId}></path></svg> CE-ready variants for EU export</li></ul>`);
 						_push(ssrRenderComponent(unref(Link), {
 							href: "/quality-compliance",
 							class: "reveal-item mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]"
@@ -713,7 +720,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					} else return [
 						createVNode("div", { class: "reveal-item" }, [createVNode("p", { class: "text-xs font-semibold uppercase tracking-[0.22em] text-teal-600" }, "Quality & Compliance")]),
 						createVNode("h2", { class: "reveal-item mt-3 font-heading text-balance text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl" }, [createTextVNode(" Auditable by design. "), createVNode("span", { class: "text-gradient-brand" }, "Validated on delivery.")]),
-						createVNode("p", { class: "reveal-item mt-6 max-w-xl text-base leading-8 text-slate-600" }, " Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ/PQ protocols in the box. "),
+						createVNode("p", { class: "reveal-item mt-6 max-w-xl text-base leading-8 text-slate-600" }, " Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ protocols in the box. "),
 						createVNode("ul", { class: "reveal-item mt-8 space-y-3 text-sm text-slate-700" }, [
 							createVNode("li", { class: "flex items-start gap-3" }, [(openBlock(), createBlock("svg", {
 								class: "mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]",
@@ -729,7 +736,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 								class: "mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]",
 								fill: "currentColor",
 								viewBox: "0 0 20 20"
-							}, [createVNode("path", { d: "M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" })])), createTextVNode(" FAT / SAT protocols, IQ/OQ/PQ documentation")]),
+							}, [createVNode("path", { d: "M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" })])), createTextVNode(" FAT / SAT protocols, IQ/OQ documentation")]),
 							createVNode("li", { class: "flex items-start gap-3" }, [(openBlock(), createBlock("svg", {
 								class: "mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]",
 								fill: "currentColor",
@@ -842,14 +849,26 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 					if (_push) {
 						_push(`<!--[-->`);
 						ssrRenderList(__props.clients, (c) => {
-							_push(`<div class="flex h-14 items-center justify-center rounded-lg border border-slate-200 bg-white px-8 text-sm font-semibold tracking-wider text-slate-600 grayscale transition hover:grayscale-0"${_scopeId}>${ssrInterpolate(c.name)}</div>`);
+							_push(`<div class="flex h-20 min-w-[190px] items-center justify-center rounded-lg border border-slate-200 bg-white px-6 shadow-sm transition"${_scopeId}>`);
+							if (c.logo) _push(`<img${ssrRenderAttr("src", c.logo)}${ssrRenderAttr("alt", c.name)} class="h-12 w-auto max-w-[150px] object-contain" loading="lazy"${_scopeId}>`);
+							else _push(`<span class="text-sm font-semibold tracking-wider text-slate-600"${_scopeId}>${ssrInterpolate(c.name)}</span>`);
+							_push(`</div>`);
 						});
 						_push(`<!--]-->`);
 					} else return [(openBlock(true), createBlock(Fragment, null, renderList(__props.clients, (c) => {
 						return openBlock(), createBlock("div", {
 							key: c.id,
-							class: "flex h-14 items-center justify-center rounded-lg border border-slate-200 bg-white px-8 text-sm font-semibold tracking-wider text-slate-600 grayscale transition hover:grayscale-0"
-						}, toDisplayString(c.name), 1);
+							class: "flex h-20 min-w-[190px] items-center justify-center rounded-lg border border-slate-200 bg-white px-6 shadow-sm transition"
+						}, [c.logo ? (openBlock(), createBlock("img", {
+							key: 0,
+							src: c.logo,
+							alt: c.name,
+							class: "h-12 w-auto max-w-[150px] object-contain",
+							loading: "lazy"
+						}, null, 8, ["src", "alt"])) : (openBlock(), createBlock("span", {
+							key: 1,
+							class: "text-sm font-semibold tracking-wider text-slate-600"
+						}, toDisplayString(c.name), 1))]);
 					}), 128))];
 				}),
 				_: 1
@@ -893,7 +912,7 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 									default: withCtx((_, _push, _parent, _scopeId) => {
 										if (_push) {
 											_push(`<div class="relative aspect-[16/10] overflow-hidden bg-slate-100"${_scopeId}>`);
-											if (post.hero_image) _push(`<img${ssrRenderAttr("src", post.hero_image)}${ssrRenderAttr("alt", post.title)} class="size-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" width="800" height="500"${_scopeId}>`);
+											if (post.hero_image) _push(`<img${ssrRenderAttr("src", post.hero_image)}${ssrRenderAttr("alt", post.title)} class="size-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" width="800" height="500" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"${_scopeId}>`);
 											else _push(`<!---->`);
 											_push(`</div><div class="p-6"${_scopeId}><div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-teal-600"${_scopeId}><span${_scopeId}>${ssrInterpolate(post.category_tag)}</span><span class="size-1 rounded-full bg-slate-300"${_scopeId}></span><span${_scopeId}>${ssrInterpolate(post.reading_minutes)} min read</span></div><h3 class="mt-3 font-heading text-lg font-semibold text-slate-900 group-hover:text-[color:var(--color-brand-accent)]"${_scopeId}>${ssrInterpolate(post.title)}</h3><p class="mt-2 line-clamp-3 text-sm leading-6 text-slate-600"${_scopeId}>${ssrInterpolate(post.excerpt)}</p></div>`);
 										} else return [createVNode("div", { class: "relative aspect-[16/10] overflow-hidden bg-slate-100" }, [post.hero_image ? (openBlock(), createBlock("img", {
@@ -903,7 +922,8 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 											class: "size-full object-cover transition-transform duration-700 group-hover:scale-110",
 											loading: "lazy",
 											width: "800",
-											height: "500"
+											height: "500",
+											sizes: "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
 										}, null, 8, ["src", "alt"])) : createCommentVNode("", true)]), createVNode("div", { class: "p-6" }, [
 											createVNode("div", { class: "flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-teal-600" }, [
 												createVNode("span", null, toDisplayString(post.category_tag), 1),
@@ -931,7 +951,8 @@ var Home_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 									class: "size-full object-cover transition-transform duration-700 group-hover:scale-110",
 									loading: "lazy",
 									width: "800",
-									height: "500"
+									height: "500",
+									sizes: "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 96vw"
 								}, null, 8, ["src", "alt"])) : createCommentVNode("", true)]), createVNode("div", { class: "p-6" }, [
 									createVNode("div", { class: "flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-teal-600" }, [
 										createVNode("span", null, toDisplayString(post.category_tag), 1),

@@ -1,4 +1,5 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
+import { t as useSiteUrl } from "./useSiteUrl-CLhO3Ycn.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
 import { computed, createVNode, defineComponent, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
@@ -12,6 +13,7 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 	},
 	setup(__props) {
 		const props = __props;
+		const site = useSiteUrl();
 		const articleSchema = computed(() => ({
 			"@context": "https://schema.org",
 			"@type": "Article",
@@ -26,11 +28,11 @@ var Show_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCom
 				name: "Kailash Machine Tools",
 				logo: {
 					"@type": "ImageObject",
-					url: "https://pharmaceuticalsmachines.com/og-default.jpg"
+					url: `${site.value}/og-default.jpg`
 				}
 			},
 			datePublished: props.post.published_at,
-			mainEntityOfPage: `https://pharmaceuticalsmachines.com/blog/${props.post.slug}`
+			mainEntityOfPage: `${site.value}/blog/${props.post.slug}`
 		}));
 		const formattedBody = computed(() => {
 			if (!props.post.body) return "";

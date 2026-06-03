@@ -30,7 +30,7 @@ const stats = [
 ];
 
 const pillars = [
-    { title: 'cGMP by design', body: 'SS 316L, documented traceability, FAT/SAT, IQ/OQ/PQ on every build.' },
+    { title: 'cGMP by design', body: 'SS 316L, documented traceability, FAT/SAT, IQ/OQ on every build.' },
     { title: 'Injectable specialists', body: 'Complete ampoule & vial lines — washing, filling, sealing, inspection.' },
     { title: 'In-house engineering', body: '34-year Ahmedabad workshop. Mechanical, servo and controls under one roof.' },
     { title: 'Global after-sales', body: 'Spare-parts stocked regionally. On-site service in 72 hours.' },
@@ -41,7 +41,7 @@ const process = [
     { step: '02', title: 'Design', body: 'Engineering drawings, DQ documentation, 3D layouts and material plans for approval.' },
     { step: '03', title: 'Build', body: 'In-house machining, assembly, servo integration, PLC programming and run-in testing.' },
     { step: '04', title: 'Validate', body: 'FAT at our Ahmedabad floor with your team + full protocol sign-off before ship.' },
-    { step: '05', title: 'Commission', body: 'On-site SAT, operator training, IQ/OQ/PQ execution, documentation handover.' },
+    { step: '05', title: 'Commission', body: 'On-site SAT, operator training, IQ/OQ execution, documentation handover.' },
     { step: '06', title: 'Support', body: '24-month warranty, regional spare stocking, remote diagnostics, life-of-machine updates.' },
 ];
 
@@ -137,7 +137,7 @@ const bento = computed(() => {
                     <span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> cGMP</span>
                     <span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> SS 316L</span>
                     <span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> FAT / SAT</span>
-                    <span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> IQ / OQ / PQ</span>
+                    <span class="flex items-center gap-2"><svg class="size-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> IQ / OQ</span>
                 </div>
             </div>
 
@@ -340,12 +340,12 @@ const bento = computed(() => {
                         Auditable by design. <span class="text-gradient-brand">Validated on delivery.</span>
                     </h2>
                     <p class="reveal-item mt-6 max-w-xl text-base leading-8 text-slate-600">
-                        Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ/PQ protocols in the box.
+                        Every build assumes your plant will be audited tomorrow — and makes sure the machine passes. Full material traceability, sanitary design, IQ/OQ protocols in the box.
                     </p>
                     <ul class="reveal-item mt-8 space-y-3 text-sm text-slate-700">
                         <li class="flex items-start gap-3"><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> cGMP + EU-GMP aligned construction</li>
                         <li class="flex items-start gap-3"><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> SS 316L contact parts, Ra &lt; 0.4 µm finish</li>
-                        <li class="flex items-start gap-3"><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> FAT / SAT protocols, IQ/OQ/PQ documentation</li>
+                        <li class="flex items-start gap-3"><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> FAT / SAT protocols, IQ/OQ documentation</li>
                         <li class="flex items-start gap-3"><svg class="mt-0.5 size-5 shrink-0 text-[color:var(--color-brand-accent)]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> CE-ready variants for EU export</li>
                     </ul>
                     <Link href="/quality-compliance" class="reveal-item mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-[color:var(--color-brand-accent)]">

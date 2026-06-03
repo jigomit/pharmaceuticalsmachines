@@ -7,11 +7,11 @@
     <meta name="theme-color" content="#0B1F4B">
     <meta name="format-detection" content="telephone=yes">
 
-    @if (config('services.seo.google_site_verification'))
-        <meta name="google-site-verification" content="{{ config('services.seo.google_site_verification') }}">
+    @if (config('seo.google_site_verification'))
+        <meta name="google-site-verification" content="{{ config('seo.google_site_verification') }}">
     @endif
-    @if (config('services.seo.bing_site_verification'))
-        <meta name="msvalidate.01" content="{{ config('services.seo.bing_site_verification') }}">
+    @if (config('seo.bing_site_verification'))
+        <meta name="msvalidate.01" content="{{ config('seo.bing_site_verification') }}">
     @endif
 
 
@@ -25,13 +25,13 @@
     @vite(['resources/js/app.ts'])
     @inertiaHead
 
-    @if (config('services.seo.google_analytics_measurement_id'))
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.seo.google_analytics_measurement_id') }}"></script>
+    @if (config('seo.google_analytics_measurement_id'))
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('seo.google_analytics_measurement_id') }}"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '{{ config('services.seo.google_analytics_measurement_id') }}');
+            gtag('config', '{{ config('seo.google_analytics_measurement_id') }}');
         </script>
     @endif
 </head>

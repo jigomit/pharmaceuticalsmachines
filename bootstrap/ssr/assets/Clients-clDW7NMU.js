@@ -1,6 +1,6 @@
-import { t as SeoHead_default } from "./SeoHead-ILEVCC59.js";
+import { t as SeoHead_default } from "./SeoHead-vcfRhzu1.js";
 import { defineComponent, useSSRContext } from "vue";
-import { ssrInterpolate, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
+import { ssrInterpolate, ssrRenderAttr, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Pages/Clients.vue?vue&type=script&setup=true&lang.ts
 var Clients_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
 	__name: "Clients",
@@ -15,7 +15,10 @@ var Clients_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ define
 			}, null, _parent));
 			_push(`<section class="mesh-hero relative py-20 text-white"><div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">Clients</p><h1 class="mt-3 max-w-3xl text-4xl font-semibold sm:text-5xl">Trusted by pharma manufacturers across the world.</h1></div></section><section class="py-16"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"><!--[-->`);
 			ssrRenderList(__props.clients, (c) => {
-				_push(`<div class="flex h-28 items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-center text-sm font-semibold text-slate-700 shadow-sm">${ssrInterpolate(c.name)}</div>`);
+				_push(`<div class="flex h-32 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center text-sm font-semibold text-slate-700 shadow-sm">`);
+				if (c.logo) _push(`<img${ssrRenderAttr("src", c.logo)}${ssrRenderAttr("alt", c.name)} class="h-20 w-auto max-w-full object-contain sm:h-24" loading="lazy">`);
+				else _push(`<span>${ssrInterpolate(c.name)}</span>`);
+				_push(`</div>`);
 			});
 			_push(`<!--]--></div></div></section><!--]-->`);
 		};
