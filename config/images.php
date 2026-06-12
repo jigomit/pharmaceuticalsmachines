@@ -255,7 +255,6 @@ return [
 
         // Labelling — use real labelling line
         'automatic-sticker-labelling-machine' => $LIB['labeling_machine_1'],
-        'wet-glue-labelling-machine'          => $LIB['wet_glue_1'],
         'ampoule-sticker-labelling-machine'   => $LIB['ampoule_sticker_1'],
 
         // Inspection
@@ -372,10 +371,6 @@ return [
         'automatic-sticker-labelling-machine' => [
             $LIB['labeling_machine_2'],
             $LIB['labeling_machine_3'],
-        ],
-        'wet-glue-labelling-machine' => [
-            $LIB['wet_glue_2'],
-            $LIB['wet_glue_3'],
         ],
         'ampoule-sticker-labelling-machine' => [
             $LIB['ampoule_sticker_2'],

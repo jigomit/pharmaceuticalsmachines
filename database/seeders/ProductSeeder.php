@@ -517,16 +517,6 @@ class ProductSeeder extends Seeder
             ],
             [
                 'category' => 'labelling',
-                'name' => 'Wet-Glue Labelling Machine',
-                'slug' => 'wet-glue-labelling-machine',
-                'short_description' => 'Rotary wet-glue labelling machine for body + neck labels on round oral-liquid bottles.',
-                'features' => ['Rotary indexing turret', 'Dual-label application', 'Glue pot with heater'],
-                'applications' => ['Syrups, nutraceuticals, cosmetics'],
-                'specs' => ['Output' => '60 – 180 BPM'],
-                'sort_order' => 2,
-            ],
-            [
-                'category' => 'labelling',
                 'name' => 'Automatic Rotary High Speed Ampoule/Vials Sticker Labelling Machine',
                 'slug' => 'ampoule-sticker-labelling-machine',
                 'model_code' => 'KMT-ASL-120/240/300',
@@ -534,7 +524,7 @@ class ProductSeeder extends Seeder
                 'features' => ['PLC/Microprocessor controlled label dispensing', 'User-friendly sensing interface for label and product', 'Choice of stepper or servo drive', 'Suitable for overlap labelling', '"No container – no label" sensor', 'PLC-based operation with VFD speed control', 'Digital counter for total labeled containers', 'Real-time speed indicator', 'Label roll end – machine stop system', 'No change parts during size changeover', 'cGMP compliant'],
                 'applications' => ['Round ampoules', 'Vials', 'High-speed labelling lines'],
                 'specs' => ['Production rate' => '50–300 containers/min', 'Dispensing speed' => '5 m/min', 'Power' => '0.5 HP, 220V, 1 Phase, 50Hz', 'Container dia' => '16 mm to 80 mm', 'Label length' => '20 mm to unlimited', 'Label width' => '10 mm to 90 mm'],
-                'sort_order' => 3,
+                'sort_order' => 2,
             ],
 
             // INSPECTION
@@ -929,6 +919,7 @@ class ProductSeeder extends Seeder
         Product::query()->where('slug', '=', 'automatic-eye-drop-filling-capping-sealing-machine')->delete();
         Product::query()->where('slug', '=', 'online-vial-cap-inspection-machine')->delete();
         Product::query()->where('slug', '=', 'semi-automatic-auger-powder-filling-machine')->delete();
+        Product::query()->where('slug', '=', 'wet-glue-labelling-machine')->delete();
 
         foreach ($products as $p) {
             $category = Category::query()->where('slug', '=', $p['category'])->firstOrFail();

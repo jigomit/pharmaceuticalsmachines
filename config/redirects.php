@@ -49,4 +49,5 @@ return [
     '/products/capping-sealing/automatic-multi-head-vial-cap-sealing-machine' => '/products/capping-sealing/automatic-multi-head-vials-cap-machine',
     '/products/capping-sealing/Automatic-Multi-Head-Vials-Cap-Machine' => '/products/capping-sealing/automatic-multi-head-vials-cap-machine',
     '/products/other-machinery/membrane-filter-holder' => '/products/other-machinery/wire-mesh-piston',
+    '/products/labelling/wet-glue-labelling-machine' => '/products/labelling',
 ];
