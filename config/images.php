@@ -60,7 +60,7 @@ $LIB = [
     'online_vials_cap_inspection_1' => "{$dir}/online-vial-powder-machine.jpg", // online vials cap inspection machine hero
     'tube_fill_1' => "{$dir}/SEMI AUTOMATIC TUBE FILLING MACHINE (1).webp",                // semi automatic tube filling machine hero
     'wire_mesh_piston_1' => "{$dir}/WIRE MESH PISTON (2).jpeg",                            // wire mesh piston hero
-    'injectable_powder_1' => "{$dir}/injectable-powder.optimized.webp",     // injectable powder filling category optimized
+    'injectable_powder_1' => "{$dir}/AUTOMATIC SERVO MAKE DRY INJECTABLE POWDER FILING MACHINE MODEL  240 (1) (1).webp", // injectable powder filling category hero
     'dry_injection_powder_1' => "{$dir}/dry-powder-1.optimized.webp",                 // dry injection powder filling machine hero updated
     'dry_injection_powder_2' => "{$dir}/dry-powder-2.optimized.webp",                  // dry injection powder filling machine second image updated
     'dry_injection_powder_3' => "{$dir}/dry-machine-3-ezremove.optimized.webp",        // dry injection powder filling machine third image updated
@@ -99,10 +99,10 @@ $LIB = [
     'wet_glue_1' => "{$dir}/wet-glue-1.optimized.webp",                                  // wet glue labelling machine hero updated
     'wet_glue_2' => "{$dir}/wet-glue-2.optimized.webp",                                   // wet glue labelling machine second image updated
     'wet_glue_3' => "{$dir}/wet-glue-3.optimized.webp",                                   // wet glue labelling machine third image updated
-    'ampoule_sticker_1' => "{$dir}/ampoule-sticker-1.optimized.webp",                    // ampoule sticker labelling machine hero updated
+    'ampoule_sticker_1' => "{$dir}/AUTOAMTIC VIALS & BOTTLE STICKER LABELLING MACHINE.jpg (1).jpeg", // ampoule sticker labelling machine hero
     'ampoule_sticker_2' => "{$dir}/Ampoule Sticker-2.webp",                    // ampoule sticker labelling machine second image updated
     'ampoule_sticker_3' => "{$dir}/ampoule-sticker-3.optimized.webp",                     // ampoule sticker labelling machine third image updated
-    'visual_inspection_1' => "{$dir}/visual-inspection-3.optimized.webp",      // visual inspection category image optimized
+    'visual_inspection_1' => "{$dir}/Online Vials visual Inspection Machine (2).png", // visual inspection category hero
     'manual_ampoule_1' => "{$dir}/manual-ampoule-1.optimized.webp",                       // manual inspection booth hero updated
     'manual_ampoule_2' => "{$dir}/Manual Ampoule-2.optimized.webp",                      // manual inspection booth second image updated
     'manual_ampoule_3' => "{$dir}/Manual Ampoule-3.optimized.webp",                       // manual inspection booth third image updated
@@ -132,7 +132,8 @@ $LIB = [
     'ss_roller_1' => "{$dir}/stainless-steel-roller.jpeg",                      // ss roller conveyor hero
     'ss_roller_2' => "{$dir}/stainless-steel-roller-2.jpeg",                    // ss roller conveyor second image
     'ss_roller_3' => "{$dir}/stainless-steel-roller-3.jpg",                     // ss roller conveyor third image
-    'rotary_table_1' => "{$dir}/Rotary-table.webp",                             // rotary turn table hero
+    'packing_conveyor_1' => "{$dir}/PACKING CONVEYOR.jpg (4).jpeg",             // packing conveyors category hero
+    'rotary_table_1' => "{$dir}/TURN TABLE.jpg (1) (1).jpeg",                   // rotary turn table hero
     'rotary_table_2' => "{$dir}/Rotary-table-1.optimized.webp",                           // rotary turn table second image
     'rotary_table_3' => "{$dir}/Rotary-table-2.webp",                           // rotary turn table third image
     'change_parts_1' => "{$dir}/change-parts-1.optimized.webp",                            // change parts category image
@@ -201,7 +202,7 @@ return [
         'tablet-section'            => $LIB['blister_line'],        // solid-dose packaging line
         'ointment-cream-plants'     => $LIB['ointment_cream_1'],    // uploaded ointment & cream image
         'liquid-syrup-plants'       => $LIB['liquid_syrup_main'],
-        'packing-conveyors'         => $LIB['bottle_labeller'],     // conveyor with bottles
+        'packing-conveyors'         => $LIB['packing_conveyor_1'], // packing conveyor category hero
         'change-parts'              => $LIB['change_parts_1'],
         'pharma-furniture'          => $LIB['pharma_furniture_1'],
         'tray-dryers-storage'       => $LIB['tray_dryers_1'],
@@ -372,10 +373,7 @@ return [
             $LIB['labeling_machine_2'],
             $LIB['labeling_machine_3'],
         ],
-        'ampoule-sticker-labelling-machine' => [
-            $LIB['ampoule_sticker_2'],
-            $LIB['ampoule_sticker_3'],
-        ],
+        'ampoule-sticker-labelling-machine' => [],
         'manual-inspection-booth' => [
             $LIB['manual_ampoule_2'],
             $LIB['manual_ampoule_3'],
