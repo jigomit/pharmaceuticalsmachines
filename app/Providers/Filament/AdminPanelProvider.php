@@ -35,6 +35,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Kailash Machine Tools')
             ->brandLogo(asset('images/brand/kmt-logo-wordmark.png'))
             ->brandLogoHeight('3rem')
+            ->favicon(asset('images/brand/kmt-logo.png'))
             ->colors([
                 'primary' => Color::hex('#0b1f4b'),
                 'info' => Color::hex('#22d3ee'),
