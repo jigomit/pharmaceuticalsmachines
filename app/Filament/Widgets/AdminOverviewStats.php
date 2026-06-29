@@ -17,16 +17,16 @@ class AdminOverviewStats extends StatsOverviewWidget
 
         return [
             Stat::make('Total Enquiries', (string) Enquiry::query()->count())
-                ->description($newEnquiries.' new enquiries need attention')
+                ->description($newEnquiries.' new need attention')
                 ->color('primary'),
             Stat::make('Active Products', (string) Product::query()->where('is_active', true)->count())
-                ->description((string) Product::query()->count().' total products')
+                ->description(Product::query()->count().' total in catalogue')
                 ->color('success'),
             Stat::make('Published Blogs', (string) BlogPost::query()->published()->count())
-                ->description((string) BlogPost::query()->count().' total blog posts')
+                ->description(BlogPost::query()->count().' posts in library')
                 ->color('info'),
             Stat::make('Active Clients', (string) Client::query()->where('is_active', true)->count())
-                ->description((string) Client::query()->count().' total clients')
+                ->description(Client::query()->count().' client logos')
                 ->color('gray'),
         ];
     }

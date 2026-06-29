@@ -59,8 +59,8 @@ Cron entry for `spatie/laravel-sitemap` daily regeneration:
 
 ## First admin user
 
-Default seeded admin: **admin@pharmaceuticalsmachines.com** / **change-me-now**
-Log in at `/admin` and change the password immediately.
+Default seeded admin: **shreeganeshpharmatech@gmail.com** / **Shreeganesh@123**
+Log in at `/admin` and change the password immediately after first login.
 
 ## Search Console / indexing checklist
 

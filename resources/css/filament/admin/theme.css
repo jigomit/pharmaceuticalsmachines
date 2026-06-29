@@ -74,11 +74,91 @@
     background: var(--kmt-brand-soft-surface);
 }
 
+.fi-page-content {
+    gap: 1.25rem;
+}
+
+.fi-header {
+    margin-bottom: 0.25rem;
+}
+
+.fi-header-heading {
+    color: var(--text);
+    font-size: clamp(1.75rem, 2.2vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.fi-header-subheading {
+    color: color-mix(in srgb, var(--text) 62%, #64748b);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-top: 0.35rem;
+    max-width: 42rem;
+}
+
+.fi-sidebar-group-label {
+    color: color-mix(in srgb, #ffffff 72%, #cbd5e1);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 .fi-section,
 .fi-ta,
 .fi-wi-stats-overview-stat {
     border-color: color-mix(in srgb, var(--primary) 12%, #d6e6ff);
     background: #ffffff;
+}
+
+.fi-wi-table .fi-ta,
+.fi-wi-table .fi-section,
+.fi-wi-table .fi-ta-ctn,
+.fi-wi-table .fi-ta-content {
+    background: #ffffff;
+    border-radius: 0.95rem;
+    overflow: hidden;
+}
+
+.fi-ta-header-cell,
+.fi-ta-cell,
+.fi-ta-text,
+.fi-ta-text-item,
+.fi-ta-col {
+    color: var(--text);
+}
+
+.fi-ta-header-cell {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--primary) 72%, #475569);
+}
+
+.fi-ta-row {
+    background: #ffffff;
+}
+
+.fi-ta-row:hover {
+    background: color-mix(in srgb, var(--bg) 55%, #ffffff);
+}
+
+.fi-ta-empty-state-heading {
+    color: var(--text);
+}
+
+.fi-ta-empty-state-description {
+    color: color-mix(in srgb, var(--text) 62%, #64748b);
+}
+
+.fi-input-wrp,
+.fi-select-input,
+.fi-input {
+    background: #ffffff;
+    color: var(--text);
 }
 
 .fi-wi-stats-overview-stat {
@@ -135,6 +215,14 @@
 .fi-section-header-heading,
 .fi-ta-header-heading {
     color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.fi-ta-header-description {
+    color: color-mix(in srgb, var(--text) 62%, #64748b);
+    font-size: 0.92rem;
+    line-height: 1.45;
 }
 
 .fi-btn-color-primary {

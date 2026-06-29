@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Client;
+use App\Models\ExportCountry;
 use App\Support\Image;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -48,6 +49,7 @@ class PageController extends Controller
     {
         return Inertia::render('Clients', [
             'clients' => Client::where('is_active', true)->orderBy('sort_order')->get(),
+            'exportCountries' => ExportCountry::where('is_active', true)->orderBy('sort_order')->get(),
         ]);
     }
 

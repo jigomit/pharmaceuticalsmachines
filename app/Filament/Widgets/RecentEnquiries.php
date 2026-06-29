@@ -18,24 +18,29 @@ class RecentEnquiries extends TableWidget
                 Enquiry::query()->latest('created_at')->limit(8)
             )
             ->heading('Recent Enquiries')
-            ->description('Latest inbound enquiries from your website contact form.')
+            ->description('Latest leads from the website contact form.')
             ->columns([
                 TextColumn::make('created_at')
                     ->label('Received')
                     ->timezone('Asia/Kolkata')
-                    ->dateTime('d M Y, h:i A'),
+                    ->dateTime('d M Y, h:i A')
+                    ->sortable(),
                 TextColumn::make('name')
+                    ->label('Name')
                     ->searchable()
-                    ->weight('bold'),
+                    ->weight('semibold'),
                 TextColumn::make('email')
+                    ->label('Email')
                     ->copyable()
                     ->searchable()
-                    ->toggleable(),
+                    ->limit(28),
                 TextColumn::make('product.name')
                     ->label('Product')
                     ->placeholder('General enquiry')
-                    ->toggleable(),
+                    ->limit(40)
+                    ->wrap(),
                 TextColumn::make('status')
+                    ->label('Status')
                     ->badge()
                     ->colors([
                         'primary' => 'new',

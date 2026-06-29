@@ -40,8 +40,9 @@ return [
     '/product' => '/products',
 
     // Product slug changes
-    '/products/washing-machines/automatic-servo-ampoule-vials-pfs-washing-machine' => '/products/washing-machines/automatic-round-bottle-sticker-labelling-machine',
-    '/products/washing-machines/automatic-servo-pfs-washing-machine' => '/products/washing-machines/automatic-round-bottle-sticker-labelling-machine',
+    '/products/washing-machines/automatic-servo-ampoule-vials-pfs-washing-machine' => '/products/labelling/automatic-round-bottle-sticker-labelling-machine',
+    '/products/washing-machines/automatic-servo-pfs-washing-machine' => '/products/labelling/automatic-round-bottle-sticker-labelling-machine',
+    '/products/washing-machines/automatic-round-bottle-sticker-labelling-machine' => '/products/labelling/automatic-round-bottle-sticker-labelling-machine',
     '/products/washing-machines/automatic-ampoule-vials-washing-machine' => '/products/washing-machines/automatic-tunnel-type-rotary-vial-washing-machine',
     '/products/injectable-liquid-filling/automatic-eye-drop-filling-capping-sealing-machine' => '/products/injectable-liquid-filling/automatic-eye-drop-filling-sealing-machine',
     '/products/injectable-powder-filling/semi-automatic-auger-powder-filling-machine' => '/products/injectable-powder-filling/semi-type-single-head-machine',

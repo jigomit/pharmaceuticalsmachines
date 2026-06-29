@@ -10,12 +10,12 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        if (! User::where('email', 'dhaval48@gmail.com')->exists()) {
-            User::create([
-                'name' => 'Dhaval',
-                'email' => 'dhaval48@gmail.com',
-                'password' => Hash::make('Tunafishm@48'),
-            ]);
-        }
+        User::updateOrCreate(
+            ['email' => 'shreeganeshpharmatech@gmail.com'],
+            [
+                'name' => 'Shree Ganesh Admin',
+                'password' => Hash::make('Shreeganesh@123'),
+            ],
+        );
     }
 }
