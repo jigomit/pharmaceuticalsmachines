@@ -206,22 +206,6 @@ var SiteFooter_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ def
 		const page = usePage();
 		const company = computed(() => page.props.company);
 		const year = (/* @__PURE__ */ new Date()).getFullYear();
-		const maskedPhone = computed(() => {
-			const phone = String(company.value?.phone ?? "");
-			const digits = phone.replace(/\D/g, "");
-			if (digits.length < 4) return phone;
-			const maskedDigits = `${digits.slice(0, -4)}XXXX`;
-			let pointer = 0;
-			return phone.replace(/\d/g, () => maskedDigits[pointer++] ?? "X");
-		});
-		const maskedPhoneAlt = computed(() => {
-			const phone = String(company.value?.phone_alt ?? "");
-			const digits = phone.replace(/\D/g, "");
-			if (digits.length < 4) return phone;
-			const maskedDigits = `${digits.slice(0, -4)}XXXX`;
-			let pointer = 0;
-			return phone.replace(/\d/g, () => maskedDigits[pointer++] ?? "X");
-		});
 		const cols = [
 			{
 				title: "Injectable Line",
@@ -362,8 +346,8 @@ var SiteFooter_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ def
 				});
 				_push(`<!--]--></ul></div>`);
 			});
-			_push(`<!--]--></div><div class="mt-12 grid gap-8 rounded-2xl border border-white/10 bg-white/5 p-6 sm:grid-cols-3"><div><h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Factory Address</h3><address class="mt-3 text-sm not-italic leading-6 text-slate-300">${ssrInterpolate(company.value?.address?.street)}<br> ${ssrInterpolate(company.value?.address?.locality)}<br> ${ssrInterpolate(company.value?.address?.city)} ${ssrInterpolate(company.value?.address?.postal_code)}, ${ssrInterpolate(company.value?.address?.region)}<br> ${ssrInterpolate(company.value?.address?.country_name)}</address></div><div><h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Phone &amp; WhatsApp</h3><div class="mt-3 space-y-1.5 text-sm"><a${ssrRenderAttr("href", `tel:${company.value?.phone?.replace(/\s/g, "")}`)} class="block font-semibold text-teal-300 hover:text-white">${ssrInterpolate(maskedPhone.value)}</a>`);
-			if (company.value?.phone_alt) _push(`<a${ssrRenderAttr("href", `tel:${company.value?.phone_alt?.replace(/\s/g, "")}`)} class="block text-slate-300 hover:text-white">${ssrInterpolate(maskedPhoneAlt.value)}</a>`);
+			_push(`<!--]--></div><div class="mt-12 grid gap-8 rounded-2xl border border-white/10 bg-white/5 p-6 sm:grid-cols-3"><div><h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Factory Address</h3><address class="mt-3 text-sm not-italic leading-6 text-slate-300">${ssrInterpolate(company.value?.address?.street)}<br> ${ssrInterpolate(company.value?.address?.locality)}<br> ${ssrInterpolate(company.value?.address?.city)} ${ssrInterpolate(company.value?.address?.postal_code)}, ${ssrInterpolate(company.value?.address?.region)}<br> ${ssrInterpolate(company.value?.address?.country_name)}</address></div><div><h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Phone &amp; WhatsApp</h3><div class="mt-3 space-y-1.5 text-sm"><a${ssrRenderAttr("href", `tel:${company.value?.phone?.replace(/\s/g, "")}`)} class="block font-semibold text-teal-300 hover:text-white">${ssrInterpolate(company.value?.phone)}</a>`);
+			if (company.value?.phone_alt) _push(`<a${ssrRenderAttr("href", `tel:${company.value?.phone_alt?.replace(/\s/g, "")}`)} class="block font-semibold text-teal-300 hover:text-white">${ssrInterpolate(company.value?.phone_alt)}</a>`);
 			else _push(`<!---->`);
 			_push(`<a${ssrRenderAttr("href", `https://wa.me/${company.value?.whatsapp}`)} target="_blank" rel="noopener" class="block text-slate-300 hover:text-white">WhatsApp · Mon–Sat 10–7 IST</a></div></div><div><h3 class="font-heading text-sm font-semibold uppercase tracking-widest text-white">Email</h3><div class="mt-3 space-y-1.5 text-sm"><a${ssrRenderAttr("href", `mailto:${company.value?.email}`)} class="block text-slate-300 hover:text-white">${ssrInterpolate(company.value?.email)}</a>`);
 			if (company.value?.email_alt) _push(`<a${ssrRenderAttr("href", `mailto:${company.value?.email_alt}`)} class="block text-slate-300 hover:text-white">${ssrInterpolate(company.value?.email_alt)}</a>`);
