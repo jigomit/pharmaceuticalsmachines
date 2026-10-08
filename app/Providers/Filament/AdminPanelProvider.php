@@ -29,12 +29,13 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->darkMode(false)
+            ->topbar(false)
             ->sidebarCollapsibleOnDesktop(false)
             ->sidebarFullyCollapsibleOnDesktop(false)
             ->userMenu(false)
             ->brandName('Kailash Machine Tools')
             ->brandLogo(asset('images/brand/kmt-logo-wordmark.png'))
-            ->brandLogoHeight('3rem')
+            ->brandLogoHeight('3.35rem')
             ->favicon(asset('images/brand/kmt-logo.png'))
             ->colors([
                 'primary' => Color::hex('#0b1f4b'),

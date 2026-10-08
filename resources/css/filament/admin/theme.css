@@ -21,6 +21,7 @@
     --kmt-brand-soft-surface: var(--bg);
 }
 
+/* ── Login ─────────────────────────────────────────────── */
 .fi-simple-layout {
     background:
         radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--kmt-brand-highlight) 26%, transparent), transparent 44%),
@@ -33,31 +34,216 @@
     box-shadow: 0 28px 50px -32px color-mix(in srgb, var(--kmt-brand) 65%, transparent);
 }
 
+/* ── Sidebar shell ─────────────────────────────────────── */
 .fi-sidebar {
-    background: linear-gradient(180deg, var(--kmt-brand), var(--kmt-brand-deep));
+    background: linear-gradient(180deg, var(--kmt-brand) 0%, var(--kmt-brand-deep) 100%) !important;
+    border-inline-end: 1px solid color-mix(in srgb, #ffffff 10%, transparent);
+}
+
+/* Keep sidebar sticky — only main content scrolls */
+@media (min-width: 1024px) {
+    .fi-layout {
+        /* overflow-x: clip breaks position:sticky in Chromium */
+        overflow-x: visible !important;
+    }
+
+    .fi-sidebar,
+    .fi-sidebar.fi-main-sidebar {
+        position: sticky !important;
+        top: 0 !important;
+        align-self: flex-start !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
+        overflow: hidden !important;
+        z-index: 30;
+    }
+
+    .fi-sidebar-nav {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+}
+
+.fi-sidebar-header-ctn,
+.fi-sidebar-header {
+    background: transparent !important;
+    box-shadow: none !important;
+    ring: none !important;
+}
+
+.fi-sidebar-header {
+    height: auto;
+    min-height: 4.5rem;
+    padding: 0.85rem 0.9rem !important;
+    border-bottom: 1px solid color-mix(in srgb, #ffffff 12%, transparent);
+}
+
+.fi-sidebar-header-logo-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.75rem;
+    background: #ffffff;
+    padding: 0.28rem 0.4rem;
+    box-shadow: 0 8px 20px -16px color-mix(in srgb, #000000 55%, transparent);
+}
+
+.fi-sidebar .fi-logo,
+.fi-sidebar-header .fi-logo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 3.35rem;
+    height: auto;
+    object-fit: contain;
+    filter: none;
+    opacity: 1;
 }
 
 .fi-sidebar-nav {
-    border-right-color: color-mix(in srgb, #ffffff 14%, transparent);
+    padding-top: 1.25rem !important;
+    padding-bottom: 1rem !important;
+    border-right-color: transparent;
 }
 
-.fi-sidebar-item-button {
-    color: #d4dced;
+.fi-sidebar-nav-groups {
+    gap: 1.35rem !important;
 }
 
-.fi-sidebar-item-button.fi-active {
-    background: color-mix(in srgb, var(--kmt-brand-accent) 32%, var(--kmt-brand));
+.fi-sidebar-group-label {
+    color: color-mix(in srgb, #ffffff 55%, #94a3b8) !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+}
+
+/* Nav items — Filament v4 uses .fi-sidebar-item-btn */
+.fi-sidebar-item-btn {
+    color: #c5d0e4 !important;
+    border-radius: 0.65rem !important;
+}
+
+.fi-sidebar-item-btn > .fi-icon {
+    color: color-mix(in srgb, #ffffff 55%, #94a3b8) !important;
+}
+
+.fi-sidebar-item-label {
+    color: inherit !important;
+    font-weight: 500 !important;
+}
+
+.fi-sidebar-item-has-url > .fi-sidebar-item-btn:hover,
+.fi-sidebar-item-has-url > .fi-sidebar-item-btn:focus-visible {
+    background: color-mix(in srgb, var(--kmt-brand-highlight) 16%, transparent) !important;
+    color: #ffffff !important;
+}
+
+.fi-sidebar-item-has-url > .fi-sidebar-item-btn:hover > .fi-icon,
+.fi-sidebar-item-has-url > .fi-sidebar-item-btn:focus-visible > .fi-icon {
+    color: var(--highlight) !important;
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
+    background: color-mix(in srgb, var(--kmt-brand-accent) 28%, var(--kmt-brand)) !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-icon {
+    color: var(--highlight) !important;
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-sidebar-item-label {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* ── Sidebar user footer ───────────────────────────────── */
+.fi-sidebar-footer {
+    border-top: 1px solid color-mix(in srgb, #ffffff 12%, transparent) !important;
+    background: transparent !important;
+    margin-inline: 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+    padding-top: 0.85rem !important;
+}
+
+.kmt-sidebar-user-card {
+    border-radius: 0.85rem;
+    border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
+    background: color-mix(in srgb, #ffffff 8%, transparent);
+    padding: 0.85rem;
+    backdrop-filter: blur(8px);
+}
+
+.kmt-sidebar-user-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.75rem;
+}
+
+.kmt-sidebar-user-avatar {
+    width: 2.15rem;
+    height: 2.15rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
     color: #ffffff;
+    background: linear-gradient(135deg, var(--accent), var(--highlight));
+    box-shadow: 0 6px 14px -8px color-mix(in srgb, var(--accent) 70%, transparent);
 }
 
-.fi-sidebar-item-button:hover {
-    background: color-mix(in srgb, var(--kmt-brand-highlight) 20%, var(--kmt-brand));
+.kmt-sidebar-user-name {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 600;
     color: #ffffff;
+    line-height: 1.15;
 }
 
+.kmt-sidebar-user-email {
+    margin: 0.2rem 0 0;
+    font-size: 0.72rem;
+    color: color-mix(in srgb, #ffffff 58%, #94a3b8);
+    line-height: 1.2;
+    word-break: break-all;
+}
+
+.kmt-sidebar-logout-btn {
+    width: 100%;
+    border: 1px solid color-mix(in srgb, #ffffff 18%, transparent);
+    border-radius: 0.55rem;
+    background: color-mix(in srgb, #ffffff 10%, transparent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.kmt-sidebar-logout-btn:hover {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+/* ── Topbar ────────────────────────────────────────────── */
 .fi-topbar {
-    background: var(--white);
-    border-bottom-color: color-mix(in srgb, var(--primary) 15%, #dbe4ef);
+    background: var(--white) !important;
+    border-bottom: 1px solid color-mix(in srgb, var(--primary) 12%, #dbe4ef) !important;
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--primary) 4%, transparent);
+}
+
+.fi-topbar .fi-logo {
+    max-height: 2.4rem;
 }
 
 .fi-topbar .fi-icon-btn,
@@ -70,46 +256,48 @@
     color: var(--accent);
 }
 
+/* When logo also appears in topbar beside dark sidebar, keep it readable */
+.fi-body-has-topbar .fi-sidebar-header {
+    background: transparent !important;
+}
+
+/* ── Main content ──────────────────────────────────────── */
 .fi-main {
     background: var(--kmt-brand-soft-surface);
 }
 
+.fi-main-ctn {
+    max-width: 100%;
+}
+
 .fi-page-content {
-    gap: 1.25rem;
+    gap: 1.35rem;
 }
 
 .fi-header {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
 }
 
 .fi-header-heading {
     color: var(--text);
-    font-size: clamp(1.75rem, 2.2vw, 2.1rem);
+    font-size: clamp(1.7rem, 2.1vw, 2rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 .fi-header-subheading {
-    color: color-mix(in srgb, var(--text) 62%, #64748b);
-    font-size: 0.98rem;
+    color: color-mix(in srgb, var(--text) 58%, #64748b);
+    font-size: 0.95rem;
     line-height: 1.5;
-    margin-top: 0.35rem;
+    margin-top: 0.3rem;
     max-width: 42rem;
-}
-
-.fi-sidebar-group-label {
-    color: color-mix(in srgb, #ffffff 72%, #cbd5e1);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
 }
 
 .fi-section,
 .fi-ta,
 .fi-wi-stats-overview-stat {
-    border-color: color-mix(in srgb, var(--primary) 12%, #d6e6ff);
+    border-color: color-mix(in srgb, var(--primary) 10%, #d6e6ff);
     background: #ffffff;
 }
 
@@ -118,7 +306,7 @@
 .fi-wi-table .fi-ta-ctn,
 .fi-wi-table .fi-ta-content {
     background: #ffffff;
-    border-radius: 0.95rem;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
@@ -131,11 +319,11 @@
 }
 
 .fi-ta-header-cell {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--primary) 72%, #475569);
+    color: color-mix(in srgb, var(--primary) 68%, #475569);
 }
 
 .fi-ta-row {
@@ -143,7 +331,7 @@
 }
 
 .fi-ta-row:hover {
-    background: color-mix(in srgb, var(--bg) 55%, #ffffff);
+    background: color-mix(in srgb, var(--bg) 60%, #ffffff);
 }
 
 .fi-ta-empty-state-heading {
@@ -162,18 +350,18 @@
 }
 
 .fi-wi-stats-overview-stat {
-    border-radius: 0.9rem;
+    border-radius: 1rem;
     border-width: 1px;
-    padding: 1.05rem 1.15rem;
-    box-shadow: 0 14px 30px -26px color-mix(in srgb, var(--primary) 55%, transparent);
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 12px 28px -24px color-mix(in srgb, var(--primary) 50%, transparent);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Keep a small clean gap between cards, without page background bleed. */
 .fi-wi-stats-overview-stats,
 .fi-wi-stats-overview .fi-wi-stats-overview-stats,
 .fi-wi-stats-overview > .grid,
 .fi-wi-stats-overview [class*='fi-grid'] {
-    gap: 0.55rem !important;
+    gap: 0.85rem !important;
     background: transparent;
     border-radius: 0;
     padding: 0;
@@ -182,8 +370,8 @@
 }
 
 .fi-wi-stats-overview-stat:hover {
-    border-color: color-mix(in srgb, var(--accent) 36%, #d0d9e7);
-    box-shadow: 0 18px 34px -26px color-mix(in srgb, var(--primary) 65%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 40%, #d0d9e7);
+    box-shadow: 0 16px 32px -24px color-mix(in srgb, var(--primary) 60%, transparent);
 }
 
 .fi-wi-stats-overview-stat .fi-color-custom {
@@ -192,7 +380,7 @@
 
 .fi-wi-stats-overview-stat-value {
     color: var(--text);
-    font-size: clamp(1.8rem, 2vw, 2.05rem);
+    font-size: clamp(1.75rem, 2vw, 2rem);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.01em;
@@ -200,28 +388,28 @@
 
 .fi-wi-stats-overview-stat-label {
     color: color-mix(in srgb, var(--primary) 78%, #42526a);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 600;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.4rem;
 }
 
 .fi-wi-stats-overview-stat-description {
-    color: color-mix(in srgb, var(--text) 64%, #6b7a90);
-    font-size: 0.95rem;
+    color: color-mix(in srgb, var(--text) 60%, #6b7a90);
+    font-size: 0.9rem;
     line-height: 1.35;
-    margin-top: 0.45rem;
+    margin-top: 0.4rem;
 }
 
 .fi-section-header-heading,
 .fi-ta-header-heading {
     color: var(--text);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
 .fi-ta-header-description {
     color: color-mix(in srgb, var(--text) 62%, #64748b);
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     line-height: 1.45;
 }
 
@@ -239,72 +427,6 @@
 
 .fi-badge {
     letter-spacing: 0.01em;
-}
-
-.fi-sidebar-footer {
-    border-top: 1px solid color-mix(in srgb, var(--primary) 12%, #d5dce7);
-    background: color-mix(in srgb, #ffffff 86%, var(--bg));
-    padding: 0.8rem;
-}
-
-.kmt-sidebar-user-card {
-    border-radius: 0.95rem;
-    border: 1px solid color-mix(in srgb, var(--primary) 16%, #cfd6df);
-    background: #ffffff;
-    padding: 0.8rem;
-    box-shadow: 0 10px 24px -20px color-mix(in srgb, var(--primary) 55%, transparent);
-}
-
-.kmt-sidebar-user-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    margin-bottom: 0.8rem;
-}
-
-.kmt-sidebar-user-avatar {
-    width: 2.1rem;
-    height: 2.1rem;
-    border-radius: 9999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #ffffff;
-    background: linear-gradient(135deg, var(--accent), var(--highlight));
-}
-
-.kmt-sidebar-user-name {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.1;
-}
-
-.kmt-sidebar-user-email {
-    margin: 0.2rem 0 0;
-    font-size: 0.85rem;
-    color: color-mix(in srgb, var(--text) 68%, #8d99ab);
-    line-height: 1.1;
-}
-
-.kmt-sidebar-logout-btn {
-    width: 100%;
-    border: 1px solid color-mix(in srgb, var(--primary) 20%, #cdd6e2);
-    border-radius: 0.62rem;
-    background: #ffffff;
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 1.02rem;
-    padding: 0.52rem 0.8rem;
-    cursor: pointer;
-}
-
-.kmt-sidebar-logout-btn:hover {
-    background: color-mix(in srgb, #ffffff 90%, var(--bg));
-    border-color: color-mix(in srgb, var(--accent) 38%, #c4cdd9);
 }
 
 /* Force-hide any sidebar collapse/toggle handles */
